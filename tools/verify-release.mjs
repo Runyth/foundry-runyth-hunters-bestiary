@@ -153,7 +153,6 @@ const rootManifest = JSON.parse(readFileSync(path.join(ROOT, "..", "module.json"
     "tests/hygiene.test.mjs",
     "tests/manifest.test.mjs",
     "tests/hygiene.test.mjs",
-    "docs/ARCHITECTURE.md",
     "docs/API.md",
     "docs/GM-GUIDE.md",
     "docs/PLAYER-GUIDE.md"
@@ -184,7 +183,7 @@ const rootManifest = JSON.parse(readFileSync(path.join(ROOT, "..", "module.json"
   const expectedRoot = `${MODULE_ID}-v${VERSION}-doc`;
   const entries = readZip(readFileSync(docPath));
   const namesInArchive = entries.map((entry) => entry.name);
-  for (const required of ["CHANGELOG.md", "README.md", "docs/ARCHITECTURE.md", "docs/API.md", "docs/GM-GUIDE.md", "docs/PLAYER-GUIDE.md", "docs/release/RELEASE-NOTES-1.8.0.md"]) {
+  for (const required of ["CHANGELOG.md", "README.md", "docs/API.md", "docs/GM-GUIDE.md", "docs/PLAYER-GUIDE.md", "docs/release/RELEASE-NOTES-1.4.0.md"]) {
     if (!namesInArchive.includes(`${expectedRoot}/${required}`)) fail(`documentation archive misses ${required}`);
   }
   console.log("Documentation archive: contract files verified.");

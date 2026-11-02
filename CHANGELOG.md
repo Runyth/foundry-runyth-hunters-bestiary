@@ -2,6 +2,8 @@
 
 ## 1.8.0 — 2026-10-11
 
+- First publication as a Runyth module: `runyth-hunters-bestiary` / **Runyth Hunter's Bestiary** with the publication standard in place — deterministic `-mod`, `-src`, and `-doc` archives with per-version checksums, byte-identical rebuild verification, standard quality and release pipelines, the full GNU AGPL-3.0-or-later licence with the standard source notice, the standard README licence chapter, and the manifest URL surfaces.
+
 - Added granular Fieldwork progression requirements with global defaults and sparse per-monster overrides.
 - Track searches can require a configurable number of successful rumors; default is 3.
 - Successful track searches can probabilistically unlock Sighting recording after a configurable threshold; default is after 5 successful tracks, with a 35% chance on each later successful search.
