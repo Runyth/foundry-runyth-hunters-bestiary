@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 export const FAMILY_NAME = "Runyth Hunter's Bestiary";
 export const NAMING_API_VERSION = "1.0.0";
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { PersistentApplication } from "./base-app.mjs";
 import { MODULE_ID, HUNT_STATUS } from "../constants.mjs";
 import { getWorldData, getProgress, knowledgeLevel } from "../state.mjs";

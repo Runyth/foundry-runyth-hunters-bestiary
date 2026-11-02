@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { MODULE_ID, FLAGS, SETTINGS } from "./constants.mjs";
 import { MainApp, AdminApp, openPlayerPerspectiveDashboard } from "./apps/main-app.mjs";
 import { TransferApp } from "./apps/transfer-app.mjs";

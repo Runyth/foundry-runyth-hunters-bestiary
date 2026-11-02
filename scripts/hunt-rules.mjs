@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { KNOWLEDGE_FIELDS, OUTCOMES, MODULE_ID, SETTINGS } from "./constants.mjs";
 import { boundedInteger, clone } from "./utils.mjs";
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { HUNT_STATUS } from "./constants.mjs";
 import { clone, nowIso, randomId, boundedInteger } from "./utils.mjs";
 import { getHunts, setHunts, appendAudit, recordHuntProgress, getProgress, getWorldData, knowledgeLevel } from "./state.mjs";

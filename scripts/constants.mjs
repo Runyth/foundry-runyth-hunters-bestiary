@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 export const MODULE_ID = "runyth-hunters-bestiary";
 export const MODULE_TITLE = "Runyth Hunter's Bestiary";
 export const MODULE_VERSION = "1.8.0";

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { MODULE_ID, SOCKET_NAME, SETTINGS } from "./constants.mjs";
 import { primaryActiveGm, randomId, notify, moduleError, localizeText } from "./utils.mjs";
 import { recordAttempt, addComplication, requestHuntResolution, recordHuntResolutionCheck, pauseSoloHuntsForQuarry } from "./hunts.mjs";
