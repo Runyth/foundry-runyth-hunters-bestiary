@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.1 - 2026-11-03
+
+### Fixed and improved
+
+- AGENTS.md conformance release: the manifest author carries the standard organisational URL, and the shipped homebrew content states its CC BY-SA 4.0 content licence in the README and on the content data records. No runtime behaviour relationship or dependency change.
+
 ## 1.8.0 — 2026-10-11
 
 - First publication as a Runyth module: `runyth-hunters-bestiary` / **Runyth Hunter's Bestiary** with the publication standard in place — deterministic `-mod`, `-src`, and `-doc` archives with per-version checksums, byte-identical rebuild verification, standard quality and release pipelines, the full GNU AGPL-3.0-or-later licence with the standard source notice, the standard README licence chapter, and the manifest URL surfaces.
