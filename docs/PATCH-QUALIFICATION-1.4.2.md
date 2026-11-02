@@ -1,4 +1,4 @@
-# Patch Qualification — Hunter's Bestiary 1.4.2
+# Patch Qualification — Runyth Hunter's Bestiary 1.4.2
 
 - Automated tests: **74/74**
 - English/German localization parity: **1019/1019**

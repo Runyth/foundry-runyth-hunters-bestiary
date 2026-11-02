@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 
 const app = await readFile(new URL("../scripts/apps/record-entry-app.mjs", import.meta.url), "utf8");
 const template = await readFile(new URL("../templates/record-entry.hbs", import.meta.url), "utf8");
-const css = await readFile(new URL("../styles/hunters-bestiary.css", import.meta.url), "utf8");
+const css = await readFile(new URL("../styles/runyth-hunters-bestiary.css", import.meta.url), "utf8");
 const main = await readFile(new URL("../scripts/apps/main-app.mjs", import.meta.url), "utf8");
 const dashboardTemplate = await readFile(new URL("../templates/main.hbs", import.meta.url), "utf8");
 

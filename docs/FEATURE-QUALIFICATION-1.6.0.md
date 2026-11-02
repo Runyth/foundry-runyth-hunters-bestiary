@@ -1,4 +1,4 @@
-# Feature qualification — Hunter's Bestiary 1.6.0
+# Feature qualification — Runyth Hunter's Bestiary 1.6.0
 
 ## Scope
 

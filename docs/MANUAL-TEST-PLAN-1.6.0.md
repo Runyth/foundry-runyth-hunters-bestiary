@@ -1,7 +1,7 @@
 # Manual test plan — 1.6.0
 
 1. Log in as a GM and a player in separate browsers.
-2. Give the player a Character and vary its Hunter's Bestiary progress.
+2. Give the player a Character and vary its Runyth Hunter's Bestiary progress.
 3. On the GM client select exactly that player's token and open the normal dashboard.
 4. Press the eye button; confirm a second dashboard opens.
 5. Compare all tabs side-by-side with the player's dashboard: monster list, knowledge gates, points, notes, evidence, hunts, fieldwork approvals, library state, statistics, and player guide must match.

@@ -1,6 +1,6 @@
-# Hunter's Bestiary — Detailed Player Guide
+# Runyth Hunter's Bestiary — Detailed Player Guide
 
-This guide explains everything a player needs to use Hunter's Bestiary without revealing GM-only information.
+This guide explains everything a player needs to use Runyth Hunter's Bestiary without revealing GM-only information.
 
 ## The basic idea
 
@@ -21,15 +21,15 @@ You can:
 
 Some actions require a one-use GM approval because they can reveal new information or advance a shared hunt. This is not a punishment or a sign that you did something wrong. It simply keeps the hunt tied to what is actually happening in the game world.
 
-## Open Hunter's Bestiary
+## Open Runyth Hunter's Bestiary
 
 You can use the normal module launchers, including:
 
 - `Shift+B`,
-- the Hunter's Bestiary Scene Control,
+- the Runyth Hunter's Bestiary Scene Control,
 - the module's Token HUD button,
 - Actor/Journal directory launchers,
-- Configure Settings → Open Hunter's Bestiary.
+- Configure Settings → Open Runyth Hunter's Bestiary.
 
 ## Choose your hunter
 
@@ -190,7 +190,7 @@ Repeated identical checks are usually not interesting.
 
 If nothing changed, repeated clicking can turn uncertainty into guaranteed success.
 
-Hunter's Bestiary therefore treats an approved attempt as a specific opportunity in the fiction.
+Runyth Hunter's Bestiary therefore treats an approved attempt as a specific opportunity in the fiction.
 
 After a failure, useful next steps are:
 

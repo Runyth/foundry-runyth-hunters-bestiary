@@ -10,8 +10,8 @@ export async function installReferenceLibrary({ updateExisting = false } = {}) {
   if (!game.user.isGM) throw new Error("Only a GM may install the reference library.");
   const data = getWorldData();
   const [journalFolder, tableFolder] = await Promise.all([
-    ensureFolder("Hunter's Bestiary: Books", "JournalEntry"),
-    ensureFolder("Hunter's Bestiary: GM Tables", "RollTable")
+    ensureFolder("Runyth Hunter's Bestiary: Books", "JournalEntry"),
+    ensureFolder("Runyth Hunter's Bestiary: GM Tables", "RollTable")
   ]);
 
   const journalBySource = new Map((game.journal?.contents ?? []).map(document => [document.getFlag(MODULE_ID, FLAGS.SOURCE), document]));
@@ -217,7 +217,7 @@ export async function publishPersonalBestiary(userId = game.user.id) {
   if (!user) throw new Error("User not found.");
   const data = getWorldData();
   const progress = await getProgress(userId);
-  const folder = await ensureFolder("Hunter's Bestiary: Personal Books", "JournalEntry");
+  const folder = await ensureFolder("Runyth Hunter's Bestiary: Personal Books", "JournalEntry");
   const source = `personal:${userId}`;
   const existing = findBySource(game.journal?.contents ?? [], source);
   const pages = [];

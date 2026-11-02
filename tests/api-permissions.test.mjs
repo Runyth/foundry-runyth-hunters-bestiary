@@ -39,7 +39,7 @@ async function createApi({ isGM, progress }) {
     user,
     i18n: { localize: key => ({ "HB.Difficulty.Tier.1": "Low Threat" }[key] ?? key) },
     settings: { get: (_module, key) => key === "worldData" ? world : [] },
-    modules: new Map([["hunters-bestiary", { version: "1.8.0" }]])
+    modules: new Map([["runyth-hunters-bestiary", { version: "1.8.0" }]])
   };
   const { HuntersBestiaryAPI } = await import(`../scripts/api.mjs?permissions=${Date.now()}-${isGM}`);
   return { api: new HuntersBestiaryAPI(), previous };

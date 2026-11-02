@@ -4,4 +4,4 @@
 - System-neutral core; optional system integrations provide Actor generation.
 - Image selection uses the Foundry v13 namespaced FilePicker implementation.
 - Existing world data, progression, linked Actors, providers, and settings remain compatible.
-- Complementary modules using shared images require Hunter's Bestiary 1.4.0 or newer.
+- Complementary modules using shared images require Runyth Hunter's Bestiary 1.4.0 or newer.

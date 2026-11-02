@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.5.0 — Feature Release
+# Runyth Hunter's Bestiary 1.5.0 — Feature Release
 
 ## Purpose
 

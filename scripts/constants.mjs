@@ -1,5 +1,5 @@
-export const MODULE_ID = "hunters-bestiary";
-export const MODULE_TITLE = "Hunter's Bestiary";
+export const MODULE_ID = "runyth-hunters-bestiary";
+export const MODULE_TITLE = "Runyth Hunter's Bestiary";
 export const MODULE_VERSION = "1.8.0";
 export const SCHEMA_VERSION = 2;
 export const SOCKET_NAME = `module.${MODULE_ID}`;

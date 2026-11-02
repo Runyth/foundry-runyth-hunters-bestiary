@@ -115,7 +115,7 @@ test("Hunt editor uses a lazy capped result list instead of pre-rendering all mo
   const [source, template, css] = await Promise.all([
     readFile(new URL("../scripts/apps/hunt-editor.mjs", import.meta.url), "utf8"),
     readFile(new URL("../templates/hunt-editor.hbs", import.meta.url), "utf8"),
-    readFile(new URL("../styles/hunters-bestiary.css", import.meta.url), "utf8")
+    readFile(new URL("../styles/runyth-hunters-bestiary.css", import.meta.url), "utf8")
   ]);
   assert.match(source, /choices\.slice\(0, 80\)/);
   assert.match(source, /requestAnimationFrame/);

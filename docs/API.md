@@ -1,4 +1,4 @@
-# Hunter's Bestiary API
+# Runyth Hunter's Bestiary API
 
 Release: 1.7.0. Public APIs are exposed through `game.modules.get("hunters-bestiary").api`; no new global namespace is required. Existing compatibility surfaces are retained for this feature release.
 

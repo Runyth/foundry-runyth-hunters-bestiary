@@ -174,7 +174,7 @@ export class HuntersBestiaryAPI {
       actualName: validation.actualName || module?.title || moduleId,
       expectedName: validation.expectedName,
       moduleId
-    }) ?? `Hunter's Bestiary naming warning: “${validation.actualName}” does not follow the complementary-module naming standard. Expected: “${validation.expectedName}”. The module remains usable; see docs/NAMING-STANDARD.md and docs/COMPLEMENTARY-MODULE-GUIDE.md.`;
+    }) ?? `Runyth Hunter's Bestiary naming warning: “${validation.actualName}” does not follow the complementary-module naming standard. Expected: “${validation.expectedName}”. The module remains usable; see docs/NAMING-STANDARD.md and docs/COMPLEMENTARY-MODULE-GUIDE.md.`;
     ui.notifications?.warn?.(message);
     console.warn(`${MODULE_ID} | Complementary module naming warning`, { moduleId, reason, validation });
     return { warned: true, reason, validation };
@@ -199,7 +199,7 @@ export class HuntersBestiaryAPI {
   }
 
   openAdministration(options = {}) {
-    if (!game.user.isGM) throw new Error("Only a GM may open Hunter's Bestiary administration.");
+    if (!game.user.isGM) throw new Error("Only a GM may open Runyth Hunter's Bestiary administration.");
     return openApplication(AdminApp, "hunters-bestiary-administration", { ...options, initialTab: "gm" });
   }
 
@@ -408,7 +408,7 @@ export class HuntersBestiaryAPI {
   }
 
   async registerContent(providerId, content = {}, { replaceProviderContent = true, allowPartial = null } = {}) {
-    if (!game.user.isGM) throw new Error("Only a GM may register complementary Hunter's Bestiary content.");
+    if (!game.user.isGM) throw new Error("Only a GM may register complementary Runyth Hunter's Bestiary content.");
     const source = slugify(providerId);
     if (!source) throw new Error("A provider id is required.");
     const partialAllowed = allowPartial ?? game.settings.get(MODULE_ID, SETTINGS.ALLOW_PARTIAL_PROVIDER_CONTENT);

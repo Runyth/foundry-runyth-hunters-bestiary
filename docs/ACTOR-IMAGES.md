@@ -5,7 +5,7 @@
 Each monster record may define an `img` path. The same path is used by the Hunter’s Bestiary dashboard, generated Actor portrait, and prototype-token texture.
 
 1. Add a WebP, PNG, JPEG, or SVG file below `assets/actors/`.
-2. Set the monster record’s `img` field to `modules/hunters-bestiary/assets/actors/<file>`.
+2. Set the monster record’s `img` field to `modules/runyth-hunters-bestiary/assets/actors/<file>`.
 3. Run `npm test`, `npm run check`, and `npm run build`.
 
 Complementary modules follow the same rule in their own data files and asset directories. Use stable monster IDs for filenames, for example `assets/actors/ashback-troll.webp`.

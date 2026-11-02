@@ -149,7 +149,7 @@ test("fieldwork changes refresh open GM dashboards once per render frame", () =>
   try {
     resetIntegrationRegistrationStateForTests();
     assert.equal(registerRerenderHooks(), true);
-    hooks.get("hunters-bestiary.fieldworkChanged")?.();
+    hooks.get("runyth-hunters-bestiary.fieldworkChanged")?.();
     hooks.get("updateSetting")?.({ key: "hunters-bestiary.fieldworkRequests" });
     assert.equal(frames.length, 1);
     frames.shift()();

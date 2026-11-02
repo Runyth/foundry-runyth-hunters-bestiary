@@ -1,4 +1,4 @@
-# Manual Test Plan - Hunter's Bestiary 1.3.2
+# Manual Test Plan - Runyth Hunter's Bestiary 1.3.2
 
 
 1. Back up a disposable Foundry v13 world.

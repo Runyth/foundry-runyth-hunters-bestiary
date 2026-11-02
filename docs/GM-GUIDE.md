@@ -1,10 +1,10 @@
-# Hunter's Bestiary — Complete GM Guide
+# Runyth Hunter's Bestiary — Complete GM Guide
 
 This guide is intentionally more detailed than the in-dashboard quick guide. It describes the complete hunt workflow, the division of responsibility between GM and players, and the anti-spam safeguards that keep investigation meaningful.
 
 ## Core principle
 
-Hunter's Bestiary treats a hunt as an ongoing campaign project rather than a sequence of buttons. Players should be able to maintain their own records and execute most routine actions themselves. The GM remains authoritative wherever an action can reveal hidden information, advance a shared hunt, or generate repeatable mechanical progress.
+Runyth Hunter's Bestiary treats a hunt as an ongoing campaign project rather than a sequence of buttons. Players should be able to maintain their own records and execute most routine actions themselves. The GM remains authoritative wherever an action can reveal hidden information, advance a shared hunt, or generate repeatable mechanical progress.
 
 The recommended default is therefore:
 
@@ -16,8 +16,8 @@ This separation prevents accidental "click farming" without turning the module i
 
 ## Quick setup
 
-1. Enable Hunter's Bestiary and enter the world as a GM once.
-2. Open **Configure Settings → Hunter's Bestiary**.
+1. Enable Runyth Hunter's Bestiary and enter the world as a GM once.
+2. Open **Configure Settings → Runyth Hunter's Bestiary**.
 3. Leave **Require GM approval for repeatable player fieldwork** enabled unless your group deliberately wants unrestricted fieldwork.
 4. Choose roll visibility.
 5. Install or update the reference library if you use the generated Journals and Roll Tables.

@@ -39,7 +39,7 @@ export function registerSocket() {
 }
 
 export async function requestGm(action, data = {}, { timeout = 15000 } = {}) {
-  if (!ACTIONS.has(action)) throw new Error(`Unknown Hunter's Bestiary socket action: ${action}`);
+  if (!ACTIONS.has(action)) throw new Error(`Unknown Runyth Hunter's Bestiary socket action: ${action}`);
   if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("Socket request data must be an object.");
   if (game.user.isGM) return dispatch(action, data, game.user.id);
   const gm = primaryActiveGm();
@@ -148,7 +148,7 @@ async function dispatch(action, data, originUserId) {
     case "record-hunt-resolution-check":
       return handleHuntResolutionCheck(data, originUserId);
     default:
-      throw new Error(`Unknown Hunter's Bestiary socket action: ${action}`);
+      throw new Error(`Unknown Runyth Hunter's Bestiary socket action: ${action}`);
   }
 }
 
@@ -225,7 +225,7 @@ function validateAttemptMessage(message, expected) {
   const authorId = message.user?.id ?? message.user;
   if (authorId !== expected.originUserId) throw new Error("The field-check Chat message belongs to another user.");
   const flags = message.flags?.[MODULE_ID] ?? {};
-  if (flags.kind !== "field-check") throw new Error("The Chat message is not a Hunter's Bestiary field check.");
+  if (flags.kind !== "field-check") throw new Error("The Chat message is not a Runyth Hunter's Bestiary field check.");
   if (flags.skillId !== expected.skillId) throw new Error("The field-check skill does not match the hunt step.");
   if (Number(flags.dc) !== Number(expected.dc)) throw new Error("The field-check DC does not match the hunt step.");
   if (expected.actorUuid && flags.actorUuid !== expected.actorUuid) throw new Error("The field-check Actor does not match the submitted hunter.");
@@ -236,7 +236,7 @@ function validateFieldCheckMessage(message, expected) {
   const authorId = message.user?.id ?? message.user;
   if (authorId !== expected.originUserId) throw new Error("The field-check Chat message belongs to another user.");
   const flags = message.flags?.[MODULE_ID] ?? {};
-  if (flags.kind !== "field-check") throw new Error("The Chat message is not a Hunter's Bestiary field check.");
+  if (flags.kind !== "field-check") throw new Error("The Chat message is not a Runyth Hunter's Bestiary field check.");
   if (flags.skillId !== expected.skillId) throw new Error("The field-check skill does not match the requested fieldwork.");
   if (Number(flags.dc) !== Number(expected.dc)) throw new Error("The field-check DC does not match the requested fieldwork.");
   if (expected.actorUuid && flags.actorUuid !== expected.actorUuid) throw new Error("The field-check Actor does not match the submitted hunter.");

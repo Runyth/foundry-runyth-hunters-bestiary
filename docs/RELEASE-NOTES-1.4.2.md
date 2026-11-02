@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.4.2
+# Runyth Hunter's Bestiary 1.4.2
 
 Patch release focused on responsiveness, reduced document and DOM work, safe asynchronous concurrency, and Foundry-specific batching. No gameplay rules, stable IDs, localization keys, public APIs, or user data formats were intentionally changed.
 

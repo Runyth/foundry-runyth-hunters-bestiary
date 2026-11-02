@@ -2,7 +2,7 @@
 
 ## Design goal
 
-Hunter's Bestiary makes a monster encounter begin before initiative. It supplies a repeatable play loop in which uncertainty, ecology, investigation, preparation, confrontation, and documentation are mechanically connected.
+Runyth Hunter's Bestiary makes a monster encounter begin before initiative. It supplies a repeatable play loop in which uncertainty, ecology, investigation, preparation, confrontation, and documentation are mechanically connected.
 
 ## Core loop
 

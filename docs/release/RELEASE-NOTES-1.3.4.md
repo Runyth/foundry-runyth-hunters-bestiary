@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.3.4
+# Runyth Hunter's Bestiary 1.3.4
 
 This patch removes the delayed close behavior from Record Sighting and Record Trophy/Sample windows. Geometry persistence continues asynchronously, while the parent Bestiary refresh begins only after the record window has closed.
 

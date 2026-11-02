@@ -27,7 +27,7 @@ test("core settings register once", () => {
     const hookCalls = [];
     globalThis.Hooks = { callAll: (...args) => hookCalls.push(args) };
     settings.get("fieldworkRequests").onChange([{ id: "request" }]);
-    assert.deepEqual(hookCalls, [["hunters-bestiary.fieldworkChanged", [{ id: "request" }]]]);
+    assert.deepEqual(hookCalls, [["runyth-hunters-bestiary.fieldworkChanged", [{ id: "request" }]]]);
     globalThis.Hooks = previousHooks;
     const firstCount = calls.length;
     assert.equal(calls.length, firstCount);

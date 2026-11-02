@@ -1,4 +1,4 @@
-Hunter's Bestiary 1.7.1 automated validation
+Runyth Hunter's Bestiary 1.7.1 automated validation
 
 - Automated tests: 116/116 passed
 - Static validation groups: 9/9 passed

@@ -1,6 +1,6 @@
 # System Adapter API
 
-Hunter's Bestiary core is intentionally game-system-neutral. Starting with v1.2.0, a complementary module can provide native behavior for one Foundry game system without changing or copying the campaign's ecology, rumors, tracks, books, hunts, permissions, or player progress.
+Runyth Hunter's Bestiary core is intentionally game-system-neutral. Starting with v1.2.0, a complementary module can provide native behavior for one Foundry game system without changing or copying the campaign's ecology, rumors, tracks, books, hunts, permissions, or player progress.
 
 ## Registering an adapter
 
@@ -98,7 +98,7 @@ core.getEncounterProfile("monster-id");
 
 ## Recommended module lifecycle
 
-1. Declare Hunter's Bestiary v1.2.0 as a required module relationship.
+1. Declare Runyth Hunter's Bestiary v1.2.0 as a required module relationship.
 2. Declare the target game system as a required system relationship.
 3. Expose your module API during `init`.
 4. During `ready`, await `core.whenReady()`.

@@ -25,7 +25,7 @@ export const PORTABLE_SETTING_KEYS = Object.freeze([
 ]);
 
 export function buildSettingsExport() {
-  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may export Hunter's Bestiary settings.");
+  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may export Runyth Hunter's Bestiary settings.");
   return {
     format: "hunters-bestiary-settings",
     moduleVersion: MODULE_VERSION,
@@ -41,13 +41,13 @@ export function downloadSettingsExport() {
 }
 
 export function validateSettingsExport(payload) {
-  if (!payload || typeof payload !== "object" || payload.format !== "hunters-bestiary-settings") throw new Error("This is not a Hunter's Bestiary settings export.");
+  if (!payload || typeof payload !== "object" || payload.format !== "hunters-bestiary-settings") throw new Error("This is not a Runyth Hunter's Bestiary settings export.");
   if (!payload.settings || typeof payload.settings !== "object" || Array.isArray(payload.settings)) throw new Error("The settings export has no settings object.");
   return true;
 }
 
 export async function importSettingsExport(payload) {
-  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may import Hunter's Bestiary settings.");
+  if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may import Runyth Hunter's Bestiary settings.");
   validateSettingsExport(payload);
   const imported = [];
   for (const key of PORTABLE_SETTING_KEYS) {
@@ -101,7 +101,7 @@ export async function downloadExport(options = {}) {
 
 export function validateExport(payload) {
   if (!payload || typeof payload !== "object") throw new Error("Import data must be a JSON object.");
-  if (payload.format !== "hunters-bestiary-export") throw new Error("This is not a Hunter's Bestiary export.");
+  if (payload.format !== "hunters-bestiary-export") throw new Error("This is not a Runyth Hunter's Bestiary export.");
   if (!payload.users || typeof payload.users !== "object") throw new Error("The export has no user progress section.");
   for (const entry of Object.values(payload.users)) normalizeProgress(entry.progress);
   if (payload.world?.data) validateSeed(payload.world.data);

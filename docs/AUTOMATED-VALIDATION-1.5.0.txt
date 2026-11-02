@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.5.0 — Automated Validation
+# Runyth Hunter's Bestiary 1.5.0 — Automated Validation
 
 ## npm test
 
@@ -513,7 +513,7 @@ ok 82 - progress operations can auto-close clean success and retain failed windo
 > hunters-bestiary@1.5.0 check
 > node tools/check.mjs
 
-Hunter's Bestiary validation passed (9 groups):
+Runyth Hunter's Bestiary validation passed (9 groups):
 - manifest and referenced files
 - seed schema, counts, IDs, references, and modular localized content
 - 27 script files syntax-checked

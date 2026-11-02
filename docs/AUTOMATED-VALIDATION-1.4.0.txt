@@ -421,7 +421,7 @@ ok 67 - progress operations can auto-close clean success and retain failed windo
 > hunters-bestiary@1.4.0 check
 > node tools/check.mjs
 
-Hunter's Bestiary validation passed (9 groups):
+Runyth Hunter's Bestiary validation passed (9 groups):
 - manifest and referenced files
 - seed schema, counts, IDs, references, and bilingual content
 - 26 script files syntax-checked

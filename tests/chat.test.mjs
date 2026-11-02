@@ -23,7 +23,7 @@ test("one field-check action creates exactly one Chat card", async () => {
     getSpeaker: () => ({ alias: "Hunter" }),
     async create(data) {
       created += 1;
-      assert.equal(data.flags["hunters-bestiary"].actorUuid, "Actor.hunter");
+      assert.equal(data.flags["runyth-hunters-bestiary"].actorUuid, "Actor.hunter");
       return { id: "message-1" };
     }
   };

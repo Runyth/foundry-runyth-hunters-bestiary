@@ -1,13 +1,13 @@
 # GM Player-Perspective Mirror
 
-Hunter's Bestiary 1.6.0 lets a GM open one additional dashboard that is rendered from a selected player's perspective. It is not a separate dashboard design: it uses the same `MainApp`, `templates/main.hbs`, localization dictionaries, data builders, visibility rules, and player permission settings as the ordinary player dashboard.
+Runyth Hunter's Bestiary 1.6.0 lets a GM open one additional dashboard that is rendered from a selected player's perspective. It is not a separate dashboard design: it uses the same `MainApp`, `templates/main.hbs`, localization dictionaries, data builders, visibility rules, and player permission settings as the ordinary player dashboard.
 
 ## Opening the mirror
 
 1. As GM, select exactly one token whose Actor belongs to a non-GM player. The player's assigned Character takes precedence when resolving ambiguous ownership.
-2. Open the normal Hunter's Bestiary dashboard.
+2. Open the normal Runyth Hunter's Bestiary dashboard.
 3. Press the eye button in the top bar.
-4. A second Hunter's Bestiary window opens. Its body is the same player dashboard the resolved player receives.
+4. A second Runyth Hunter's Bestiary window opens. Its body is the same player dashboard the resolved player receives.
 
 The mirror window is reused. Select another player token and press the eye button again to retarget the existing mirror instead of opening unlimited windows.
 

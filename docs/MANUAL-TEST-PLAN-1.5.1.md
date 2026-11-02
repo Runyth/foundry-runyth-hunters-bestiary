@@ -1,4 +1,4 @@
-# Manual Test Plan — Hunter's Bestiary 1.5.1
+# Manual Test Plan — Runyth Hunter's Bestiary 1.5.1
 
 Target: Foundry VTT 13.351.
 

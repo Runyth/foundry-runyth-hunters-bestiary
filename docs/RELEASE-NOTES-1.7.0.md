@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.7.0 — Hunt System Redesign
+# Runyth Hunter's Bestiary 1.7.0 — Hunt System Redesign
 
 This feature release makes a hunt a coherent progression from uncertain rumor to identified quarry, research, pursuit and player-chosen final objective.
 

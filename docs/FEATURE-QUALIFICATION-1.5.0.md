@@ -2,7 +2,7 @@
 
 ## Scope
 
-Hunter's Bestiary 1.5.0 adds guided hunt workflow controls without changing the player progression schema or the provider/Actor contracts.
+Runyth Hunter's Bestiary 1.5.0 adds guided hunt workflow controls without changing the player progression schema or the provider/Actor contracts.
 
 ## Qualified behavior
 

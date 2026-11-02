@@ -2,7 +2,7 @@
 
 ## Scope
 
-Complete production-tree audit of Hunter's Bestiary v1.2.0, patched as v1.2.1 for Foundry VTT 13.351. The audit covered hooks, ApplicationV2 lifecycle, native DOM use, listeners, CSS, sheet/HUD/Scene Control/Chat/canvas ownership, settings, keybindings, sockets, public API, migrations, startup resilience, packaging, and complementary-module boundaries.
+Complete production-tree audit of Runyth Hunter's Bestiary v1.2.0, patched as v1.2.1 for Foundry VTT 13.351. The audit covered hooks, ApplicationV2 lifecycle, native DOM use, listeners, CSS, sheet/HUD/Scene Control/Chat/canvas ownership, settings, keybindings, sockets, public API, migrations, startup resilience, packaging, and complementary-module boundaries.
 
 ## Issues found and corrected
 

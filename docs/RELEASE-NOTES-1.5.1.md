@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.5.1 — Patch Release
+# Runyth Hunter's Bestiary 1.5.1 — Patch Release
 
 This patch repairs the multiplayer GM approval workflow introduced in 1.5.0.
 

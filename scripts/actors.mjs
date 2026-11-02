@@ -48,7 +48,7 @@ export function actorProvisioningStatus(monster, { systemId = globalThis.game?.s
   return { status: monster.actorUuid ? "linked" : "available", available: true };
 }
 
-export async function provisionActors({ monsterIds = null, updateExisting = false, folderName = "Hunter's Bestiary: Quarry Actors", onProgress = null } = {}) {
+export async function provisionActors({ monsterIds = null, updateExisting = false, folderName = "Runyth Hunter's Bestiary: Quarry Actors", onProgress = null } = {}) {
   if (!game.user.isGM) throw new Error("Only a GM may provision quarry Actors.");
   const world = getWorldData();
   const selectedIds = monsterIds ? new Set(monsterIds) : null;
@@ -294,7 +294,7 @@ export function isManagedEmbeddedDocument(document, { actor = null, documentName
   // Compatibility with v1.2.0 D&D-generated embedded Items, which predate core markers.
   if (documentName === "Item" && actor?.getFlag?.(MODULE_ID, FLAGS.ACTOR_MONSTER_ID)) {
     const source = document?.system?.source ?? {};
-    return ["Hunter's Bestiary", "The Hunter's Bestiary"].includes(source.book) && source.rules === "2024";
+    return ["Hunter's Bestiary", "Runyth Hunter's Bestiary"].includes(source.book) && source.rules === "2024";
   }
   return false;
 }

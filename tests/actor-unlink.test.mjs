@@ -15,7 +15,7 @@ test("GM API unlinks only the expected managed Actor UUID", async () => {
       get: (_module, key) => settings.get(key),
       set: async (_module, key, value) => { settings.set(key, value); return value; }
     },
-    modules: new Map([["hunters-bestiary", { version: "1.4.2" }]])
+    modules: new Map([["runyth-hunters-bestiary", { version: "1.4.2" }]])
   };
   try {
     const { HuntersBestiaryAPI } = await import(`../scripts/api.mjs?unlink=${Date.now()}`);

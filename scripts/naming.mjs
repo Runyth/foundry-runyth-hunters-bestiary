@@ -1,4 +1,4 @@
-export const FAMILY_NAME = "Hunter's Bestiary";
+export const FAMILY_NAME = "Runyth Hunter's Bestiary";
 export const NAMING_API_VERSION = "1.0.0";
 
 export const COMPLEMENTARY_MODULE_TYPES = Object.freeze({
@@ -37,7 +37,7 @@ function inferType(metadata = {}) {
   if (metadata.subject && metadata.gameSystem) return COMPLEMENTARY_MODULE_TYPES.SUBJECT_SYSTEM_LAYER;
   if (metadata.subject) return COMPLEMENTARY_MODULE_TYPES.SUBJECT;
   if (metadata.gameSystem) return COMPLEMENTARY_MODULE_TYPES.SYSTEM_LAYER;
-  return metadata.moduleId === "hunters-bestiary" ? COMPLEMENTARY_MODULE_TYPES.CORE : COMPLEMENTARY_MODULE_TYPES.PROVIDER;
+  return metadata.moduleId === "runyth-hunters-bestiary" ? COMPLEMENTARY_MODULE_TYPES.CORE : COMPLEMENTARY_MODULE_TYPES.PROVIDER;
 }
 
 export function normalizeNamingMetadata(metadata = {}) {

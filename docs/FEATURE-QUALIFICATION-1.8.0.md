@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.8.0 — Feature Qualification
+# Runyth Hunter's Bestiary 1.8.0 — Feature Qualification
 
 ## Scope
 

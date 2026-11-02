@@ -1,4 +1,4 @@
-# Hunter's Bestiary — Hunt System 1.7
+# Runyth Hunter's Bestiary — Hunt System 1.7
 
 ## Design goal
 
@@ -94,7 +94,7 @@ Empty/Inherited values continue to use the global rule. This keeps the common ca
 
 ### Absolute encounter danger
 
-Player-facing difficulty never displays raw CR or the internal numeric tier. Hunter's Bestiary uses five absolute bands, independent of the current party level:
+Player-facing difficulty never displays raw CR or the internal numeric tier. Runyth Hunter's Bestiary uses five absolute bands, independent of the current party level:
 
 1. **Low Threat**
 2. **Elevated Threat**
@@ -104,7 +104,7 @@ Player-facing difficulty never displays raw CR or the internal numeric tier. Hun
 
 The model is deliberately absolute: a creature does not become less dangerous merely because a stronger party is looking at it. The labels can be renamed globally to fit the campaign's vocabulary, while individual monsters can override which band they occupy. The internal numeric tier remains GM/configuration data and is not disclosed through the player-facing Bestiary API.
 
-Monster Hunter games communicate difficulty primarily through ranked/starred quest structures rather than a canonical five-name immersive threat vocabulary. Hunter's Bestiary therefore uses its own descriptive bands instead of presenting invented terminology as official Monster Hunter nomenclature.
+Monster Hunter games communicate difficulty primarily through ranked/starred quest structures rather than a canonical five-name immersive threat vocabulary. Runyth Hunter's Bestiary therefore uses its own descriptive bands instead of presenting invented terminology as official Monster Hunter nomenclature.
 
 ### Deferring a quarry
 

@@ -1,4 +1,4 @@
-# Hunter's Bestiary
+# Runyth Hunter's Bestiary
 
 Current release: **1.8.0**.
 
@@ -25,7 +25,7 @@ See [`docs/HUNT-SYSTEM.md`](docs/HUNT-SYSTEM.md).
 
 ## 1.6.0 player-perspective mirror
 
-- GMs can select exactly one player-owned token and open a second Hunter's Bestiary window from the normal GM dashboard.
+- GMs can select exactly one player-owned token and open a second Runyth Hunter's Bestiary window from the normal GM dashboard.
 - The second window is rendered by the same dashboard implementation with the selected player as its effective viewer.
 - Knowledge gates, discovered monsters, progress, notes, evidence, hunts, approvals, library state, statistics, permissions, and the player guide therefore match the player-facing dashboard.
 - GM-only tabs, secrets, provider diagnostics, catalogue controls, image editing, provisioning, and manual knowledge controls are absent from the mirrored player context.
@@ -46,7 +46,7 @@ See [`docs/PLAYER-PERSPECTIVE.md`](docs/PLAYER-PERSPECTIVE.md).
 
 ## Installation
 
-Extract `hunters-bestiary-v1.8.0.zip` into Foundry's `Data/modules` directory while Foundry is stopped, then start Foundry and enable **Hunter's Bestiary**.
+Extract `hunters-bestiary-v1.8.0.zip` into Foundry's `Data/modules` directory while Foundry is stopped, then start Foundry and enable **Runyth Hunter's Bestiary**.
 
 See [`docs/ACTOR-IMAGES.md`](docs/ACTOR-IMAGES.md) for pre-packed artwork, installed-world image selection, storage behavior, and build instructions.
 ## Localization

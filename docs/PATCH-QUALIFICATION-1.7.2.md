@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.7.2 — Patch Qualification
+# Runyth Hunter's Bestiary 1.7.2 — Patch Qualification
 
 - 121/121 automated tests passed.
 - 9/9 static-validation groups passed.

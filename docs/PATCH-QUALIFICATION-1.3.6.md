@@ -1,6 +1,6 @@
 # Patch Qualification 1.3.6
 
-Hunter's Bestiary 1.3.6 defines the canonical safe operation-result contract. Validation must prove that rich Foundry runtime objects and accessor properties are never recursively enumerated, explicit nested failures remain visible, and existing progress-window lifecycle behavior remains unchanged.
+Runyth Hunter's Bestiary 1.3.6 defines the canonical safe operation-result contract. Validation must prove that rich Foundry runtime objects and accessor properties are never recursively enumerated, explicit nested failures remain visible, and existing progress-window lifecycle behavior remains unchanged.
 
 ## Required gates
 

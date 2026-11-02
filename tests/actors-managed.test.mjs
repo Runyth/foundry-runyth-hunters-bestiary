@@ -8,8 +8,8 @@ function item({ id, name, managed = false, legacy = false }) {
     documentName: "Item",
     type: "weapon",
     name,
-    flags: managed ? { "hunters-bestiary": { managedEmbedded: true, managedEmbeddedKey: name.toLowerCase() } } : {},
-    system: { source: legacy ? { book: "The Hunter's Bestiary", rules: "2024" } : { book: "Campaign" } },
+    flags: managed ? { "runyth-hunters-bestiary": { managedEmbedded: true, managedEmbeddedKey: name.toLowerCase() } } : {},
+    system: { source: legacy ? { book: "Runyth Hunter's Bestiary", rules: "2024" } : { book: "Campaign" } },
     getFlag(moduleId, key) { return this.flags[moduleId]?.[key]; }
   };
 }
@@ -30,8 +30,8 @@ test("managed Actor refresh preserves unrelated embedded Items", async () => {
   const incoming = [{
     name: "Bite",
     type: "weapon",
-    system: { source: { book: "The Hunter's Bestiary", rules: "2024" } },
-    flags: { "hunters-bestiary": { managedEmbedded: true, managedEmbeddedKey: "bite" } }
+    system: { source: { book: "Runyth Hunter's Bestiary", rules: "2024" } },
+    flags: { "runyth-hunters-bestiary": { managedEmbedded: true, managedEmbeddedKey: "bite" } }
   }];
   await reconcileManagedEmbedded(actor, "Item", incoming);
   assert.deepEqual(actor.updated.map(record => record._id), ["legacy"]);

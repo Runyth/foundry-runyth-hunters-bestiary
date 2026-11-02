@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.7.2
+# Runyth Hunter's Bestiary 1.7.2
 
 This patch improves GM ergonomics around selected-hunter knowledge, Hunt creation, quarry-history colors, and settings portability.
 
@@ -16,4 +16,4 @@ Hunt Rules now contains a lightweight color section with Classic, High Contrast 
 
 ## Settings portability
 
-The Transfer window has a GM-only settings export/import section. It transfers all portable Hunter's Bestiary configuration, including Hunt Rules, quarry colors, player permissions, roll behavior, UI launcher options and current-client UI preferences. Catalogue data, shared Hunts, audit history, installed-content bookkeeping and transient approval queues remain separate data and are intentionally not overwritten by a settings import.
+The Transfer window has a GM-only settings export/import section. It transfers all portable Runyth Hunter's Bestiary configuration, including Hunt Rules, quarry colors, player permissions, roll behavior, UI launcher options and current-client UI preferences. Catalogue data, shared Hunts, audit history, installed-content bookkeeping and transient approval queues remain separate data and are intentionally not overwritten by a settings import.

@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.7.0 — Manual Foundry Acceptance
+# Runyth Hunter's Bestiary 1.7.0 — Manual Foundry Acceptance
 
 Target: Foundry VTT 13.351 in a multiplayer world.
 

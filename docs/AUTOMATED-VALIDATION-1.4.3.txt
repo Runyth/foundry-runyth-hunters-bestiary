@@ -1,6 +1,6 @@
 Hunter\x27s Bestiary 1.4.3 automated validation
 
-Hunter's Bestiary validation passed (9 groups):
+Runyth Hunter's Bestiary validation passed (9 groups):
 - manifest and referenced files
 - seed schema, counts, IDs, references, and modular localized content
 - 26 script files syntax-checked

@@ -40,7 +40,7 @@ test("production source uses native DOM, modern Chat behavior, and no canvas ove
 });
 
 test("module CSS is scoped to module-owned roots and prefixes", async () => {
-  const css = await readFile(new URL("../styles/hunters-bestiary.css", import.meta.url), "utf8");
+  const css = await readFile(new URL("../styles/runyth-hunters-bestiary.css", import.meta.url), "utf8");
   for (const forbidden of [
     /^\s*\.window-header\b/m,
     /^\s*\.window-content\b/m,

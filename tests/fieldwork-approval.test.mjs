@@ -134,7 +134,7 @@ test("fieldwork mutations emit a local change event after persistence", async ()
     globalThis.Hooks = { callAll: (name, value) => events.push([name, value]) };
     await createFieldworkRequest({ userId: "player", type: FIELDWORK_TYPES.RUMOR, monsterId: "wolf" });
     assert.equal(events.length, 1);
-    assert.equal(events[0][0], "hunters-bestiary.fieldworkChanged");
+    assert.equal(events[0][0], "runyth-hunters-bestiary.fieldworkChanged");
     assert.equal(events[0][1][0].status, "pending");
   } finally {
     globalThis.Hooks = previousHooks;

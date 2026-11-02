@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.3.1 Release Notes
+# Runyth Hunter's Bestiary 1.3.1 Release Notes
 
 Released 2026-07-31. Patch release from 1.3.0.
 

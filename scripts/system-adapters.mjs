@@ -129,7 +129,7 @@ export async function buildHarvestItemData(monsterId, options = {}) {
   return clone(normalized);
 }
 
-export async function createHarvestItems({ monsterId, folderName = "Hunter's Bestiary: Harvest Items", ownership = null, options = {} } = {}) {
+export async function createHarvestItems({ monsterId, folderName = "Runyth Hunter's Bestiary: Harvest Items", ownership = null, options = {} } = {}) {
   if (!globalThis.game?.user?.isGM) throw new Error("Only a GM may create harvest Items.");
   const records = await buildHarvestItemData(monsterId, options);
   if (!records.length) return [];

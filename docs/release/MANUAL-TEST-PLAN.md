@@ -1,4 +1,4 @@
-# Manual Test Plan - Hunter's Bestiary 1.3.2
+# Manual Test Plan - Runyth Hunter's Bestiary 1.3.2
 
 1. Open the Bestiary tab and narrow the window.
 2. Verify Tier and Knowledge wrap as separate facts without collision, clipping, or fixed-height truncation.

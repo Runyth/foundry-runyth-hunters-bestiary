@@ -1,4 +1,4 @@
-# Hunter's Bestiary v1.7.0 — Build Report
+# Runyth Hunter's Bestiary v1.7.0 — Build Report
 
 ## Deliverables
 

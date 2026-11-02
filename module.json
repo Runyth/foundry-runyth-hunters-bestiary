@@ -1,6 +1,6 @@
 {
-  "id": "hunters-bestiary",
-  "title": "Hunter's Bestiary",
+  "id": "runyth-hunters-bestiary",
+  "title": "Runyth Hunter's Bestiary",
   "description": "A complete monster-hunting game mode for Foundry VTT: personal bestiaries, tracks, rumors, ecology, field research, micro-quest hunts, generated books and GM-private roll tables.",
   "version": "1.8.0",
   "authors": [
@@ -17,7 +17,7 @@
     "scripts/main.mjs"
   ],
   "styles": [
-    "styles/hunters-bestiary.css"
+    "styles/runyth-hunters-bestiary.css"
   ],
   "languages": [
     {

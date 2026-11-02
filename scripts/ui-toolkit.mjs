@@ -455,7 +455,7 @@ function safelyBringProgressToFront(dialog) {
     dialog.bringToFront?.();
     return true;
   } catch (error) {
-    console.warn("Hunter's Bestiary | Could not foreground progress window", error);
+    console.warn("Runyth Hunter's Bestiary | Could not foreground progress window", error);
     return false;
   }
 }

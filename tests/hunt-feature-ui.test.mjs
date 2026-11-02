@@ -34,7 +34,7 @@ test("player bestiary metadata uses the disclosure model instead of raw knowledg
 
 test("large hunt-rule monster lists use stable search and browser containment hints", async () => {
   const app = await readFile(new URL("scripts/apps/hunt-rules-app.mjs", root), "utf8");
-  const css = await readFile(new URL("styles/hunters-bestiary.css", root), "utf8");
+  const css = await readFile(new URL("styles/runyth-hunters-bestiary.css", root), "utf8");
   assert.match(app, /bindStableSearch/);
   assert.match(app, /new Set\(rules\.quarryPool\)/);
   assert.match(css, /content-visibility:\s*auto/);

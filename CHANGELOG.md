@@ -27,7 +27,7 @@
 - GM Bestiary list now reflects the selected player Actor's actual knowledge levels while retaining GM visibility of the full catalogue.
 - New Hunt monster selection now uses the selected hunter's knowledge and Hunt history for configurable status highlighting.
 - Added built-in and reusable custom Hunt quarry color presets.
-- Added GM import/export for all portable Hunter's Bestiary configuration settings.
+- Added GM import/export for all portable Runyth Hunter's Bestiary configuration settings.
 - Added regression coverage for selected-player knowledge context, Hunt history classification, colors and settings transfer.
 
 ## 1.7.1 — 2026-10-10
@@ -202,7 +202,7 @@
 
 ## 1.0.0 — 2026-07-25
 
-- Added the Hunter's Bestiary control centre using Foundry VTT ApplicationV2.
+- Added the Runyth Hunter's Bestiary control centre using Foundry VTT ApplicationV2.
 - Added independent per-user bestiary progress, notes, sightings, trophies, hunt history, fieldwork statistics, and discoveries.
 - Added a GM-owned monster catalogue with public knowledge layers and GM-only UI fields and generated-document ownership.
 - Added active hunt micro-questlines with clues, checks, setbacks, hazards, lairs, and conclusions.

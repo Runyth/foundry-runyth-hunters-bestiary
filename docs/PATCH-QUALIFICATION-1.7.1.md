@@ -1,4 +1,4 @@
-# Hunter's Bestiary 1.7.1 — Patch Qualification
+# Runyth Hunter's Bestiary 1.7.1 — Patch Qualification
 
 ## Scope
 
