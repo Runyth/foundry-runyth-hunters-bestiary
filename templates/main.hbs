@@ -1,0 +1,392 @@
+<div class="hb-shell hb-shared-dashboard">
+  <header class="hb-topbar">
+    <div class="hb-brand">
+      <img src="modules/hunters-bestiary/assets/hunters-bestiary.svg" alt="">
+      <div>
+        <h1>{{localize "HB.App.Title"}}</h1>
+        <p>{{localize "HB.App.Subtitle"}}</p>
+      </div>
+    </div>
+    <div class="hb-context-strip">
+      {{#if activeActor}}
+        <span class="hb-context-good"><i class="fa-solid fa-user-shield"></i> {{localize "HB.Common.ActiveHunter"}}: <strong>{{activeActor.name}}</strong></span>
+      {{else}}
+        <span class="hb-context-warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "HB.Common.NoActiveHunter"}}</span>
+      {{/if}}
+      {{#if showApprovalInbox}}<button type="button" class="hb-approval-alert" data-action="setTab" data-tab="gm" data-tooltip="{{localize 'HB.Approvals.GM.ReviewNow'}}"><i class="fa-solid fa-bell"></i><strong>{{pendingApprovalCount}}</strong><span>{{localize "HB.Approvals.GM.PendingBanner"}}</span></button>{{/if}}
+      {{#if canOpenPlayerPerspective}}<button type="button" class="icon" data-action="openPlayerPerspective" {{#unless hasPlayerPerspectiveTarget}}disabled{{/unless}} data-tooltip="{{#if hasPlayerPerspectiveTarget}}{{localize 'HB.PlayerPerspective.Open'}}: {{playerPerspectiveTargetName}}{{else}}{{localize 'HB.PlayerPerspective.SelectToken'}}{{/if}}" aria-label="{{localize 'HB.PlayerPerspective.Open'}}"><i class="fa-solid fa-eye"></i></button>{{/if}}
+      <button type="button" class="icon" data-action="openGuide" data-tooltip="{{localize 'HB.Actions.OpenGuide'}}"><i class="fa-solid fa-circle-question"></i></button>
+      <button type="button" class="icon" data-action="resetSize" data-tooltip="{{localize 'HB.Actions.ResetSize'}}" aria-label="{{localize 'HB.Actions.ResetSize'}}"><i class="fa-solid fa-expand"></i></button>
+      <button type="button" class="icon" data-action="resetPosition" data-tooltip="{{localize 'HB.Actions.ResetPosition'}}" aria-label="{{localize 'HB.Actions.ResetPosition'}}"><i class="fa-solid fa-crosshairs"></i></button>
+    </div>
+  </header>
+
+  <nav class="hb-tabs" aria-label="{{localize 'HB.App.Navigation'}}">
+    {{#each tabs}}
+      <button type="button" class="{{#if active}}active{{/if}}" data-action="setTab" data-tab="{{id}}">
+        <i class="{{icon}}"></i><span>{{localize label}}</span>
+      </button>
+    {{/each}}
+  </nav>
+
+  <main class="hb-main">
+    {{#if isBestiary}}
+      <section class="hb-two-pane">
+        <aside class="hb-list-pane">
+          <div class="hb-pane-heading">
+            <div>
+              <h2>{{localize "HB.Bestiary.Title"}}</h2>
+              <p>{{localize "HB.Bestiary.Hint"}}</p>
+            </div>
+            {{#if journalSync}}
+              <button type="button" class="icon" data-action="publishJournal" data-tooltip="{{localize 'HB.Actions.PublishJournal'}}"><i class="fa-solid fa-book-medical"></i></button>
+            {{/if}}
+          </div>
+          <label class="hb-search"><i class="fa-solid fa-magnifying-glass"></i><span class="sr-only">{{localize "HB.Common.Search"}}</span><input type="search" value="{{query}}" data-hb-search="monsters" placeholder="{{localize 'HB.Common.Search'}}" aria-label="{{localize 'HB.Common.Search'}}"></label>
+          <div class="hb-scroll-list" data-hb-list="monsters">
+            <div class="hb-empty" data-hb-search-empty="monsters" hidden><i class="fa-solid fa-magnifying-glass"></i><p>{{localize "HB.Dashboard.NoSearchResults"}}</p></div>
+            {{#each monsters}}
+              <article class="hb-list-card {{#if selected}}selected{{/if}}" data-search-text="{{name}} {{type}} {{tagsText}}" {{#if selectedPlayerKnowledge}}data-selected-player-knowledge="true"{{/if}} {{#if huntDisplayColor}}style="--hb-selected-player-accent: {{huntDisplayColor}}"{{/if}}>
+                <button type="button" class="hb-list-card-hitbox" data-action="selectMonster" data-monster-id="{{id}}" aria-label="{{name}}"></button>
+                <img class="hb-card-image" src="{{image}}" alt="" loading="lazy">
+                <span class="hb-card-title">{{name}}</span>
+                <span class="hb-card-facts" aria-label="{{localize 'HB.Bestiary.EntryStatus'}}">
+                  <span class="hb-card-fact"><span>{{localize "HB.Common.Difficulty"}}</span><strong>{{difficultyLabel}}</strong></span>
+                  <span class="hb-card-fact hb-card-fact-knowledge"><span>{{localize "HB.Bestiary.Knowledge"}}</span><strong>{{levelName}}</strong></span>
+                </span>
+                <span class="hb-progress"><span style="width: {{progressPercent}}%"></span></span>
+              </article>
+            {{else}}
+              <div class="hb-empty"><i class="fa-solid fa-book"></i><p>{{localize "HB.Bestiary.Empty"}}</p></div>
+            {{/each}}
+          </div>
+        </aside>
+
+        <article class="hb-detail-pane">
+          {{#if selectedMonster}}
+            <header class="hb-monster-header">
+              <div class="hb-monster-portrait-wrap">
+                {{#if selectedMonster.canChangeImage}}
+                  <button type="button" class="hb-monster-portrait-button" data-action="changeMonsterImage" aria-label="{{localize 'HB.Actions.ChangeImage'}}" data-tooltip="{{localize 'HB.Actions.ChangeImage'}}">
+                    <img class="hb-monster-portrait" src="{{selectedMonster.image}}" alt="{{selectedMonster.name}}">
+                    <span><i class="fa-solid fa-camera"></i></span>
+                  </button>
+                  {{#if selectedMonster.imageOverridden}}<button type="button" class="hb-image-reset" data-action="resetMonsterImage"><i class="fa-solid fa-rotate-left"></i> {{localize "HB.Actions.ResetImage"}}</button>{{/if}}
+                {{else}}
+                  <img class="hb-monster-portrait" src="{{selectedMonster.image}}" alt="{{selectedMonster.name}}">
+                {{/if}}
+              </div>
+              <div>
+                <span class="hb-eyebrow">{{selectedMonster.type}} · {{localize "HB.Common.Difficulty"}} {{selectedMonster.difficultyLabel}}</span>
+                <h2>{{selectedMonster.name}}</h2>
+                <div class="hb-tags">{{#each selectedMonster.tags}}<span>{{this}}</span>{{/each}}</div>
+              </div>
+              <div class="hb-level-badge">
+                <span>{{selectedMonster.levelName}}</span>
+                <strong>{{selectedMonster.points}}</strong>
+                <small>{{localize "HB.Common.KnowledgePoints"}}</small>
+                <small>{{selectedMonster.rumorsSucceeded}} {{localize "HB.Approvals.GM.RumorsLearned"}} · {{localize "HB.Hunts.MinKnowledgeShort"}} {{selectedMonster.minimumHuntLevel}}</small>
+              </div>
+            </header>
+
+            <div class="hb-level-progress" aria-label="{{localize 'HB.Common.KnowledgeProgress'}}">
+              <span style="width: {{selectedMonster.progressPercent}}%"></span>
+            </div>
+
+            <div class="hb-action-row">
+              {{#if canAddNotes}}<button type="button" data-action="addNote"><i class="fa-solid fa-pen"></i> {{localize "HB.Actions.AddNote"}}</button>{{/if}}
+              <button type="button" data-action="addSighting" {{#unless isGM}}{{#unless selectedMonster.isActiveQuarry}}disabled{{else}}{{#unless selectedMonster.fieldworkStatus.canRecordSighting}}disabled{{/unless}}{{/unless}}{{/unless}}><i class="fa-solid fa-eye"></i> {{localize "HB.Actions.RecordSighting"}}</button>
+              <button type="button" data-action="addTrophy"><i class="fa-solid fa-award"></i> {{localize "HB.Actions.RecordTrophy"}}</button>
+              {{#if canShare}}<button type="button" data-action="shareKnowledge"><i class="fa-solid fa-people-arrows"></i> {{localize "HB.Actions.ShareKnowledge"}}</button>{{/if}}
+              {{#if isGM}}<button type="button" data-action="editMonster"><i class="fa-solid fa-pen-ruler"></i> {{localize "HB.Actions.EditMonster"}}</button>{{/if}}
+              {{#if selectedMonster.actorUuid}}<button type="button" data-action="openActor"><i class="fa-solid fa-user-monster"></i> {{localize "HB.Actions.OpenActor"}}</button>{{/if}}
+              {{#if selectedMonster.actorCanProvision}}<button type="button" data-action="provisionActors" data-scope="selected" data-update="false"><i class="fa-solid fa-user-plus"></i> {{localize "HB.Actions.ProvisionActor"}}</button>{{/if}}
+              {{#if isGM}}<span class="hb-inline-status"><i class="fa-solid fa-link"></i> {{selectedMonster.actorStatusLabel}}</span>{{/if}}
+            </div>
+
+            <section class="hb-knowledge-grid">
+              <div class="hb-field wide"><h3>{{localize "HB.Fields.Summary"}}</h3><p>{{selectedMonster.summary}}</p></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Rumor"}}</h3><p>{{selectedMonster.rumor}}</p></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Habitats"}}</h3><ul>{{#each selectedMonster.habitats}}<li>{{this}}</li>{{/each}}</ul></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Signs"}}</h3><ul>{{#each selectedMonster.signs}}<li>{{this}}</li>{{/each}}</ul></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Ecology"}}</h3><p>{{selectedMonster.ecology}}</p></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Behavior"}}</h3><p>{{selectedMonster.behavior}}</p></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Defenses"}}</h3><p>{{selectedMonster.defenses}}</p></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Weaknesses"}}</h3><p>{{selectedMonster.weaknesses}}</p></div>
+              <div class="hb-field"><h3>{{localize "HB.Fields.Harvest"}}</h3><p>{{selectedMonster.harvest}}</p></div>
+              {{#if selectedMonster.gmSecrets}}
+                <div class="hb-field hb-gm-secret wide"><h3><i class="fa-solid fa-lock"></i> {{localize "HB.Fields.GMSecrets"}}</h3><p>{{selectedMonster.gmSecrets}}</p></div>
+              {{/if}}
+            </section>
+
+            <section class="hb-log-grid">
+              <div class="hb-log-panel">
+                <h3>{{localize "HB.Fields.PersonalNotes"}}</h3>
+                {{#each selectedMonster.notes}}
+                  <article><p>{{text}}</p><footer>{{atDisplay}} <button type="button" class="icon danger" data-action="removeNote" data-monster-id="{{@root.selectedMonster.id}}" data-note-id="{{id}}"><i class="fa-solid fa-trash"></i></button></footer></article>
+                {{else}}<p class="muted">{{localize "HB.Common.NoneYet"}}</p>{{/each}}
+              </div>
+              <div class="hb-log-panel">
+                <h3>{{localize "HB.Fields.Sightings"}}</h3>
+                {{#each selectedMonster.sightings}}<article><strong>{{location}}</strong><p>{{detail}}</p><footer>{{atDisplay}}</footer></article>{{else}}<p class="muted">{{localize "HB.Common.NoneYet"}}</p>{{/each}}
+              </div>
+              <div class="hb-log-panel">
+                <h3>{{localize "HB.Fields.Trophies"}}</h3>
+                {{#each selectedMonster.trophies}}<article><strong>{{name}} × {{quantity}}</strong><p>{{detail}}</p><footer>{{atDisplay}}</footer></article>{{else}}<p class="muted">{{localize "HB.Common.NoneYet"}}</p>{{/each}}
+              </div>
+              <div class="hb-log-panel">
+                <h3>{{localize "HB.Fields.HuntHistory"}}</h3>
+                {{#each selectedMonster.hunts}}<article><strong>{{title}}</strong><p>{{statusLabel}} · {{outcomeLabel}}</p><footer>{{updatedAtDisplay}}</footer></article>{{else}}<p class="muted">{{localize "HB.Common.NoneYet"}}</p>{{/each}}
+              </div>
+            </section>
+
+            {{#if isGM}}
+              <section class="hb-gm-award">
+                <h3>{{localize "HB.GM.KnowledgeControl"}}</h3>
+                <div class="hb-inline-form">
+                  <label>{{localize "HB.Common.Player"}}<select name="userId">{{#each users}}<option value="{{id}}">{{name}}</option>{{/each}}</select></label>
+                  <label>{{localize "HB.Common.Points"}}<input name="points" type="number" min="-20" max="20" value="1"></label>
+                  <button type="button" data-action="awardKnowledge"><i class="fa-solid fa-plus"></i> {{localize "HB.Actions.Apply"}}</button>
+                  <label>{{localize "HB.Common.ManualLevel"}}<select name="manualLevel"><option value="auto">{{localize "HB.Common.Automatic"}}</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label>
+                  <button type="button" data-action="setManualLevel"><i class="fa-solid fa-sliders"></i> {{localize "HB.Actions.SetLevel"}}</button>
+                </div>
+              </section>
+            {{/if}}
+          {{else}}
+            <div class="hb-empty large"><i class="fa-solid fa-paw"></i><h2>{{localize "HB.Bestiary.NoSelection"}}</h2><p>{{localize "HB.Bestiary.NoSelectionHint"}}</p></div>
+          {{/if}}
+        </article>
+      </section>
+    {{/if}}
+
+    {{#if isHunts}}
+      <section class="hb-two-pane">
+        <aside class="hb-list-pane">
+          <div class="hb-pane-heading"><div><h2>{{localize "HB.Hunts.Title"}}</h2><p>{{localize "HB.Hunts.Hint"}}</p></div>{{#if isGM}}<button type="button" class="icon" data-action="newHunt" data-tooltip="{{localize 'HB.Actions.NewHunt'}}"><i class="fa-solid fa-plus"></i></button>{{/if}}</div>
+          <div class="hb-scroll-list">
+            {{#each hunts}}
+              <button type="button" class="hb-list-card" data-action="selectHunt" data-hunt-id="{{id}}"><span class="hb-card-title">{{title}}</span><span class="hb-card-meta">{{monsterName}} · {{status}}</span><span class="hb-card-meta">{{region}}</span></button>
+            {{else}}<div class="hb-empty"><i class="fa-solid fa-location-crosshairs"></i><p>{{localize "HB.Hunts.Empty"}}</p></div>{{/each}}
+          </div>
+        </aside>
+        <article class="hb-detail-pane">
+          {{#if selectedHunt}}
+            <header class="hb-monster-header"><div><span class="hb-eyebrow">{{selectedHunt.monsterName}} · {{selectedHunt.region}}</span><h2>{{selectedHunt.title}}</h2><p>{{selectedHunt.stakes}}</p></div><div class="hb-status-badge">{{selectedHunt.status}}</div></header>
+            <div class="hb-action-row">{{#if isGM}}<button type="button" data-action="editHunt"><i class="fa-solid fa-pen"></i> {{localize "HB.Actions.EditHunt"}}</button><button type="button" class="danger" data-action="deleteHunt"><i class="fa-solid fa-trash"></i> {{localize "HB.Actions.DeleteHunt"}}</button>{{/if}}</div>
+            {{#unless selectedHunt.huntEligible}}<p class="hb-approval-state pending"><i class="fa-solid fa-lock"></i> {{localize "HB.Hunts.KnowledgeGate"}} {{selectedHunt.requiredKnowledgeLevel}}</p>{{/unless}}
+            <section class="hb-timeline">
+              {{#each selectedHunt.steps}}
+                <article class="hb-step {{status}}">
+                  <div class="hb-step-index">{{@index}}</div>
+                  <div class="hb-step-body">
+                    <header><h3>{{name}}</h3><span>{{kind}} · DC {{dc}}</span></header>
+                    {{#if completed}}<p class="success"><i class="fa-solid fa-check"></i> {{successText}}</p>{{/if}}
+                    {{#if active}}
+                      <p>{{successText}}</p>
+                      {{#if skillOptions.length}}
+                        {{#if @root.canAttempt}}
+                          {{#if @root.isGM}}
+                            <div class="hb-inline-form"><label>{{localize "HB.Common.Skill"}}<select name="skillId">{{#each skillOptions}}<option value="{{id}}">{{label}}</option>{{/each}}</select></label><button type="button" data-action="attemptStep" data-hunt-id="{{@root.selectedHunt.id}}" data-step-id="{{id}}"><i class="fa-solid fa-dice-d20"></i> {{localize "HB.Actions.Attempt"}}</button></div>
+                          {{else}}
+                            {{#if @root.approvalRequired}}
+                              {{#if attemptApproved}}
+                                <p class="hb-approval-state approved"><i class="fa-solid fa-circle-check"></i> {{localize "HB.Approvals.Player.ApprovedAttempt"}}</p>
+                                <div class="hb-inline-form"><label>{{localize "HB.Common.Skill"}}<select name="skillId">{{#each skillOptions}}<option value="{{id}}">{{label}}</option>{{/each}}</select></label><button type="button" data-action="attemptStep" data-hunt-id="{{@root.selectedHunt.id}}" data-step-id="{{id}}" data-approval-request-id="{{attemptRequest.id}}"><i class="fa-solid fa-dice-d20"></i> {{localize "HB.Actions.Attempt"}}</button></div>
+                              {{else}}
+                                {{#if attemptPending}}
+                                  <p class="hb-approval-state pending"><i class="fa-solid fa-hourglass-half"></i> {{localize "HB.Approvals.Player.Waiting"}}</p>
+                                {{else}}
+                                  <button type="button" data-action="requestHuntAttempt" data-hunt-id="{{@root.selectedHunt.id}}" data-step-id="{{id}}"><i class="fa-solid fa-hand"></i> {{localize "HB.Approvals.Player.RequestAttempt"}}</button>
+                                {{/if}}
+                              {{/if}}
+                            {{else}}
+                              <div class="hb-inline-form"><label>{{localize "HB.Common.Skill"}}<select name="skillId">{{#each skillOptions}}<option value="{{id}}">{{label}}</option>{{/each}}</select></label><button type="button" data-action="attemptStep" data-hunt-id="{{@root.selectedHunt.id}}" data-step-id="{{id}}"><i class="fa-solid fa-dice-d20"></i> {{localize "HB.Actions.Attempt"}}</button></div>
+                            {{/if}}
+                          {{/if}}
+                        {{/if}}
+                      {{else}}
+                        <p class="muted"><i class="fa-solid fa-hourglass-half"></i> {{localize "HB.Hunts.AwaitingGMResolution"}}</p>
+                      {{/if}}
+                      {{#if @root.isGM}}{{#unless conclusion}}{{#if active}}<button type="button" data-action="advanceStep" data-hunt-id="{{@root.selectedHunt.id}}" data-step-id="{{id}}"><i class="fa-solid fa-forward-step"></i> {{localize "HB.Actions.AdvanceStep"}}</button>{{/if}}{{#if reversible}}<button type="button" class="secondary" data-action="revertStep" data-hunt-id="{{@root.selectedHunt.id}}" data-step-id="{{id}}"><i class="fa-solid fa-rotate-left"></i> {{localize "HB.Actions.RevertStep"}}</button>{{/if}}{{/unless}}{{/if}}
+                    {{/if}}
+                    {{#if locked}}<p class="muted"><i class="fa-solid fa-lock"></i> {{localize "HB.Hunts.StepLocked"}}</p>{{/if}}
+                    {{#if attempts.length}}<details><summary>{{localize "HB.Hunts.Attempts"}} ({{attempts.length}})</summary>{{#each attempts}}<p>{{actorName}} · {{skillId}} · {{total}} / {{dc}}</p>{{/each}}</details>{{/if}}
+                  </div>
+                </article>
+              {{/each}}
+            </section>
+            {{#if selectedHunt.resolutionView.available}}
+              <section class="hb-resolution-panel">
+                <header><div><span class="hb-eyebrow">{{localize "HB.Hunts.FinalStage"}}</span><h3>{{localize "HB.Hunts.ResolveTheHunt"}}</h3></div></header>
+                {{#if selectedHunt.resolutionView.awaitingChoice}}
+                  {{#if isGM}}<p>{{localize "HB.Hunts.PlayerChoosesOutcome"}}</p>{{else}}
+                    <p>{{localize "HB.Hunts.ChooseDesiredOutcomeHint"}}</p>
+                    <div class="hb-inline-form"><label>{{localize "HB.Hunts.DesiredOutcome"}}<select name="desiredOutcome">{{#each selectedHunt.resolutionView.desiredOutcomes}}<option value="{{outcome}}">{{label}} · {{modeLabel}}</option>{{/each}}</select></label><button type="button" data-action="requestResolution" data-hunt-id="{{selectedHunt.id}}"><i class="fa-solid fa-flag-checkered"></i> {{localize "HB.Hunts.ChooseOutcome"}}</button></div>
+                  {{/if}}
+                {{/if}}
+                {{#if selectedHunt.resolutionView.pendingCheck}}
+                  <p><strong>{{selectedHunt.resolutionView.requestedOutcomeLabel}}</strong> · {{localize "HB.Hunts.CheckThenGM"}} · DC {{selectedHunt.resolutionView.checkDc}}</p>
+                  {{#unless isGM}}<div class="hb-inline-form"><label>{{localize "HB.Common.Skill"}}<select name="resolutionSkillId">{{#each selectedHunt.resolutionView.checkSkills}}<option value="{{id}}">{{label}}</option>{{/each}}</select></label><button type="button" data-action="attemptResolution" data-hunt-id="{{selectedHunt.id}}"><i class="fa-solid fa-dice-d20"></i> {{localize "HB.Hunts.RollResolution"}}</button></div>{{/unless}}
+                {{/if}}
+                {{#if selectedHunt.resolutionView.pendingGM}}
+                  <p><strong>{{selectedHunt.resolutionView.requestedOutcomeLabel}}</strong> · {{localize "HB.Hunts.AwaitingGMResolution"}}</p>
+                  {{#if selectedHunt.resolutionView.check}}<p>{{localize "HB.Hunts.ResolutionCheck"}}: {{selectedHunt.resolutionView.check.skillId}} · {{selectedHunt.resolutionView.check.total}} / {{selectedHunt.resolutionView.check.dc}}</p>{{/if}}
+                  {{#if isGM}}<div class="hb-inline-form"><label>{{localize "HB.Hunts.ActualOutcome"}}<select name="actualOutcome">{{#each selectedHunt.resolutionView.actualOutcomes}}<option value="{{outcome}}">{{label}}</option>{{/each}}</select></label><button type="button" data-action="gmResolveOutcome" data-hunt-id="{{selectedHunt.id}}"><i class="fa-solid fa-check"></i> {{localize "HB.Hunts.ConfirmOutcome"}}</button><button type="button" class="danger" data-action="gmRejectResolution" data-hunt-id="{{selectedHunt.id}}"><i class="fa-solid fa-rotate-left"></i> {{localize "HB.Hunts.ContinueHunt"}}</button></div>{{/if}}
+                {{/if}}
+              </section>
+            {{/if}}
+            {{#if selectedHunt.complications.length}}<section class="hb-complications"><h3>{{localize "HB.Fields.Complications"}}</h3>{{#each selectedHunt.complications}}<article><p>{{text}}</p><footer>{{atDisplay}}</footer></article>{{/each}}</section>{{/if}}
+          {{else}}<div class="hb-empty large"><i class="fa-solid fa-map"></i><h2>{{localize "HB.Hunts.NoSelection"}}</h2></div>{{/if}}
+        </article>
+      </section>
+    {{/if}}
+
+    {{#if isFieldwork}}
+      <section class="hb-dashboard">
+        <header><h2>{{localize "HB.Fieldwork.Title"}}</h2><p>{{localize "HB.Fieldwork.Hint"}}</p></header>
+        {{#if currentQuarry}}<section class="hb-current-quarry"><i class="fa-solid fa-crosshairs"></i><div><strong>{{localize "HB.Hunts.CurrentQuarry"}}</strong><span>{{currentQuarry.name}}{{#if fieldworkStatus.difficultyKnown}} · {{localize "HB.Common.Difficulty"}}: {{currentQuarry.difficultyLabel}}{{/if}}</span></div>{{#unless isGM}}<div class="hb-current-quarry-actions"><button type="button" data-action="deferQuarry" {{#unless canDeferQuarry}}disabled{{/unless}}><i class="fa-solid fa-pause"></i> {{localize "HB.Fieldwork.Defer"}}</button>{{#if canStartHunt}}{{#if huntProposalRequest}}<button type="button" disabled>{{localize "HB.Fieldwork.ProposalWaiting"}}</button>{{else}}<button type="button" class="primary" data-action="proposeHunt"><i class="fa-solid fa-scroll"></i> {{localize "HB.Fieldwork.ProposeHunt"}}</button>{{/if}}{{/if}}</div>{{/unless}}</section>{{/if}}
+        {{#if isGM}}
+          {{#if selectedPlayer}}
+            <section class="hb-player-review">
+              <header><div><span class="hb-eyebrow">{{localize "HB.Approvals.GM.SelectedHunter"}}</span><h3>{{selectedPlayer.name}} · {{selectedPlayer.actorName}}</h3></div><span class="hb-count-badge">{{selectedPlayer.pendingApprovals}}</span></header>
+              <div class="hb-stat-grid hb-player-stats"><article><strong>{{selectedPlayer.statistics.checksAttempted}}</strong><span>{{localize "HB.Statistics.ChecksAttempted"}}</span></article><article><strong>{{selectedPlayer.statistics.checksSucceeded}}</strong><span>{{localize "HB.Statistics.ChecksSucceeded"}}</span></article><article><strong>{{selectedPlayer.rumorsLearned}}</strong><span>{{localize "HB.Approvals.GM.RumorsLearned"}}</span></article><article><strong>{{selectedPlayer.tracksFound}}</strong><span>{{localize "HB.Approvals.GM.TracksFound"}}</span></article></div>
+              <p>{{localize "HB.Approvals.GM.SelectedHunterHint"}}</p>
+            </section>
+          {{else}}
+            <section class="hb-player-review hb-player-review-empty"><p><i class="fa-solid fa-arrow-pointer"></i> {{localize "HB.Approvals.GM.SelectPlayerTokenHint"}}</p></section>
+          {{/if}}
+          <section class="hb-approval-panel">
+            <header><div><h3>{{localize "HB.Approvals.GM.FieldworkQueueTitle"}}</h3><p>{{localize "HB.Approvals.GM.FieldworkQueueHint"}}</p></div><span class="hb-count-badge">{{approvalCount}}</span></header>
+            {{#each approvalQueue}}
+              <article class="hb-approval-row {{status}}">
+                <div><strong>{{userName}}</strong><span>{{typeLabel}} · {{quarryName}} · {{huntTitle}}</span>{{#if detail}}<small>{{detail}}</small>{{/if}}</div>
+                <div class="hb-approval-actions">
+                  <small>{{statusLabel}} · {{createdAtDisplay}}</small>
+                  {{#if pending}}
+                    <button type="button" data-action="resolveFieldworkRequest" data-request-id="{{id}}" data-decision="approve"><i class="fa-solid fa-check"></i> {{localize "HB.Approvals.GM.Approve"}}</button>
+                    <button type="button" class="danger" data-action="resolveFieldworkRequest" data-request-id="{{id}}" data-decision="deny"><i class="fa-solid fa-xmark"></i> {{localize "HB.Approvals.GM.Deny"}}</button>
+                  {{else}}
+                    <button type="button" class="danger" data-action="resolveFieldworkRequest" data-request-id="{{id}}" data-decision="revoke"><i class="fa-solid fa-ban"></i> {{localize "HB.Approvals.GM.Revoke"}}</button>
+                  {{/if}}
+                </div>
+              </article>
+            {{else}}<div class="hb-empty"><i class="fa-solid fa-inbox"></i><p>{{localize "HB.Approvals.GM.Empty"}}</p></div>{{/each}}
+          </section>
+          {{#if selectedPlayerRecentRequests.length}}
+            <details class="hb-recent-fieldwork"><summary>{{localize "HB.Approvals.GM.RecentForSelected"}}</summary>{{#each selectedPlayerRecentRequests}}<p><strong>{{typeLabel}}</strong> · {{statusLabel}} · {{quarryName}} · {{createdAtDisplay}}</p>{{/each}}</details>
+          {{/if}}
+        {{/if}}
+        {{#if deferredQuarries.length}}
+          <section class="hb-deferred-quarries"><header><div><h3>{{localize "HB.Fieldwork.DeferredTitle"}}</h3><p>{{localize "HB.Fieldwork.DeferredHint"}}</p></div><span class="hb-count-badge">{{deferredCount}} / {{maxDeferredQuarries}}</span></header>{{#each deferredQuarries}}<article><div><strong>{{name}}</strong><small>{{localize "HB.Common.Difficulty"}}: {{#if fieldworkStatus.difficultyKnown}}{{difficultyLabel}}{{else}}{{localize "HB.Common.Unknown"}}{{/if}}</small></div>{{#unless ../isGM}}{{#if request}}<button type="button" disabled>{{localize "HB.Approvals.Player.Waiting"}}</button>{{else}}<button type="button" data-action="requestReactivateQuarry" data-monster-id="{{id}}">{{localize "HB.Fieldwork.RequestReactivate"}}</button>{{/if}}{{/unless}}</article>{{/each}}</section>
+        {{/if}}
+        <div class="hb-mode-cards">
+          <article><i class="fa-solid fa-comments"></i><h3>{{localize "HB.Actions.GatherRumor"}}</h3><p>{{localize "HB.Fieldwork.RumorHint"}}</p>
+            {{#if isGM}}<button type="button" data-action="randomRumor">{{localize "HB.Actions.GatherRumor"}}</button>
+            {{else}}{{#if approvalRequired}}
+              {{#if rumorRequest}}
+                {{#if rumorRequest.approved}}<button type="button" data-action="randomRumor" data-approval-request-id="{{rumorRequest.id}}">{{localize "HB.Approvals.Player.UseApprovedRumor"}}</button>{{else}}<button type="button" disabled>{{localize "HB.Approvals.Player.Waiting"}}</button>{{/if}}
+              {{else}}<button type="button" data-action="requestFieldwork" data-request-type="rumor">{{localize "HB.Approvals.Player.RequestRumor"}}</button>{{/if}}
+            {{else}}<button type="button" data-action="randomRumor">{{localize "HB.Actions.GatherRumor"}}</button>{{/if}}{{/if}}
+          </article>
+          <article><i class="fa-solid fa-shoe-prints"></i><h3>{{localize "HB.Actions.SearchTracks"}}</h3><p>{{localize "HB.Fieldwork.TrackHint"}}</p>{{#if fieldworkStatus}}<small>{{localize "HB.Fieldwork.TrackProgress" count=fieldworkStatus.rumorsSucceeded required=fieldworkStatus.trackMinRumors}}</small>{{/if}}
+            {{#if isGM}}<button type="button" data-action="randomTrack" {{#unless fieldworkTargetId}}disabled{{/unless}}>{{localize "HB.Actions.SearchTracks"}}</button>
+            {{else}}{{#if approvalRequired}}
+              {{#if trackRequest}}
+                {{#if trackRequest.approved}}<button type="button" data-action="randomTrack" data-approval-request-id="{{trackRequest.id}}">{{localize "HB.Approvals.Player.UseApprovedTrack"}}</button>{{else}}<button type="button" disabled>{{localize "HB.Approvals.Player.Waiting"}}</button>{{/if}}
+              {{else}}<button type="button" data-action="requestFieldwork" data-request-type="track" {{#unless canSearchTracks}}disabled{{/unless}}>{{localize "HB.Approvals.Player.RequestTrack"}}</button>{{/if}}
+            {{else}}<button type="button" data-action="randomTrack" {{#unless canSearchTracks}}disabled{{/unless}}>{{localize "HB.Actions.SearchTracks"}}</button>{{/if}}{{/if}}
+          </article>
+          <article><i class="fa-solid fa-eye"></i><h3>{{localize "HB.Actions.RecordSighting"}}</h3><p>{{localize "HB.Fieldwork.SightingHint"}}</p>{{#if fieldworkStatus}}<small>{{localize "HB.Fieldwork.SightingProgress" count=fieldworkStatus.tracksSucceeded required=fieldworkStatus.sightingMinTracks chance=fieldworkStatus.sightingChance}}</small>{{/if}}<button type="button" data-action="addSighting" {{#unless canRecordSighting}}disabled{{/unless}}>{{localize "HB.Actions.RecordSighting"}}</button><small>{{localize "HB.Approvals.Player.EvidenceCreditHint"}}</small></article>
+          <article><i class="fa-solid fa-location-crosshairs"></i><h3>{{localize "HB.Actions.OpenHunts"}}</h3><p>{{localize "HB.Fieldwork.HuntHint"}}</p>{{#if fieldworkStatus}}<small>{{#if fieldworkStatus.difficultyKnown}}{{localize "HB.Fieldwork.DifficultyKnown"}}{{else}}{{localize "HB.Fieldwork.DifficultyUnknown" count=fieldworkStatus.sightings required=fieldworkStatus.difficultyMinSightings chance=fieldworkStatus.difficultyChance}}{{/if}}</small>{{/if}}<button type="button" data-action="setTab" data-tab="hunts">{{localize "HB.Actions.OpenHunts"}}</button></article>
+        </div>
+        <section class="hb-stat-grid hb-player-stats"><article><strong>{{statistics.checksAttempted}}</strong><span>{{localize "HB.Statistics.ChecksAttempted"}}</span></article><article><strong>{{statistics.checksSucceeded}}</strong><span>{{localize "HB.Statistics.ChecksSucceeded"}}</span></article><article><strong>{{statistics.huntsJoined}}</strong><span>{{localize "HB.Statistics.HuntsJoined"}}</span></article><article><strong>{{statistics.huntsResolved}}</strong><span>{{localize "HB.Statistics.HuntsResolved"}}</span></article></section>
+        <section class="hb-reference-list"><h3>{{localize "HB.Fields.TrackTypes"}}</h3><div class="hb-card-grid">{{#each tracks}}<article><h4>{{name}}</h4><p>{{description}}</p><small>{{localize "HB.Common.BaseDC"}} {{baseDc}}</small></article>{{/each}}</div></section>
+      </section>
+    {{/if}}
+
+    {{#if isLibrary}}
+      <section class="hb-dashboard">
+        <header><h2>{{localize "HB.Library.Title"}}</h2><p>{{localize "HB.Library.Hint"}}</p></header>
+        <div class="hb-card-grid books">
+          {{#each books}}<article class="hb-book-card {{#if read}}read{{/if}}"><span class="hb-eyebrow">{{author}}</span><h3>{{name}}</h3><p>{{summary}}</p><footer><span>{{localize "HB.Common.Tier"}} {{tier}}</span><button type="button" data-action="readBook" data-book-id="{{id}}">{{#if read}}{{localize "HB.Common.ReadAgain"}}{{else}}{{localize "HB.Actions.MarkRead"}}{{/if}}</button></footer></article>{{/each}}
+        </div>
+      </section>
+    {{/if}}
+
+    {{#if isGMTab}}
+      <section class="hb-dashboard">
+        <header><h2>{{localize "HB.GM.Title"}}</h2><p>{{localize "HB.GM.Hint"}}</p></header>
+        <div class="hb-mode-cards gm">
+          <article><i class="fa-solid fa-dragon"></i><h3>{{localize "HB.GM.Catalogue"}}</h3><p>{{localize "HB.GM.CatalogueHint"}}</p><button type="button" data-action="newMonster">{{localize "HB.Actions.NewMonster"}}</button></article>
+          <article><i class="fa-solid fa-location-crosshairs"></i><h3>{{localize "HB.GM.HuntManager"}}</h3><p>{{localize "HB.GM.HuntManagerHint"}}</p><div class="hb-button-stack"><button type="button" data-action="newHunt">{{localize "HB.Actions.NewHunt"}}</button><button type="button" data-action="openHuntRules"><i class="fa-solid fa-sliders"></i> {{localize "HB.HuntRules.Open"}}</button></div></article>
+          <article><i class="fa-solid fa-books"></i><h3>{{localize "HB.GM.ReferenceLibrary"}}</h3><p>{{localize "HB.GM.ReferenceLibraryHint"}}</p><div class="hb-button-stack"><button type="button" data-action="installLibrary" data-update="false">{{localize "HB.Actions.InstallLibrary"}}</button><button type="button" data-action="installLibrary" data-update="true">{{localize "HB.Actions.UpdateLibrary"}}</button></div><small>{{localize "HB.Common.LastInstalled"}}: {{installedAt}}</small></article>
+          <article><i class="fa-solid fa-file-export"></i><h3>{{localize "HB.GM.DataTransfer"}}</h3><p>{{localize "HB.GM.DataTransferHint"}}</p><button type="button" data-action="openTransfer">{{localize "HB.Actions.OpenTransfer"}}</button></article>
+          <article><i class="fa-solid fa-user-monster"></i><h3>{{localize "HB.GM.ActorProvisioning"}}</h3><p>{{localize "HB.GM.ActorProvisioningHint"}}</p><div class="hb-button-stack"><button type="button" data-action="provisionActors" data-scope="all" data-update="false">{{localize "HB.Actions.CreateMissingActors"}}</button><button type="button" data-action="provisionActors" data-scope="all" data-update="true">{{localize "HB.Actions.UpdateManagedActors"}}</button></div><small>{{actorSummary.linked}} {{localize "HB.ActorStatus.linked"}} · {{actorSummary.available}} {{localize "HB.ActorStatus.available"}} · {{actorSummary.notRequired}} {{localize "HB.ActorStatus.not-required"}}</small></article>
+          <article><i class="fa-solid fa-puzzle-piece"></i><h3>{{localize "HB.GM.ContentProviders"}}</h3><p>{{localize "HB.GM.ContentProvidersHint"}}</p><strong>{{providerReports.length}}</strong> {{localize "HB.Common.Providers"}} · <strong>{{providerIncompleteCount}}</strong> {{localize "HB.Common.IncompletePackages"}}</article>
+          <article><i class="fa-solid fa-clock-rotate-left"></i><h3>{{localize "HB.Audit.CardTitle"}}</h3><p>{{localize "HB.Audit.CardHint"}}</p>{{#if selectedPlayer}}<small>{{selectedPlayer.name}} · {{selectedPlayer.actorName}}</small><button type="button" data-action="openAuditLog">{{localize "HB.Audit.Open"}}</button>{{else}}<small>{{localize "HB.Audit.SelectPlayerActor"}}</small><button type="button" data-action="openAuditLog" disabled>{{localize "HB.Audit.Open"}}</button>{{/if}}</article>
+        </div>
+        <section class="hb-approval-panel">
+          <header><div><h3>{{localize "HB.Approvals.GM.Title"}}</h3><p>{{localize "HB.Approvals.GM.Hint"}}</p></div><span class="hb-count-badge">{{approvalCount}}</span></header>
+          {{#each approvalQueue}}
+            <article class="hb-approval-row {{status}}">
+              <div><strong>{{userName}}</strong><span>{{typeLabel}} · {{quarryName}} · {{huntTitle}}</span>{{#if detail}}<small>{{detail}}</small>{{/if}}</div>
+              <div class="hb-approval-actions">
+                {{#if statusLabel}}<small>{{statusLabel}} · {{createdAtDisplay}}</small>{{/if}}
+                {{#if pending}}
+                  <button type="button" data-action="resolveFieldworkRequest" data-request-id="{{id}}" data-decision="approve"><i class="fa-solid fa-check"></i> {{localize "HB.Approvals.GM.Approve"}}</button>
+                  <button type="button" class="danger" data-action="resolveFieldworkRequest" data-request-id="{{id}}" data-decision="deny"><i class="fa-solid fa-xmark"></i> {{localize "HB.Approvals.GM.Deny"}}</button>
+                {{else}}
+                  <button type="button" class="danger" data-action="resolveFieldworkRequest" data-request-id="{{id}}" data-decision="revoke"><i class="fa-solid fa-ban"></i> {{localize "HB.Approvals.GM.Revoke"}}</button>
+                {{/if}}
+              </div>
+            </article>
+          {{else}}<div class="hb-empty"><i class="fa-solid fa-inbox"></i><p>{{localize "HB.Approvals.GM.Empty"}}</p></div>{{/each}}
+        </section>
+        <section class="hb-stat-grid"><article><strong>{{users.length}}</strong><span>{{localize "HB.Common.Players"}}</span></article><article><strong>{{monsters.length}}</strong><span>{{localize "HB.Common.Monsters"}}</span></article><article><strong>{{hunts.length}}</strong><span>{{localize "HB.Common.Hunts"}}</span></article><article><strong>{{moduleVersion}}</strong><span>{{localize "HB.Common.Version"}}</span></article></section>
+        <section class="hb-provider-report">
+          <h3>{{localize "HB.GM.ProviderReport"}}</h3>
+          <p>{{localize "HB.GM.ProviderReportHint"}}</p>
+          {{#each providerReports}}
+            <details class="{{#unless complete}}incomplete{{/unless}}">
+              <summary><strong>{{label}}</strong> — {{completeCount}} / {{monsterCount}} {{localize "HB.Common.CompletePackages"}}</summary>
+              {{#each monsters}}
+                <article class="{{#unless complete}}incomplete{{/unless}}"><strong>{{name}}</strong><span>{{#if complete}}{{localize "HB.Common.Complete"}}{{else}}{{errorText}}{{/if}}</span></article>
+              {{/each}}
+            </details>
+          {{/each}}
+        </section>
+      </section>
+    {{/if}}
+
+    {{#if isGuide}}
+      <section class="hb-guide">
+        <header><img src="modules/hunters-bestiary/assets/hunters-bestiary.svg" alt=""><div><h2>{{localize "HB.Guide.Title"}}</h2><p>{{localize "HB.Guide.Intro"}}</p></div></header>
+        <div class="hb-guide-grid">
+          <article><span>1</span><h3>{{localize "HB.Guide.Step1Title"}}</h3><p>{{localize "HB.Guide.Step1Text"}}</p></article>
+          <article><span>2</span><h3>{{localize "HB.Guide.Step2Title"}}</h3><p>{{localize "HB.Guide.Step2Text"}}</p></article>
+          <article><span>3</span><h3>{{localize "HB.Guide.Step3Title"}}</h3><p>{{localize "HB.Guide.Step3Text"}}</p></article>
+          <article><span>4</span><h3>{{localize "HB.Guide.Step4Title"}}</h3><p>{{localize "HB.Guide.Step4Text"}}</p></article>
+        </div>
+        <section class="hb-permission-guide"><h3>{{localize "HB.Guide.PermissionsTitle"}}</h3><p>{{localize "HB.Guide.PermissionsText"}}</p></section>
+
+        {{#if isGM}}
+          <section class="hb-guide-detail">
+            <header><h2>{{localize "HB.Guide.GM.Title"}}</h2><p>{{localize "HB.Guide.GM.Intro"}}</p></header>
+            <details open><summary>{{localize "HB.Guide.GM.RolesTitle"}}</summary><p>{{localize "HB.Guide.GM.RolesText"}}</p><div class="hb-role-grid"><article><h4>{{localize "HB.Guide.GM.PlayerOwnTitle"}}</h4><p>{{localize "HB.Guide.GM.PlayerOwnText"}}</p></article><article><h4>{{localize "HB.Guide.GM.GMOwnTitle"}}</h4><p>{{localize "HB.Guide.GM.GMOwnText"}}</p></article></div></details>
+            <details open><summary>{{localize "HB.Guide.GM.WorkflowTitle"}}</summary><ol><li>{{localize "HB.Guide.GM.Workflow1"}}</li><li>{{localize "HB.Guide.GM.Workflow2"}}</li><li>{{localize "HB.Guide.GM.Workflow3"}}</li><li>{{localize "HB.Guide.GM.Workflow4"}}</li><li>{{localize "HB.Guide.GM.Workflow5"}}</li><li>{{localize "HB.Guide.GM.Workflow6"}}</li><li>{{localize "HB.Guide.GM.Workflow7"}}</li></ol></details>
+            <details><summary>{{localize "HB.Guide.GM.ApprovalsTitle"}}</summary><p>{{localize "HB.Guide.GM.ApprovalsText"}}</p><ul><li>{{localize "HB.Guide.GM.Approvals1"}}</li><li>{{localize "HB.Guide.GM.Approvals2"}}</li><li>{{localize "HB.Guide.GM.Approvals3"}}</li><li>{{localize "HB.Guide.GM.Approvals4"}}</li></ul></details>
+            <details><summary>{{localize "HB.Guide.GM.SessionTitle"}}</summary><p>{{localize "HB.Guide.GM.SessionText"}}</p></details>
+          </section>
+        {{else}}
+          <section class="hb-guide-detail">
+            <header><h2>{{localize "HB.Guide.Player.Title"}}</h2><p>{{localize "HB.Guide.Player.Intro"}}</p></header>
+            <details open><summary>{{localize "HB.Guide.Player.WorkflowTitle"}}</summary><ol><li>{{localize "HB.Guide.Player.Workflow1"}}</li><li>{{localize "HB.Guide.Player.Workflow2"}}</li><li>{{localize "HB.Guide.Player.Workflow3"}}</li><li>{{localize "HB.Guide.Player.Workflow4"}}</li><li>{{localize "HB.Guide.Player.Workflow5"}}</li><li>{{localize "HB.Guide.Player.Workflow6"}}</li></ol></details>
+            <details open><summary>{{localize "HB.Guide.Player.SelfServiceTitle"}}</summary><p>{{localize "HB.Guide.Player.SelfServiceText"}}</p></details>
+            <details><summary>{{localize "HB.Guide.Player.ApprovalsTitle"}}</summary><p>{{localize "HB.Guide.Player.ApprovalsText"}}</p></details>
+            <details><summary>{{localize "HB.Guide.Player.TableTalkTitle"}}</summary><p>{{localize "HB.Guide.Player.TableTalkText"}}</p></details>
+          </section>
+        {{/if}}
+      </section>
+    {{/if}}
+  </main>
+</div>

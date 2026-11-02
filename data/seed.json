@@ -1,0 +1,3373 @@
+{
+  "schemaVersion": 2,
+  "moduleVersion": "1.4.2",
+  "knowledgeLevels": [
+    {
+      "level": 0,
+      "key": "unknown",
+      "name": "HB.Content.Seed.knowledgeLevels.1.name",
+      "threshold": 0
+    },
+    {
+      "level": 1,
+      "key": "rumored",
+      "name": "HB.Content.Seed.knowledgeLevels.2.name",
+      "threshold": 1
+    },
+    {
+      "level": 2,
+      "key": "tracked",
+      "name": "HB.Content.Seed.knowledgeLevels.3.name",
+      "threshold": 3
+    },
+    {
+      "level": 3,
+      "key": "identified",
+      "name": "HB.Content.Seed.knowledgeLevels.4.name",
+      "threshold": 6
+    },
+    {
+      "level": 4,
+      "key": "hunted",
+      "name": "HB.Content.Seed.knowledgeLevels.5.name",
+      "threshold": 10
+    },
+    {
+      "level": 5,
+      "key": "mastered",
+      "name": "HB.Content.Seed.knowledgeLevels.6.name",
+      "threshold": 15
+    }
+  ],
+  "monsters": [
+    {
+      "id": "ashback-troll",
+      "name": "HB.Content.Seed.monsters.ashback_troll.name",
+      "type": "giant",
+      "tier": 3,
+      "tags": [
+        "forest",
+        "mountain",
+        "nocturnal",
+        "territorial"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.ashback_troll.habitats.1",
+        "HB.Content.Seed.monsters.ashback_troll.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.ashback_troll.summary",
+      "rumor": "HB.Content.Seed.monsters.ashback_troll.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.ashback_troll.signs.1",
+        "HB.Content.Seed.monsters.ashback_troll.signs.2",
+        "HB.Content.Seed.monsters.ashback_troll.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.ashback_troll.ecology",
+      "behavior": "HB.Content.Seed.monsters.ashback_troll.behavior",
+      "defenses": "HB.Content.Seed.monsters.ashback_troll.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.ashback_troll.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.ashback_troll.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.ashback_troll.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "inv"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "campfire-rule",
+          "quarry-ashback-troll"
+        ],
+        "trackIds": [
+          "footprint",
+          "scratch"
+        ],
+        "bookIds": [
+          "field-signs-primer"
+        ],
+        "trailTemplateIds": [
+          "classic-trail"
+        ],
+        "complicationIds": [
+          "core-complication-01",
+          "core-complication-12"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.ashback_troll.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "mireglass-basilisk",
+      "name": "HB.Content.Seed.monsters.mireglass_basilisk.name",
+      "type": "monstrosity",
+      "tier": 4,
+      "tags": [
+        "swamp",
+        "reptile",
+        "ambush",
+        "venom"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.mireglass_basilisk.habitats.1",
+        "HB.Content.Seed.monsters.mireglass_basilisk.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.mireglass_basilisk.summary",
+      "rumor": "HB.Content.Seed.monsters.mireglass_basilisk.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.mireglass_basilisk.signs.1",
+        "HB.Content.Seed.monsters.mireglass_basilisk.signs.2",
+        "HB.Content.Seed.monsters.mireglass_basilisk.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.mireglass_basilisk.ecology",
+      "behavior": "HB.Content.Seed.monsters.mireglass_basilisk.behavior",
+      "defenses": "HB.Content.Seed.monsters.mireglass_basilisk.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.mireglass_basilisk.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.mireglass_basilisk.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.mireglass_basilisk.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "med"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "merchant-reward",
+          "poisoned-stream",
+          "old-book",
+          "quarry-mireglass-basilisk"
+        ],
+        "trackIds": [
+          "scat",
+          "rub"
+        ],
+        "bookIds": [
+          "freshness-weather"
+        ],
+        "trailTemplateIds": [
+          "settlement-attacks"
+        ],
+        "complicationIds": [
+          "core-complication-02",
+          "core-complication-13"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.mireglass_basilisk.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "thornhide-boar",
+      "name": "HB.Content.Seed.monsters.thornhide_boar.name",
+      "type": "beast",
+      "tier": 2,
+      "tags": [
+        "forest",
+        "grassland",
+        "herd",
+        "aggressive"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.thornhide_boar.habitats.1",
+        "HB.Content.Seed.monsters.thornhide_boar.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.thornhide_boar.summary",
+      "rumor": "HB.Content.Seed.monsters.thornhide_boar.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.thornhide_boar.signs.1",
+        "HB.Content.Seed.monsters.thornhide_boar.signs.2",
+        "HB.Content.Seed.monsters.thornhide_boar.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.thornhide_boar.ecology",
+      "behavior": "HB.Content.Seed.monsters.thornhide_boar.behavior",
+      "defenses": "HB.Content.Seed.monsters.thornhide_boar.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.thornhide_boar.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.thornhide_boar.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.thornhide_boar.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "ani",
+        "nat"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "false-trophy",
+          "quarry-thornhide-boar"
+        ],
+        "trackIds": [
+          "hair",
+          "feeding"
+        ],
+        "bookIds": [
+          "predator-ecology"
+        ],
+        "trailTemplateIds": [
+          "missing-expedition"
+        ],
+        "complicationIds": [
+          "core-complication-03",
+          "core-complication-14"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.thornhide_boar.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "moonveil-stag",
+      "name": "HB.Content.Seed.monsters.moonveil_stag.name",
+      "type": "fey-beast",
+      "tier": 3,
+      "tags": [
+        "forest",
+        "fey",
+        "crepuscular",
+        "elusive"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.moonveil_stag.habitats.1",
+        "HB.Content.Seed.monsters.moonveil_stag.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.moonveil_stag.summary",
+      "rumor": "HB.Content.Seed.monsters.moonveil_stag.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.moonveil_stag.signs.1",
+        "HB.Content.Seed.monsters.moonveil_stag.signs.2",
+        "HB.Content.Seed.monsters.moonveil_stag.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.moonveil_stag.ecology",
+      "behavior": "HB.Content.Seed.monsters.moonveil_stag.behavior",
+      "defenses": "HB.Content.Seed.monsters.moonveil_stag.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.moonveil_stag.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.moonveil_stag.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.moonveil_stag.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "arc",
+        "nat"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "wrong-tracks",
+          "children-song",
+          "quarry-moonveil-stag"
+        ],
+        "trackIds": [
+          "feather",
+          "kill"
+        ],
+        "bookIds": [
+          "monster-anatomy"
+        ],
+        "trailTemplateIds": [
+          "ecological-mystery"
+        ],
+        "complicationIds": [
+          "core-complication-04",
+          "core-complication-15"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.moonveil_stag.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "saltmarsh-mireclaw",
+      "name": "HB.Content.Seed.monsters.saltmarsh_mireclaw.name",
+      "type": "beast",
+      "tier": 2,
+      "tags": [
+        "coast",
+        "swamp",
+        "crustacean",
+        "burrower"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.saltmarsh_mireclaw.habitats.1",
+        "HB.Content.Seed.monsters.saltmarsh_mireclaw.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.saltmarsh_mireclaw.summary",
+      "rumor": "HB.Content.Seed.monsters.saltmarsh_mireclaw.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.saltmarsh_mireclaw.signs.1",
+        "HB.Content.Seed.monsters.saltmarsh_mireclaw.signs.2",
+        "HB.Content.Seed.monsters.saltmarsh_mireclaw.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.saltmarsh_mireclaw.ecology",
+      "behavior": "HB.Content.Seed.monsters.saltmarsh_mireclaw.behavior",
+      "defenses": "HB.Content.Seed.monsters.saltmarsh_mireclaw.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.saltmarsh_mireclaw.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.saltmarsh_mireclaw.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.saltmarsh_mireclaw.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "prc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "poisoned-stream",
+          "red-water",
+          "quarry-saltmarsh-mireclaw"
+        ],
+        "trackIds": [
+          "scale",
+          "nest"
+        ],
+        "bookIds": [
+          "rumor-craft"
+        ],
+        "trailTemplateIds": [
+          "urban-predator"
+        ],
+        "complicationIds": [
+          "core-complication-05",
+          "core-complication-16"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.saltmarsh_mireclaw.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "hollow-eyed-wyrm",
+      "name": "HB.Content.Seed.monsters.hollow_eyed_wyrm.name",
+      "type": "dragonkin",
+      "tier": 5,
+      "tags": [
+        "cave",
+        "mountain",
+        "blind",
+        "apex"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.hollow_eyed_wyrm.habitats.1",
+        "HB.Content.Seed.monsters.hollow_eyed_wyrm.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.hollow_eyed_wyrm.summary",
+      "rumor": "HB.Content.Seed.monsters.hollow_eyed_wyrm.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.hollow_eyed_wyrm.signs.1",
+        "HB.Content.Seed.monsters.hollow_eyed_wyrm.signs.2",
+        "HB.Content.Seed.monsters.hollow_eyed_wyrm.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.hollow_eyed_wyrm.ecology",
+      "behavior": "HB.Content.Seed.monsters.hollow_eyed_wyrm.behavior",
+      "defenses": "HB.Content.Seed.monsters.hollow_eyed_wyrm.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.hollow_eyed_wyrm.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.hollow_eyed_wyrm.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.hollow_eyed_wyrm.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "inv",
+        "prc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "hunter-returned",
+          "old-book",
+          "mine-collapse",
+          "quarry-hollow-eyed-wyrm"
+        ],
+        "trackIds": [
+          "blood",
+          "burrow"
+        ],
+        "bookIds": [
+          "lair-approach"
+        ],
+        "trailTemplateIds": [
+          "migration-intercept"
+        ],
+        "complicationIds": [
+          "core-complication-06",
+          "core-complication-17"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.hollow_eyed_wyrm.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "fen-lantern-moth",
+      "name": "HB.Content.Seed.monsters.fen_lantern_moth.name",
+      "type": "beast",
+      "tier": 1,
+      "tags": [
+        "swamp",
+        "insect",
+        "swarm",
+        "luminous"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.fen_lantern_moth.habitats.1",
+        "HB.Content.Seed.monsters.fen_lantern_moth.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.fen_lantern_moth.summary",
+      "rumor": "HB.Content.Seed.monsters.fen_lantern_moth.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.fen_lantern_moth.signs.1",
+        "HB.Content.Seed.monsters.fen_lantern_moth.signs.2",
+        "HB.Content.Seed.monsters.fen_lantern_moth.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.fen_lantern_moth.ecology",
+      "behavior": "HB.Content.Seed.monsters.fen_lantern_moth.behavior",
+      "defenses": "HB.Content.Seed.monsters.fen_lantern_moth.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.fen_lantern_moth.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.fen_lantern_moth.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.fen_lantern_moth.gmSecrets",
+      "preferredSkills": [
+        "nat",
+        "sur",
+        "arc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "merchant-reward",
+          "healer-warning",
+          "quarry-fen-lantern-moth"
+        ],
+        "trackIds": [
+          "scent",
+          "vegetation"
+        ],
+        "bookIds": [
+          "peaceful-hunts"
+        ],
+        "trailTemplateIds": [
+          "classic-trail"
+        ],
+        "complicationIds": [
+          "core-complication-07",
+          "core-complication-18"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.fen_lantern_moth.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "gravewind-hyena",
+      "name": "HB.Content.Seed.monsters.gravewind_hyena.name",
+      "type": "beast",
+      "tier": 2,
+      "tags": [
+        "desert",
+        "ruins",
+        "pack",
+        "scavenger"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.gravewind_hyena.habitats.1",
+        "HB.Content.Seed.monsters.gravewind_hyena.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.gravewind_hyena.summary",
+      "rumor": "HB.Content.Seed.monsters.gravewind_hyena.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.gravewind_hyena.signs.1",
+        "HB.Content.Seed.monsters.gravewind_hyena.signs.2",
+        "HB.Content.Seed.monsters.gravewind_hyena.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.gravewind_hyena.ecology",
+      "behavior": "HB.Content.Seed.monsters.gravewind_hyena.behavior",
+      "defenses": "HB.Content.Seed.monsters.gravewind_hyena.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.gravewind_hyena.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.gravewind_hyena.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.gravewind_hyena.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "his"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "missing-livestock",
+          "pilgrim-route",
+          "quarry-gravewind-hyena"
+        ],
+        "trackIds": [
+          "scratch",
+          "residue"
+        ],
+        "bookIds": [
+          "apex-patterns"
+        ],
+        "trailTemplateIds": [
+          "settlement-attacks"
+        ],
+        "complicationIds": [
+          "core-complication-08",
+          "core-complication-19"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.gravewind_hyena.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "ironjaw-lindworm",
+      "name": "HB.Content.Seed.monsters.ironjaw_lindworm.name",
+      "type": "dragonkin",
+      "tier": 4,
+      "tags": [
+        "mountain",
+        "river",
+        "burrower",
+        "metal-eater"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.ironjaw_lindworm.habitats.1",
+        "HB.Content.Seed.monsters.ironjaw_lindworm.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.ironjaw_lindworm.summary",
+      "rumor": "HB.Content.Seed.monsters.ironjaw_lindworm.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.ironjaw_lindworm.signs.1",
+        "HB.Content.Seed.monsters.ironjaw_lindworm.signs.2",
+        "HB.Content.Seed.monsters.ironjaw_lindworm.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.ironjaw_lindworm.ecology",
+      "behavior": "HB.Content.Seed.monsters.ironjaw_lindworm.behavior",
+      "defenses": "HB.Content.Seed.monsters.ironjaw_lindworm.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.ironjaw_lindworm.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.ironjaw_lindworm.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.ironjaw_lindworm.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "arc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "smuggler-story",
+          "mine-collapse",
+          "quarry-ironjaw-lindworm"
+        ],
+        "trackIds": [
+          "rub",
+          "sound"
+        ],
+        "bookIds": [
+          "bestiary-cartography"
+        ],
+        "trailTemplateIds": [
+          "missing-expedition"
+        ],
+        "complicationIds": [
+          "core-complication-09",
+          "core-complication-20"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.ironjaw_lindworm.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "gloamfang-cougar",
+      "name": "HB.Content.Seed.monsters.gloamfang_cougar.name",
+      "type": "beast",
+      "tier": 3,
+      "tags": [
+        "forest",
+        "mountain",
+        "stalker",
+        "shadow"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.gloamfang_cougar.habitats.1",
+        "HB.Content.Seed.monsters.gloamfang_cougar.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.gloamfang_cougar.summary",
+      "rumor": "HB.Content.Seed.monsters.gloamfang_cougar.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.gloamfang_cougar.signs.1",
+        "HB.Content.Seed.monsters.gloamfang_cougar.signs.2",
+        "HB.Content.Seed.monsters.gloamfang_cougar.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.gloamfang_cougar.ecology",
+      "behavior": "HB.Content.Seed.monsters.gloamfang_cougar.behavior",
+      "defenses": "HB.Content.Seed.monsters.gloamfang_cougar.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.gloamfang_cougar.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.gloamfang_cougar.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.gloamfang_cougar.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "prc",
+        "nat"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "missing-livestock",
+          "silent-road",
+          "moonless-hunt",
+          "quarry-gloamfang-cougar"
+        ],
+        "trackIds": [
+          "feeding",
+          "shadow"
+        ],
+        "bookIds": [
+          "humane-capture"
+        ],
+        "trailTemplateIds": [
+          "ecological-mystery"
+        ],
+        "complicationIds": [
+          "core-complication-10",
+          "core-complication-21"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.gloamfang_cougar.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "carrion-bell-spider",
+      "name": "HB.Content.Seed.monsters.carrion_bell_spider.name",
+      "type": "monstrosity",
+      "tier": 3,
+      "tags": [
+        "ruins",
+        "cave",
+        "arachnid",
+        "lure"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.carrion_bell_spider.habitats.1",
+        "HB.Content.Seed.monsters.carrion_bell_spider.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.carrion_bell_spider.summary",
+      "rumor": "HB.Content.Seed.monsters.carrion_bell_spider.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.carrion_bell_spider.signs.1",
+        "HB.Content.Seed.monsters.carrion_bell_spider.signs.2",
+        "HB.Content.Seed.monsters.carrion_bell_spider.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.carrion_bell_spider.ecology",
+      "behavior": "HB.Content.Seed.monsters.carrion_bell_spider.behavior",
+      "defenses": "HB.Content.Seed.monsters.carrion_bell_spider.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.carrion_bell_spider.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.carrion_bell_spider.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.carrion_bell_spider.gmSecrets",
+      "preferredSkills": [
+        "inv",
+        "nat",
+        "prc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "silent-road",
+          "bells-at-night",
+          "survivor-mark",
+          "quarry-carrion-bell-spider"
+        ],
+        "trackIds": [
+          "kill",
+          "water"
+        ],
+        "bookIds": [
+          "harvest-ledger"
+        ],
+        "trailTemplateIds": [
+          "urban-predator"
+        ],
+        "complicationIds": [
+          "core-complication-11",
+          "core-complication-22"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.carrion_bell_spider.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "rimehorn-aurochs",
+      "name": "HB.Content.Seed.monsters.rimehorn_aurochs.name",
+      "type": "beast",
+      "tier": 3,
+      "tags": [
+        "tundra",
+        "mountain",
+        "herd",
+        "cold"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.rimehorn_aurochs.habitats.1",
+        "HB.Content.Seed.monsters.rimehorn_aurochs.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.rimehorn_aurochs.summary",
+      "rumor": "HB.Content.Seed.monsters.rimehorn_aurochs.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.rimehorn_aurochs.signs.1",
+        "HB.Content.Seed.monsters.rimehorn_aurochs.signs.2",
+        "HB.Content.Seed.monsters.rimehorn_aurochs.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.rimehorn_aurochs.ecology",
+      "behavior": "HB.Content.Seed.monsters.rimehorn_aurochs.behavior",
+      "defenses": "HB.Content.Seed.monsters.rimehorn_aurochs.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.rimehorn_aurochs.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.rimehorn_aurochs.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.rimehorn_aurochs.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "ani",
+        "nat"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "weather-sign",
+          "quarry-rimehorn-aurochs"
+        ],
+        "trackIds": [
+          "nest",
+          "stone"
+        ],
+        "bookIds": [
+          "lair-structures"
+        ],
+        "trailTemplateIds": [
+          "migration-intercept"
+        ],
+        "complicationIds": [
+          "core-complication-12",
+          "core-complication-23"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.rimehorn_aurochs.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "embercrop-manticore",
+      "name": "HB.Content.Seed.monsters.embercrop_manticore.name",
+      "type": "monstrosity",
+      "tier": 5,
+      "tags": [
+        "badlands",
+        "mountain",
+        "apex",
+        "fire"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.embercrop_manticore.habitats.1",
+        "HB.Content.Seed.monsters.embercrop_manticore.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.embercrop_manticore.summary",
+      "rumor": "HB.Content.Seed.monsters.embercrop_manticore.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.embercrop_manticore.signs.1",
+        "HB.Content.Seed.monsters.embercrop_manticore.signs.2",
+        "HB.Content.Seed.monsters.embercrop_manticore.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.embercrop_manticore.ecology",
+      "behavior": "HB.Content.Seed.monsters.embercrop_manticore.behavior",
+      "defenses": "HB.Content.Seed.monsters.embercrop_manticore.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.embercrop_manticore.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.embercrop_manticore.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.embercrop_manticore.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "arc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "missing-livestock",
+          "bone-collector",
+          "quarry-embercrop-manticore"
+        ],
+        "trackIds": [
+          "burrow",
+          "tool"
+        ],
+        "bookIds": [
+          "field-signs-primer"
+        ],
+        "trailTemplateIds": [
+          "classic-trail"
+        ],
+        "complicationIds": [
+          "core-complication-13",
+          "core-complication-24"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.embercrop_manticore.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "stormglass-roc",
+      "name": "HB.Content.Seed.monsters.stormglass_roc.name",
+      "type": "monstrosity",
+      "tier": 5,
+      "tags": [
+        "mountain",
+        "coast",
+        "aerial",
+        "storm",
+        "territorial"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.stormglass_roc.habitats.1",
+        "HB.Content.Seed.monsters.stormglass_roc.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.stormglass_roc.summary",
+      "rumor": "HB.Content.Seed.monsters.stormglass_roc.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.stormglass_roc.signs.1",
+        "HB.Content.Seed.monsters.stormglass_roc.signs.2",
+        "HB.Content.Seed.monsters.stormglass_roc.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.stormglass_roc.ecology",
+      "behavior": "HB.Content.Seed.monsters.stormglass_roc.behavior",
+      "defenses": "HB.Content.Seed.monsters.stormglass_roc.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.stormglass_roc.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.stormglass_roc.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.stormglass_roc.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "prc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-stormglass-roc"
+        ],
+        "trackIds": [
+          "vegetation",
+          "thermal-residue"
+        ],
+        "bookIds": [
+          "freshness-weather"
+        ],
+        "trailTemplateIds": [
+          "settlement-attacks"
+        ],
+        "complicationIds": [
+          "core-complication-14",
+          "core-complication-25"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.stormglass_roc.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "reed-crowned-crocodile",
+      "name": "HB.Content.Seed.monsters.reed_crowned_crocodile.name",
+      "type": "beast",
+      "tier": 3,
+      "tags": [
+        "swamp",
+        "river",
+        "aquatic",
+        "ambush",
+        "nesting"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.reed_crowned_crocodile.habitats.1",
+        "HB.Content.Seed.monsters.reed_crowned_crocodile.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.reed_crowned_crocodile.summary",
+      "rumor": "HB.Content.Seed.monsters.reed_crowned_crocodile.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.reed_crowned_crocodile.signs.1",
+        "HB.Content.Seed.monsters.reed_crowned_crocodile.signs.2",
+        "HB.Content.Seed.monsters.reed_crowned_crocodile.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.reed_crowned_crocodile.ecology",
+      "behavior": "HB.Content.Seed.monsters.reed_crowned_crocodile.behavior",
+      "defenses": "HB.Content.Seed.monsters.reed_crowned_crocodile.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.reed_crowned_crocodile.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.reed_crowned_crocodile.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.reed_crowned_crocodile.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "ani",
+        "nat"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-reed-crowned-crocodile"
+        ],
+        "trackIds": [
+          "residue",
+          "magnetic-disturbance"
+        ],
+        "bookIds": [
+          "predator-ecology"
+        ],
+        "trailTemplateIds": [
+          "missing-expedition"
+        ],
+        "complicationIds": [
+          "core-complication-15",
+          "core-complication-26"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.reed_crowned_crocodile.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "lanternjaw-eel",
+      "name": "HB.Content.Seed.monsters.lanternjaw_eel.name",
+      "type": "beast",
+      "tier": 2,
+      "tags": [
+        "river",
+        "cave",
+        "aquatic",
+        "nocturnal",
+        "bioluminescent"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.lanternjaw_eel.habitats.1",
+        "HB.Content.Seed.monsters.lanternjaw_eel.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.lanternjaw_eel.summary",
+      "rumor": "HB.Content.Seed.monsters.lanternjaw_eel.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.lanternjaw_eel.signs.1",
+        "HB.Content.Seed.monsters.lanternjaw_eel.signs.2",
+        "HB.Content.Seed.monsters.lanternjaw_eel.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.lanternjaw_eel.ecology",
+      "behavior": "HB.Content.Seed.monsters.lanternjaw_eel.behavior",
+      "defenses": "HB.Content.Seed.monsters.lanternjaw_eel.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.lanternjaw_eel.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.lanternjaw_eel.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.lanternjaw_eel.gmSecrets",
+      "preferredSkills": [
+        "nat",
+        "sur",
+        "inv"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-lanternjaw-eel"
+        ],
+        "trackIds": [
+          "sound",
+          "acid-pitting"
+        ],
+        "bookIds": [
+          "monster-anatomy"
+        ],
+        "trailTemplateIds": [
+          "ecological-mystery"
+        ],
+        "complicationIds": [
+          "core-complication-16",
+          "core-complication-27"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.lanternjaw_eel.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "bone-orchard-elk",
+      "name": "HB.Content.Seed.monsters.bone_orchard_elk.name",
+      "type": "fey",
+      "tier": 4,
+      "tags": [
+        "forest",
+        "ruins",
+        "crepuscular",
+        "fungal",
+        "herd"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.bone_orchard_elk.habitats.1",
+        "HB.Content.Seed.monsters.bone_orchard_elk.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.bone_orchard_elk.summary",
+      "rumor": "HB.Content.Seed.monsters.bone_orchard_elk.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.bone_orchard_elk.signs.1",
+        "HB.Content.Seed.monsters.bone_orchard_elk.signs.2",
+        "HB.Content.Seed.monsters.bone_orchard_elk.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.bone_orchard_elk.ecology",
+      "behavior": "HB.Content.Seed.monsters.bone_orchard_elk.behavior",
+      "defenses": "HB.Content.Seed.monsters.bone_orchard_elk.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.bone_orchard_elk.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.bone_orchard_elk.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.bone_orchard_elk.gmSecrets",
+      "preferredSkills": [
+        "nat",
+        "rel",
+        "ani"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-bone-orchard-elk"
+        ],
+        "trackIds": [
+          "shadow",
+          "web-tension"
+        ],
+        "bookIds": [
+          "rumor-craft"
+        ],
+        "trailTemplateIds": [
+          "urban-predator"
+        ],
+        "complicationIds": [
+          "core-complication-17",
+          "core-complication-28"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.bone_orchard_elk.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "dustmantle-burrower",
+      "name": "HB.Content.Seed.monsters.dustmantle_burrower.name",
+      "type": "monstrosity",
+      "tier": 3,
+      "tags": [
+        "farmland",
+        "grassland",
+        "burrowing",
+        "migratory",
+        "armored"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.dustmantle_burrower.habitats.1",
+        "HB.Content.Seed.monsters.dustmantle_burrower.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.dustmantle_burrower.summary",
+      "rumor": "HB.Content.Seed.monsters.dustmantle_burrower.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.dustmantle_burrower.signs.1",
+        "HB.Content.Seed.monsters.dustmantle_burrower.signs.2",
+        "HB.Content.Seed.monsters.dustmantle_burrower.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.dustmantle_burrower.ecology",
+      "behavior": "HB.Content.Seed.monsters.dustmantle_burrower.behavior",
+      "defenses": "HB.Content.Seed.monsters.dustmantle_burrower.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.dustmantle_burrower.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.dustmantle_burrower.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.dustmantle_burrower.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "inv"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-dustmantle-burrower"
+        ],
+        "trackIds": [
+          "water",
+          "spore-bloom"
+        ],
+        "bookIds": [
+          "lair-approach"
+        ],
+        "trailTemplateIds": [
+          "migration-intercept"
+        ],
+        "complicationIds": [
+          "core-complication-18",
+          "core-complication-29"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.dustmantle_burrower.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "choirback-toad",
+      "name": "HB.Content.Seed.monsters.choirback_toad.name",
+      "type": "beast",
+      "tier": 2,
+      "tags": [
+        "swamp",
+        "river",
+        "amphibious",
+        "sonic",
+        "colonial"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.choirback_toad.habitats.1",
+        "HB.Content.Seed.monsters.choirback_toad.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.choirback_toad.summary",
+      "rumor": "HB.Content.Seed.monsters.choirback_toad.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.choirback_toad.signs.1",
+        "HB.Content.Seed.monsters.choirback_toad.signs.2",
+        "HB.Content.Seed.monsters.choirback_toad.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.choirback_toad.ecology",
+      "behavior": "HB.Content.Seed.monsters.choirback_toad.behavior",
+      "defenses": "HB.Content.Seed.monsters.choirback_toad.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.choirback_toad.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.choirback_toad.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.choirback_toad.gmSecrets",
+      "preferredSkills": [
+        "nat",
+        "prf",
+        "ani"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-choirback-toad"
+        ],
+        "trackIds": [
+          "stone",
+          "acoustic-shadow"
+        ],
+        "bookIds": [
+          "peaceful-hunts"
+        ],
+        "trailTemplateIds": [
+          "classic-trail"
+        ],
+        "complicationIds": [
+          "core-complication-19",
+          "core-complication-30"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.choirback_toad.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "veinroot-colossus",
+      "name": "HB.Content.Seed.monsters.veinroot_colossus.name",
+      "type": "plant",
+      "tier": 5,
+      "tags": [
+        "forest",
+        "mountain",
+        "plant",
+        "ancient",
+        "territorial"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.veinroot_colossus.habitats.1",
+        "HB.Content.Seed.monsters.veinroot_colossus.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.veinroot_colossus.summary",
+      "rumor": "HB.Content.Seed.monsters.veinroot_colossus.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.veinroot_colossus.signs.1",
+        "HB.Content.Seed.monsters.veinroot_colossus.signs.2",
+        "HB.Content.Seed.monsters.veinroot_colossus.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.veinroot_colossus.ecology",
+      "behavior": "HB.Content.Seed.monsters.veinroot_colossus.behavior",
+      "defenses": "HB.Content.Seed.monsters.veinroot_colossus.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.veinroot_colossus.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.veinroot_colossus.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.veinroot_colossus.gmSecrets",
+      "preferredSkills": [
+        "nat",
+        "inv",
+        "sur"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-veinroot-colossus"
+        ],
+        "trackIds": [
+          "tool",
+          "water-displacement"
+        ],
+        "bookIds": [
+          "apex-patterns"
+        ],
+        "trailTemplateIds": [
+          "settlement-attacks"
+        ],
+        "complicationIds": [
+          "core-complication-20",
+          "core-complication-01"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.veinroot_colossus.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "cinderwing-drake",
+      "name": "HB.Content.Seed.monsters.cinderwing_drake.name",
+      "type": "dragon",
+      "tier": 4,
+      "tags": [
+        "mountain",
+        "cave",
+        "volcanic",
+        "aerial",
+        "scavenger"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.cinderwing_drake.habitats.1",
+        "HB.Content.Seed.monsters.cinderwing_drake.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.cinderwing_drake.summary",
+      "rumor": "HB.Content.Seed.monsters.cinderwing_drake.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.cinderwing_drake.signs.1",
+        "HB.Content.Seed.monsters.cinderwing_drake.signs.2",
+        "HB.Content.Seed.monsters.cinderwing_drake.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.cinderwing_drake.ecology",
+      "behavior": "HB.Content.Seed.monsters.cinderwing_drake.behavior",
+      "defenses": "HB.Content.Seed.monsters.cinderwing_drake.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.cinderwing_drake.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.cinderwing_drake.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.cinderwing_drake.gmSecrets",
+      "preferredSkills": [
+        "nat",
+        "sur",
+        "ani"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-cinderwing-drake"
+        ],
+        "trackIds": [
+          "thermal-residue",
+          "insect-response"
+        ],
+        "bookIds": [
+          "bestiary-cartography"
+        ],
+        "trailTemplateIds": [
+          "missing-expedition"
+        ],
+        "complicationIds": [
+          "core-complication-21",
+          "core-complication-02"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.cinderwing_drake.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "whitewake-serpent",
+      "name": "HB.Content.Seed.monsters.whitewake_serpent.name",
+      "type": "monstrosity",
+      "tier": 5,
+      "tags": [
+        "coast",
+        "tundra",
+        "aquatic",
+        "migratory",
+        "apex"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.whitewake_serpent.habitats.1",
+        "HB.Content.Seed.monsters.whitewake_serpent.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.whitewake_serpent.summary",
+      "rumor": "HB.Content.Seed.monsters.whitewake_serpent.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.whitewake_serpent.signs.1",
+        "HB.Content.Seed.monsters.whitewake_serpent.signs.2",
+        "HB.Content.Seed.monsters.whitewake_serpent.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.whitewake_serpent.ecology",
+      "behavior": "HB.Content.Seed.monsters.whitewake_serpent.behavior",
+      "defenses": "HB.Content.Seed.monsters.whitewake_serpent.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.whitewake_serpent.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.whitewake_serpent.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.whitewake_serpent.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "nat",
+        "prc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-whitewake-serpent"
+        ],
+        "trackIds": [
+          "magnetic-disturbance",
+          "lightning-scar"
+        ],
+        "bookIds": [
+          "humane-capture"
+        ],
+        "trailTemplateIds": [
+          "ecological-mystery"
+        ],
+        "complicationIds": [
+          "core-complication-22",
+          "core-complication-03"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.whitewake_serpent.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "coppercap-jackal",
+      "name": "HB.Content.Seed.monsters.coppercap_jackal.name",
+      "type": "beast",
+      "tier": 2,
+      "tags": [
+        "grassland",
+        "ruins",
+        "pack",
+        "fungal",
+        "nocturnal"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.coppercap_jackal.habitats.1",
+        "HB.Content.Seed.monsters.coppercap_jackal.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.coppercap_jackal.summary",
+      "rumor": "HB.Content.Seed.monsters.coppercap_jackal.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.coppercap_jackal.signs.1",
+        "HB.Content.Seed.monsters.coppercap_jackal.signs.2",
+        "HB.Content.Seed.monsters.coppercap_jackal.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.coppercap_jackal.ecology",
+      "behavior": "HB.Content.Seed.monsters.coppercap_jackal.behavior",
+      "defenses": "HB.Content.Seed.monsters.coppercap_jackal.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.coppercap_jackal.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.coppercap_jackal.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.coppercap_jackal.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "ani",
+        "ins"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-coppercap-jackal"
+        ],
+        "trackIds": [
+          "acid-pitting",
+          "counterfeit-trail"
+        ],
+        "bookIds": [
+          "harvest-ledger"
+        ],
+        "trailTemplateIds": [
+          "urban-predator"
+        ],
+        "complicationIds": [
+          "core-complication-23",
+          "core-complication-04"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.coppercap_jackal.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    },
+    {
+      "id": "mirrorhide-lynx",
+      "name": "HB.Content.Seed.monsters.mirrorhide_lynx.name",
+      "type": "fey",
+      "tier": 4,
+      "tags": [
+        "forest",
+        "mountain",
+        "solitary",
+        "ambush",
+        "fey"
+      ],
+      "habitats": [
+        "HB.Content.Seed.monsters.mirrorhide_lynx.habitats.1",
+        "HB.Content.Seed.monsters.mirrorhide_lynx.habitats.2"
+      ],
+      "summary": "HB.Content.Seed.monsters.mirrorhide_lynx.summary",
+      "rumor": "HB.Content.Seed.monsters.mirrorhide_lynx.rumor",
+      "signs": [
+        "HB.Content.Seed.monsters.mirrorhide_lynx.signs.1",
+        "HB.Content.Seed.monsters.mirrorhide_lynx.signs.2",
+        "HB.Content.Seed.monsters.mirrorhide_lynx.signs.3"
+      ],
+      "ecology": "HB.Content.Seed.monsters.mirrorhide_lynx.ecology",
+      "behavior": "HB.Content.Seed.monsters.mirrorhide_lynx.behavior",
+      "defenses": "HB.Content.Seed.monsters.mirrorhide_lynx.defenses",
+      "weaknesses": "HB.Content.Seed.monsters.mirrorhide_lynx.weaknesses",
+      "harvest": "HB.Content.Seed.monsters.mirrorhide_lynx.harvest",
+      "gmSecrets": "HB.Content.Seed.monsters.mirrorhide_lynx.gmSecrets",
+      "preferredSkills": [
+        "sur",
+        "prc",
+        "arc"
+      ],
+      "actorUuid": "",
+      "contentLinks": {
+        "rumorIds": [
+          "quarry-mirrorhide-lynx"
+        ],
+        "trackIds": [
+          "web-tension",
+          "footprint"
+        ],
+        "bookIds": [
+          "lair-structures"
+        ],
+        "trailTemplateIds": [
+          "migration-intercept"
+        ],
+        "complicationIds": [
+          "core-complication-24",
+          "core-complication-05"
+        ]
+      },
+      "actorSource": {
+        "mode": "none",
+        "reason": "HB.Content.Seed.monsters.mirrorhide_lynx.actorSource.reason"
+      },
+      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "footprint",
+      "name": "HB.Content.Seed.tracks.footprint.name",
+      "description": "HB.Content.Seed.tracks.footprint.description",
+      "baseDc": 11,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "scat",
+      "name": "HB.Content.Seed.tracks.scat.name",
+      "description": "HB.Content.Seed.tracks.scat.description",
+      "baseDc": 12,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "hair",
+      "name": "HB.Content.Seed.tracks.hair.name",
+      "description": "HB.Content.Seed.tracks.hair.description",
+      "baseDc": 13,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "feather",
+      "name": "HB.Content.Seed.tracks.feather.name",
+      "description": "HB.Content.Seed.tracks.feather.description",
+      "baseDc": 14,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "scale",
+      "name": "HB.Content.Seed.tracks.scale.name",
+      "description": "HB.Content.Seed.tracks.scale.description",
+      "baseDc": 10,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "blood",
+      "name": "HB.Content.Seed.tracks.blood.name",
+      "description": "HB.Content.Seed.tracks.blood.description",
+      "baseDc": 11,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "scent",
+      "name": "HB.Content.Seed.tracks.scent.name",
+      "description": "HB.Content.Seed.tracks.scent.description",
+      "baseDc": 12,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "scratch",
+      "name": "HB.Content.Seed.tracks.scratch.name",
+      "description": "HB.Content.Seed.tracks.scratch.description",
+      "baseDc": 13,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "rub",
+      "name": "HB.Content.Seed.tracks.rub.name",
+      "description": "HB.Content.Seed.tracks.rub.description",
+      "baseDc": 14,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "feeding",
+      "name": "HB.Content.Seed.tracks.feeding.name",
+      "description": "HB.Content.Seed.tracks.feeding.description",
+      "baseDc": 10,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "kill",
+      "name": "HB.Content.Seed.tracks.kill.name",
+      "description": "HB.Content.Seed.tracks.kill.description",
+      "baseDc": 11,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "nest",
+      "name": "HB.Content.Seed.tracks.nest.name",
+      "description": "HB.Content.Seed.tracks.nest.description",
+      "baseDc": 12,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "burrow",
+      "name": "HB.Content.Seed.tracks.burrow.name",
+      "description": "HB.Content.Seed.tracks.burrow.description",
+      "baseDc": 13,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "vegetation",
+      "name": "HB.Content.Seed.tracks.vegetation.name",
+      "description": "HB.Content.Seed.tracks.vegetation.description",
+      "baseDc": 14,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "residue",
+      "name": "HB.Content.Seed.tracks.residue.name",
+      "description": "HB.Content.Seed.tracks.residue.description",
+      "baseDc": 10,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "sound",
+      "name": "HB.Content.Seed.tracks.sound.name",
+      "description": "HB.Content.Seed.tracks.sound.description",
+      "baseDc": 11,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "shadow",
+      "name": "HB.Content.Seed.tracks.shadow.name",
+      "description": "HB.Content.Seed.tracks.shadow.description",
+      "baseDc": 12,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "water",
+      "name": "HB.Content.Seed.tracks.water.name",
+      "description": "HB.Content.Seed.tracks.water.description",
+      "baseDc": 13,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "stone",
+      "name": "HB.Content.Seed.tracks.stone.name",
+      "description": "HB.Content.Seed.tracks.stone.description",
+      "baseDc": 14,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "tool",
+      "name": "HB.Content.Seed.tracks.tool.name",
+      "description": "HB.Content.Seed.tracks.tool.description",
+      "baseDc": 10,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": []
+    },
+    {
+      "id": "thermal-residue",
+      "name": "HB.Content.Seed.tracks.thermal_residue.name",
+      "description": "HB.Content.Seed.tracks.thermal_residue.description",
+      "baseDc": 13,
+      "freshnessHours": [
+        1,
+        3,
+        12,
+        24
+      ],
+      "tags": [
+        "heat"
+      ]
+    },
+    {
+      "id": "magnetic-disturbance",
+      "name": "HB.Content.Seed.tracks.magnetic_disturbance.name",
+      "description": "HB.Content.Seed.tracks.magnetic_disturbance.description",
+      "baseDc": 15,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": [
+        "mineral",
+        "storm"
+      ]
+    },
+    {
+      "id": "acid-pitting",
+      "name": "HB.Content.Seed.tracks.acid_pitting.name",
+      "description": "HB.Content.Seed.tracks.acid_pitting.description",
+      "baseDc": 14,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        168
+      ],
+      "tags": [
+        "venom"
+      ]
+    },
+    {
+      "id": "web-tension",
+      "name": "HB.Content.Seed.tracks.web_tension.name",
+      "description": "HB.Content.Seed.tracks.web_tension.description",
+      "baseDc": 13,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "spore-bloom",
+      "name": "HB.Content.Seed.tracks.spore_bloom.name",
+      "description": "HB.Content.Seed.tracks.spore_bloom.description",
+      "baseDc": 14,
+      "freshnessHours": [
+        1,
+        12,
+        48,
+        168
+      ],
+      "tags": [
+        "fungal"
+      ]
+    },
+    {
+      "id": "acoustic-shadow",
+      "name": "HB.Content.Seed.tracks.acoustic_shadow.name",
+      "description": "HB.Content.Seed.tracks.acoustic_shadow.description",
+      "baseDc": 15,
+      "freshnessHours": [
+        1,
+        2,
+        6,
+        12
+      ],
+      "tags": [
+        "sonic"
+      ]
+    },
+    {
+      "id": "water-displacement",
+      "name": "HB.Content.Seed.tracks.water_displacement.name",
+      "description": "HB.Content.Seed.tracks.water_displacement.description",
+      "baseDc": 12,
+      "freshnessHours": [
+        1,
+        3,
+        8,
+        24
+      ],
+      "tags": [
+        "aquatic"
+      ]
+    },
+    {
+      "id": "insect-response",
+      "name": "HB.Content.Seed.tracks.insect_response.name",
+      "description": "HB.Content.Seed.tracks.insect_response.description",
+      "baseDc": 12,
+      "freshnessHours": [
+        1,
+        3,
+        12,
+        24
+      ],
+      "tags": [
+        "ecology"
+      ]
+    },
+    {
+      "id": "lightning-scar",
+      "name": "HB.Content.Seed.tracks.lightning_scar.name",
+      "description": "HB.Content.Seed.tracks.lightning_scar.description",
+      "baseDc": 16,
+      "freshnessHours": [
+        1,
+        24,
+        168,
+        720
+      ],
+      "tags": [
+        "storm"
+      ]
+    },
+    {
+      "id": "counterfeit-trail",
+      "name": "HB.Content.Seed.tracks.counterfeit_trail.name",
+      "description": "HB.Content.Seed.tracks.counterfeit_trail.description",
+      "baseDc": 16,
+      "freshnessHours": [
+        1,
+        6,
+        24,
+        72
+      ],
+      "tags": [
+        "deception"
+      ]
+    }
+  ],
+  "rumors": [
+    {
+      "id": "missing-livestock",
+      "text": "HB.Content.Seed.rumors.missing_livestock.text",
+      "truth": "mixed",
+      "monsterIds": [
+        "gloamfang-cougar",
+        "embercrop-manticore",
+        "gravewind-hyena"
+      ],
+      "regions": [
+        "forest",
+        "mountain",
+        "ruins"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "silent-road",
+      "text": "HB.Content.Seed.rumors.silent_road.text",
+      "truth": "true",
+      "monsterIds": [
+        "carrion-bell-spider",
+        "gloamfang-cougar"
+      ],
+      "regions": [
+        "cave",
+        "forest",
+        "mountain",
+        "ruins"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "wrong-tracks",
+      "text": "HB.Content.Seed.rumors.wrong_tracks.text",
+      "truth": "false",
+      "monsterIds": [
+        "moonveil-stag"
+      ],
+      "regions": [
+        "forest"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "merchant-reward",
+      "text": "HB.Content.Seed.rumors.merchant_reward.text",
+      "truth": "true",
+      "monsterIds": [
+        "fen-lantern-moth",
+        "mireglass-basilisk"
+      ],
+      "regions": [
+        "swamp"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "hunter-returned",
+      "text": "HB.Content.Seed.rumors.hunter_returned.text",
+      "truth": "mixed",
+      "monsterIds": [
+        "hollow-eyed-wyrm"
+      ],
+      "regions": [
+        "cave",
+        "mountain"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "bells-at-night",
+      "text": "HB.Content.Seed.rumors.bells_at_night.text",
+      "truth": "true",
+      "monsterIds": [
+        "carrion-bell-spider"
+      ],
+      "regions": [
+        "cave",
+        "ruins"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "poisoned-stream",
+      "text": "HB.Content.Seed.rumors.poisoned_stream.text",
+      "truth": "mixed",
+      "monsterIds": [
+        "saltmarsh-mireclaw",
+        "mireglass-basilisk"
+      ],
+      "regions": [
+        "coast",
+        "swamp"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "smuggler-story",
+      "text": "HB.Content.Seed.rumors.smuggler_story.text",
+      "truth": "true",
+      "monsterIds": [
+        "ironjaw-lindworm"
+      ],
+      "regions": [
+        "mountain",
+        "river"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "healer-warning",
+      "text": "HB.Content.Seed.rumors.healer_warning.text",
+      "truth": "true",
+      "monsterIds": [
+        "fen-lantern-moth"
+      ],
+      "regions": [
+        "swamp"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "old-book",
+      "text": "HB.Content.Seed.rumors.old_book.text",
+      "truth": "mixed",
+      "monsterIds": [
+        "mireglass-basilisk",
+        "hollow-eyed-wyrm"
+      ],
+      "regions": [
+        "cave",
+        "mountain",
+        "swamp"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "weather-sign",
+      "text": "HB.Content.Seed.rumors.weather_sign.text",
+      "truth": "true",
+      "monsterIds": [
+        "rimehorn-aurochs"
+      ],
+      "regions": [
+        "mountain",
+        "tundra"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "children-song",
+      "text": "HB.Content.Seed.rumors.children_song.text",
+      "truth": "true",
+      "monsterIds": [
+        "moonveil-stag"
+      ],
+      "regions": [
+        "forest"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "false-trophy",
+      "text": "HB.Content.Seed.rumors.false_trophy.text",
+      "truth": "true",
+      "monsterIds": [
+        "thornhide-boar"
+      ],
+      "regions": [
+        "forest",
+        "grassland"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "pilgrim-route",
+      "text": "HB.Content.Seed.rumors.pilgrim_route.text",
+      "truth": "mixed",
+      "monsterIds": [
+        "gravewind-hyena"
+      ],
+      "regions": [
+        "ruins"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "mine-collapse",
+      "text": "HB.Content.Seed.rumors.mine_collapse.text",
+      "truth": "true",
+      "monsterIds": [
+        "ironjaw-lindworm",
+        "hollow-eyed-wyrm"
+      ],
+      "regions": [
+        "cave",
+        "mountain",
+        "river"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "moonless-hunt",
+      "text": "HB.Content.Seed.rumors.moonless_hunt.text",
+      "truth": "false",
+      "monsterIds": [
+        "gloamfang-cougar"
+      ],
+      "regions": [
+        "forest",
+        "mountain"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "red-water",
+      "text": "HB.Content.Seed.rumors.red_water.text",
+      "truth": "mixed",
+      "monsterIds": [
+        "saltmarsh-mireclaw"
+      ],
+      "regions": [
+        "coast",
+        "swamp"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "campfire-rule",
+      "text": "HB.Content.Seed.rumors.campfire_rule.text",
+      "truth": "false",
+      "monsterIds": [
+        "ashback-troll"
+      ],
+      "regions": [
+        "forest",
+        "mountain"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "bone-collector",
+      "text": "HB.Content.Seed.rumors.bone_collector.text",
+      "truth": "true",
+      "monsterIds": [
+        "embercrop-manticore"
+      ],
+      "regions": [
+        "mountain"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "survivor-mark",
+      "text": "HB.Content.Seed.rumors.survivor_mark.text",
+      "truth": "mixed",
+      "monsterIds": [
+        "carrion-bell-spider"
+      ],
+      "regions": [
+        "cave",
+        "ruins"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "quarry-ashback-troll",
+      "text": "HB.Content.Seed.rumors.quarry_ashback_troll.text",
+      "truth": "true",
+      "monsterIds": [
+        "ashback-troll"
+      ],
+      "regions": [
+        "forest",
+        "mountain"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-mireglass-basilisk",
+      "text": "HB.Content.Seed.rumors.quarry_mireglass_basilisk.text",
+      "truth": "true",
+      "monsterIds": [
+        "mireglass-basilisk"
+      ],
+      "regions": [
+        "swamp"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-thornhide-boar",
+      "text": "HB.Content.Seed.rumors.quarry_thornhide_boar.text",
+      "truth": "true",
+      "monsterIds": [
+        "thornhide-boar"
+      ],
+      "regions": [
+        "forest",
+        "grassland"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-moonveil-stag",
+      "text": "HB.Content.Seed.rumors.quarry_moonveil_stag.text",
+      "truth": "true",
+      "monsterIds": [
+        "moonveil-stag"
+      ],
+      "regions": [
+        "forest"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-saltmarsh-mireclaw",
+      "text": "HB.Content.Seed.rumors.quarry_saltmarsh_mireclaw.text",
+      "truth": "true",
+      "monsterIds": [
+        "saltmarsh-mireclaw"
+      ],
+      "regions": [
+        "coast",
+        "swamp"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-hollow-eyed-wyrm",
+      "text": "HB.Content.Seed.rumors.quarry_hollow_eyed_wyrm.text",
+      "truth": "true",
+      "monsterIds": [
+        "hollow-eyed-wyrm"
+      ],
+      "regions": [
+        "cave",
+        "mountain"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-fen-lantern-moth",
+      "text": "HB.Content.Seed.rumors.quarry_fen_lantern_moth.text",
+      "truth": "true",
+      "monsterIds": [
+        "fen-lantern-moth"
+      ],
+      "regions": [
+        "swamp"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-gravewind-hyena",
+      "text": "HB.Content.Seed.rumors.quarry_gravewind_hyena.text",
+      "truth": "true",
+      "monsterIds": [
+        "gravewind-hyena"
+      ],
+      "regions": [
+        "ruins"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-ironjaw-lindworm",
+      "text": "HB.Content.Seed.rumors.quarry_ironjaw_lindworm.text",
+      "truth": "true",
+      "monsterIds": [
+        "ironjaw-lindworm"
+      ],
+      "regions": [
+        "mountain",
+        "river"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-gloamfang-cougar",
+      "text": "HB.Content.Seed.rumors.quarry_gloamfang_cougar.text",
+      "truth": "true",
+      "monsterIds": [
+        "gloamfang-cougar"
+      ],
+      "regions": [
+        "forest",
+        "mountain"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-carrion-bell-spider",
+      "text": "HB.Content.Seed.rumors.quarry_carrion_bell_spider.text",
+      "truth": "true",
+      "monsterIds": [
+        "carrion-bell-spider"
+      ],
+      "regions": [
+        "ruins",
+        "cave"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-rimehorn-aurochs",
+      "text": "HB.Content.Seed.rumors.quarry_rimehorn_aurochs.text",
+      "truth": "true",
+      "monsterIds": [
+        "rimehorn-aurochs"
+      ],
+      "regions": [
+        "tundra",
+        "mountain"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-embercrop-manticore",
+      "text": "HB.Content.Seed.rumors.quarry_embercrop_manticore.text",
+      "truth": "true",
+      "monsterIds": [
+        "embercrop-manticore"
+      ],
+      "regions": [
+        "mountain"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-stormglass-roc",
+      "text": "HB.Content.Seed.rumors.quarry_stormglass_roc.text",
+      "truth": "true",
+      "monsterIds": [
+        "stormglass-roc"
+      ],
+      "regions": [
+        "mountain",
+        "coast"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-reed-crowned-crocodile",
+      "text": "HB.Content.Seed.rumors.quarry_reed_crowned_crocodile.text",
+      "truth": "true",
+      "monsterIds": [
+        "reed-crowned-crocodile"
+      ],
+      "regions": [
+        "swamp",
+        "river"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-lanternjaw-eel",
+      "text": "HB.Content.Seed.rumors.quarry_lanternjaw_eel.text",
+      "truth": "true",
+      "monsterIds": [
+        "lanternjaw-eel"
+      ],
+      "regions": [
+        "river",
+        "cave"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-bone-orchard-elk",
+      "text": "HB.Content.Seed.rumors.quarry_bone_orchard_elk.text",
+      "truth": "true",
+      "monsterIds": [
+        "bone-orchard-elk"
+      ],
+      "regions": [
+        "forest",
+        "ruins"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-dustmantle-burrower",
+      "text": "HB.Content.Seed.rumors.quarry_dustmantle_burrower.text",
+      "truth": "true",
+      "monsterIds": [
+        "dustmantle-burrower"
+      ],
+      "regions": [
+        "farmland",
+        "grassland"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-choirback-toad",
+      "text": "HB.Content.Seed.rumors.quarry_choirback_toad.text",
+      "truth": "true",
+      "monsterIds": [
+        "choirback-toad"
+      ],
+      "regions": [
+        "swamp",
+        "river"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-veinroot-colossus",
+      "text": "HB.Content.Seed.rumors.quarry_veinroot_colossus.text",
+      "truth": "true",
+      "monsterIds": [
+        "veinroot-colossus"
+      ],
+      "regions": [
+        "forest",
+        "mountain"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-cinderwing-drake",
+      "text": "HB.Content.Seed.rumors.quarry_cinderwing_drake.text",
+      "truth": "true",
+      "monsterIds": [
+        "cinderwing-drake"
+      ],
+      "regions": [
+        "mountain",
+        "cave"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-whitewake-serpent",
+      "text": "HB.Content.Seed.rumors.quarry_whitewake_serpent.text",
+      "truth": "true",
+      "monsterIds": [
+        "whitewake-serpent"
+      ],
+      "regions": [
+        "coast",
+        "tundra"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-coppercap-jackal",
+      "text": "HB.Content.Seed.rumors.quarry_coppercap_jackal.text",
+      "truth": "true",
+      "monsterIds": [
+        "coppercap-jackal"
+      ],
+      "regions": [
+        "grassland",
+        "ruins"
+      ],
+      "weight": 3
+    },
+    {
+      "id": "quarry-mirrorhide-lynx",
+      "text": "HB.Content.Seed.rumors.quarry_mirrorhide_lynx.text",
+      "truth": "true",
+      "monsterIds": [
+        "mirrorhide-lynx"
+      ],
+      "regions": [
+        "forest",
+        "mountain"
+      ],
+      "weight": 3
+    }
+  ],
+  "books": [
+    {
+      "id": "field-signs-primer",
+      "name": "HB.Content.Seed.books.field_signs_primer.name",
+      "author": "HB.Content.Seed.books.field_signs_primer.author",
+      "tier": 1,
+      "tags": [
+        "tracks",
+        "basics"
+      ],
+      "summary": "HB.Content.Seed.books.field_signs_primer.summary",
+      "unlock": {
+        "points": 1,
+        "tags": [
+          "tracks"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.field_signs_primer.chapters.1.title",
+          "body": "HB.Content.Seed.books.field_signs_primer.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.field_signs_primer.chapters.2.title",
+          "body": "HB.Content.Seed.books.field_signs_primer.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "freshness-weather",
+      "name": "HB.Content.Seed.books.freshness_weather.name",
+      "author": "HB.Content.Seed.books.freshness_weather.author",
+      "tier": 1,
+      "tags": [
+        "tracks",
+        "weather"
+      ],
+      "summary": "HB.Content.Seed.books.freshness_weather.summary",
+      "unlock": {
+        "points": 1,
+        "tags": [
+          "weather"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.freshness_weather.chapters.1.title",
+          "body": "HB.Content.Seed.books.freshness_weather.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.freshness_weather.chapters.2.title",
+          "body": "HB.Content.Seed.books.freshness_weather.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "predator-ecology",
+      "name": "HB.Content.Seed.books.predator_ecology.name",
+      "author": "HB.Content.Seed.books.predator_ecology.author",
+      "tier": 2,
+      "tags": [
+        "ecology"
+      ],
+      "summary": "HB.Content.Seed.books.predator_ecology.summary",
+      "unlock": {
+        "points": 2,
+        "tags": [
+          "ecology"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.predator_ecology.chapters.1.title",
+          "body": "HB.Content.Seed.books.predator_ecology.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.predator_ecology.chapters.2.title",
+          "body": "HB.Content.Seed.books.predator_ecology.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "monster-anatomy",
+      "name": "HB.Content.Seed.books.monster_anatomy.name",
+      "author": "HB.Content.Seed.books.monster_anatomy.author",
+      "tier": 2,
+      "tags": [
+        "harvest",
+        "medicine"
+      ],
+      "summary": "HB.Content.Seed.books.monster_anatomy.summary",
+      "unlock": {
+        "points": 2,
+        "tags": [
+          "harvest"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.monster_anatomy.chapters.1.title",
+          "body": "HB.Content.Seed.books.monster_anatomy.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.monster_anatomy.chapters.2.title",
+          "body": "HB.Content.Seed.books.monster_anatomy.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "rumor-craft",
+      "name": "HB.Content.Seed.books.rumor_craft.name",
+      "author": "HB.Content.Seed.books.rumor_craft.author",
+      "tier": 2,
+      "tags": [
+        "rumors",
+        "investigation"
+      ],
+      "summary": "HB.Content.Seed.books.rumor_craft.summary",
+      "unlock": {
+        "points": 2,
+        "tags": [
+          "rumors"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.rumor_craft.chapters.1.title",
+          "body": "HB.Content.Seed.books.rumor_craft.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.rumor_craft.chapters.2.title",
+          "body": "HB.Content.Seed.books.rumor_craft.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "lair-approach",
+      "name": "HB.Content.Seed.books.lair_approach.name",
+      "author": "HB.Content.Seed.books.lair_approach.author",
+      "tier": 3,
+      "tags": [
+        "hunt",
+        "hazards"
+      ],
+      "summary": "HB.Content.Seed.books.lair_approach.summary",
+      "unlock": {
+        "points": 3,
+        "tags": [
+          "hunt"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.lair_approach.chapters.1.title",
+          "body": "HB.Content.Seed.books.lair_approach.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.lair_approach.chapters.2.title",
+          "body": "HB.Content.Seed.books.lair_approach.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "peaceful-hunts",
+      "name": "HB.Content.Seed.books.peaceful_hunts.name",
+      "author": "HB.Content.Seed.books.peaceful_hunts.author",
+      "tier": 3,
+      "tags": [
+        "ecology",
+        "relocation"
+      ],
+      "summary": "HB.Content.Seed.books.peaceful_hunts.summary",
+      "unlock": {
+        "points": 3,
+        "tags": [
+          "relocation"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.peaceful_hunts.chapters.1.title",
+          "body": "HB.Content.Seed.books.peaceful_hunts.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.peaceful_hunts.chapters.2.title",
+          "body": "HB.Content.Seed.books.peaceful_hunts.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "apex-patterns",
+      "name": "HB.Content.Seed.books.apex_patterns.name",
+      "author": "HB.Content.Seed.books.apex_patterns.author",
+      "tier": 4,
+      "tags": [
+        "apex",
+        "strategy"
+      ],
+      "summary": "HB.Content.Seed.books.apex_patterns.summary",
+      "unlock": {
+        "points": 4,
+        "tags": [
+          "apex"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.apex_patterns.chapters.1.title",
+          "body": "HB.Content.Seed.books.apex_patterns.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.apex_patterns.chapters.2.title",
+          "body": "HB.Content.Seed.books.apex_patterns.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "bestiary-cartography",
+      "name": "HB.Content.Seed.books.bestiary_cartography.name",
+      "author": "HB.Content.Seed.books.bestiary_cartography.author",
+      "tier": 2,
+      "tags": [
+        "ecology",
+        "maps"
+      ],
+      "summary": "HB.Content.Seed.books.bestiary_cartography.summary",
+      "unlock": {
+        "points": 2,
+        "tags": [
+          "ecology",
+          "maps"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.bestiary_cartography.chapters.1.title",
+          "body": "HB.Content.Seed.books.bestiary_cartography.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.bestiary_cartography.chapters.2.title",
+          "body": "HB.Content.Seed.books.bestiary_cartography.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "humane-capture",
+      "name": "HB.Content.Seed.books.humane_capture.name",
+      "author": "HB.Content.Seed.books.humane_capture.author",
+      "tier": 3,
+      "tags": [
+        "capture",
+        "welfare"
+      ],
+      "summary": "HB.Content.Seed.books.humane_capture.summary",
+      "unlock": {
+        "points": 2,
+        "tags": [
+          "capture"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.humane_capture.chapters.1.title",
+          "body": "HB.Content.Seed.books.humane_capture.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.humane_capture.chapters.2.title",
+          "body": "HB.Content.Seed.books.humane_capture.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "harvest-ledger",
+      "name": "HB.Content.Seed.books.harvest_ledger.name",
+      "author": "HB.Content.Seed.books.harvest_ledger.author",
+      "tier": 2,
+      "tags": [
+        "harvest",
+        "trade"
+      ],
+      "summary": "HB.Content.Seed.books.harvest_ledger.summary",
+      "unlock": {
+        "points": 2,
+        "tags": [
+          "harvest",
+          "trade"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.harvest_ledger.chapters.1.title",
+          "body": "HB.Content.Seed.books.harvest_ledger.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.harvest_ledger.chapters.2.title",
+          "body": "HB.Content.Seed.books.harvest_ledger.chapters.2.body"
+        }
+      ]
+    },
+    {
+      "id": "lair-structures",
+      "name": "HB.Content.Seed.books.lair_structures.name",
+      "author": "HB.Content.Seed.books.lair_structures.author",
+      "tier": 3,
+      "tags": [
+        "lairs",
+        "hazards"
+      ],
+      "summary": "HB.Content.Seed.books.lair_structures.summary",
+      "unlock": {
+        "points": 2,
+        "tags": [
+          "lairs",
+          "hazards"
+        ]
+      },
+      "chapters": [
+        {
+          "title": "HB.Content.Seed.books.lair_structures.chapters.1.title",
+          "body": "HB.Content.Seed.books.lair_structures.chapters.1.body"
+        },
+        {
+          "title": "HB.Content.Seed.books.lair_structures.chapters.2.title",
+          "body": "HB.Content.Seed.books.lair_structures.chapters.2.body"
+        }
+      ]
+    }
+  ],
+  "trailTemplates": [
+    {
+      "id": "classic-trail",
+      "name": "HB.Content.Seed.trailTemplates.classic_trail.name",
+      "tags": [
+        "any"
+      ],
+      "steps": [
+        {
+          "id": "rumor",
+          "name": "HB.Content.Seed.trailTemplates.classic_trail.steps.rumor.name",
+          "kind": "rumor",
+          "dc": 10,
+          "skills": [
+            "inv",
+            "per",
+            "ins"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.classic_trail.steps.rumor.success",
+          "failure": "HB.Content.Seed.trailTemplates.classic_trail.steps.rumor.failure"
+        },
+        {
+          "id": "survey",
+          "name": "HB.Content.Seed.trailTemplates.classic_trail.steps.survey.name",
+          "kind": "track",
+          "dc": 12,
+          "skills": [
+            "sur",
+            "prc",
+            "nat"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.classic_trail.steps.survey.success",
+          "failure": "HB.Content.Seed.trailTemplates.classic_trail.steps.survey.failure"
+        },
+        {
+          "id": "interpret",
+          "name": "HB.Content.Seed.trailTemplates.classic_trail.steps.interpret.name",
+          "kind": "research",
+          "dc": 13,
+          "skills": [
+            "sur",
+            "nat",
+            "inv"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.classic_trail.steps.interpret.success",
+          "failure": "HB.Content.Seed.trailTemplates.classic_trail.steps.interpret.failure"
+        },
+        {
+          "id": "hazard",
+          "name": "HB.Content.Seed.trailTemplates.classic_trail.steps.hazard.name",
+          "kind": "hazard",
+          "dc": 14,
+          "skills": [
+            "sur",
+            "ath",
+            "acr"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.classic_trail.steps.hazard.success",
+          "failure": "HB.Content.Seed.trailTemplates.classic_trail.steps.hazard.failure"
+        },
+        {
+          "id": "lair",
+          "name": "HB.Content.Seed.trailTemplates.classic_trail.steps.lair.name",
+          "kind": "lair",
+          "dc": 15,
+          "skills": [
+            "sur",
+            "prc",
+            "inv"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.classic_trail.steps.lair.success",
+          "failure": "HB.Content.Seed.trailTemplates.classic_trail.steps.lair.failure"
+        },
+        {
+          "id": "conclusion",
+          "name": "HB.Content.Seed.trailTemplates.classic_trail.steps.conclusion.name",
+          "kind": "conclusion",
+          "dc": 0,
+          "skills": [],
+          "success": "HB.Content.Seed.trailTemplates.classic_trail.steps.conclusion.success",
+          "failure": "HB.Content.Seed.trailTemplates.classic_trail.steps.conclusion.failure"
+        }
+      ]
+    },
+    {
+      "id": "settlement-attacks",
+      "name": "HB.Content.Seed.trailTemplates.settlement_attacks.name",
+      "tags": [
+        "settlement"
+      ],
+      "steps": [
+        {
+          "id": "victims",
+          "name": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.victims.name",
+          "kind": "research",
+          "dc": 11,
+          "skills": [
+            "inv",
+            "med",
+            "sur"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.victims.success",
+          "failure": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.victims.failure"
+        },
+        {
+          "id": "bait",
+          "name": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.bait.name",
+          "kind": "rumor",
+          "dc": 13,
+          "skills": [
+            "inv",
+            "ins",
+            "nat"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.bait.success",
+          "failure": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.bait.failure"
+        },
+        {
+          "id": "watch",
+          "name": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.watch.name",
+          "kind": "track",
+          "dc": 14,
+          "skills": [
+            "prc",
+            "ste",
+            "sur"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.watch.success",
+          "failure": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.watch.failure"
+        },
+        {
+          "id": "source",
+          "name": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.source.name",
+          "kind": "research",
+          "dc": 15,
+          "skills": [
+            "nat",
+            "inv",
+            "arc"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.source.success",
+          "failure": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.source.failure"
+        },
+        {
+          "id": "conclusion",
+          "name": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.conclusion.name",
+          "kind": "conclusion",
+          "dc": 0,
+          "skills": [],
+          "success": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.conclusion.success",
+          "failure": "HB.Content.Seed.trailTemplates.settlement_attacks.steps.conclusion.failure"
+        }
+      ]
+    },
+    {
+      "id": "missing-expedition",
+      "name": "HB.Content.Seed.trailTemplates.missing_expedition.name",
+      "tags": [
+        "rescue"
+      ],
+      "steps": [
+        {
+          "id": "last-known",
+          "name": "HB.Content.Seed.trailTemplates.missing_expedition.steps.last_known.name",
+          "kind": "rumor",
+          "dc": 10,
+          "skills": [
+            "inv",
+            "sur",
+            "ins"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.missing_expedition.steps.last_known.success",
+          "failure": "HB.Content.Seed.trailTemplates.missing_expedition.steps.last_known.failure"
+        },
+        {
+          "id": "human-trail",
+          "name": "HB.Content.Seed.trailTemplates.missing_expedition.steps.human_trail.name",
+          "kind": "track",
+          "dc": 13,
+          "skills": [
+            "sur",
+            "inv",
+            "nat"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.missing_expedition.steps.human_trail.success",
+          "failure": "HB.Content.Seed.trailTemplates.missing_expedition.steps.human_trail.failure"
+        },
+        {
+          "id": "survivors",
+          "name": "HB.Content.Seed.trailTemplates.missing_expedition.steps.survivors.name",
+          "kind": "hazard",
+          "dc": 14,
+          "skills": [
+            "sur",
+            "prc",
+            "med"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.missing_expedition.steps.survivors.success",
+          "failure": "HB.Content.Seed.trailTemplates.missing_expedition.steps.survivors.failure"
+        },
+        {
+          "id": "pursuit",
+          "name": "HB.Content.Seed.trailTemplates.missing_expedition.steps.pursuit.name",
+          "kind": "lair",
+          "dc": 15,
+          "skills": [
+            "sur",
+            "ath",
+            "prc"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.missing_expedition.steps.pursuit.success",
+          "failure": "HB.Content.Seed.trailTemplates.missing_expedition.steps.pursuit.failure"
+        },
+        {
+          "id": "conclusion",
+          "name": "HB.Content.Seed.trailTemplates.missing_expedition.steps.conclusion.name",
+          "kind": "conclusion",
+          "dc": 0,
+          "skills": [],
+          "success": "HB.Content.Seed.trailTemplates.missing_expedition.steps.conclusion.success",
+          "failure": "HB.Content.Seed.trailTemplates.missing_expedition.steps.conclusion.failure"
+        }
+      ]
+    },
+    {
+      "id": "ecological-mystery",
+      "name": "HB.Content.Seed.trailTemplates.ecological_mystery.name",
+      "tags": [
+        "ecology"
+      ],
+      "steps": [
+        {
+          "id": "change",
+          "name": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.change.name",
+          "kind": "research",
+          "dc": 11,
+          "skills": [
+            "nat",
+            "inv",
+            "sur"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.change.success",
+          "failure": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.change.failure"
+        },
+        {
+          "id": "samples",
+          "name": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.samples.name",
+          "kind": "track",
+          "dc": 13,
+          "skills": [
+            "nat",
+            "med",
+            "sur"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.samples.success",
+          "failure": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.samples.failure"
+        },
+        {
+          "id": "cycle",
+          "name": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.cycle.name",
+          "kind": "research",
+          "dc": 15,
+          "skills": [
+            "nat",
+            "arc",
+            "inv"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.cycle.success",
+          "failure": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.cycle.failure"
+        },
+        {
+          "id": "intervention",
+          "name": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.intervention.name",
+          "kind": "hazard",
+          "dc": 14,
+          "skills": [
+            "nat",
+            "ani",
+            "sur"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.intervention.success",
+          "failure": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.intervention.failure"
+        },
+        {
+          "id": "conclusion",
+          "name": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.conclusion.name",
+          "kind": "conclusion",
+          "dc": 0,
+          "skills": [],
+          "success": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.conclusion.success",
+          "failure": "HB.Content.Seed.trailTemplates.ecological_mystery.steps.conclusion.failure"
+        }
+      ]
+    },
+    {
+      "id": "urban-predator",
+      "name": "HB.Content.Seed.trailTemplates.urban_predator.name",
+      "tags": [
+        "settlement",
+        "urban"
+      ],
+      "steps": [
+        {
+          "id": "separate-reports",
+          "name": "HB.Content.Seed.trailTemplates.urban_predator.steps.separate_reports.name",
+          "kind": "rumor",
+          "dc": 12,
+          "skills": [
+            "inv",
+            "ins",
+            "per"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.urban_predator.steps.separate_reports.success",
+          "failure": "HB.Content.Seed.trailTemplates.urban_predator.steps.separate_reports.failure"
+        },
+        {
+          "id": "map-access",
+          "name": "HB.Content.Seed.trailTemplates.urban_predator.steps.map_access.name",
+          "kind": "survey",
+          "dc": 13,
+          "skills": [
+            "inv",
+            "sur",
+            "prc"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.urban_predator.steps.map_access.success",
+          "failure": "HB.Content.Seed.trailTemplates.urban_predator.steps.map_access.failure"
+        },
+        {
+          "id": "protect-bystanders",
+          "name": "HB.Content.Seed.trailTemplates.urban_predator.steps.protect_bystanders.name",
+          "kind": "preparation",
+          "dc": 13,
+          "skills": [
+            "per",
+            "itm",
+            "prf"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.urban_predator.steps.protect_bystanders.success",
+          "failure": "HB.Content.Seed.trailTemplates.urban_predator.steps.protect_bystanders.failure"
+        },
+        {
+          "id": "controlled-bait",
+          "name": "HB.Content.Seed.trailTemplates.urban_predator.steps.controlled_bait.name",
+          "kind": "lure",
+          "dc": 15,
+          "skills": [
+            "ani",
+            "nat",
+            "inv"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.urban_predator.steps.controlled_bait.success",
+          "failure": "HB.Content.Seed.trailTemplates.urban_predator.steps.controlled_bait.failure"
+        },
+        {
+          "id": "urban-conclusion",
+          "name": "HB.Content.Seed.trailTemplates.urban_predator.steps.urban_conclusion.name",
+          "kind": "conclusion",
+          "dc": 0,
+          "skills": [],
+          "success": "HB.Content.Seed.trailTemplates.urban_predator.steps.urban_conclusion.success",
+          "failure": "HB.Content.Seed.trailTemplates.urban_predator.steps.urban_conclusion.failure"
+        }
+      ]
+    },
+    {
+      "id": "migration-intercept",
+      "name": "HB.Content.Seed.trailTemplates.migration_intercept.name",
+      "tags": [
+        "migration",
+        "ecology"
+      ],
+      "steps": [
+        {
+          "id": "season-clock",
+          "name": "HB.Content.Seed.trailTemplates.migration_intercept.steps.season_clock.name",
+          "kind": "research",
+          "dc": 12,
+          "skills": [
+            "nat",
+            "sur",
+            "his"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.migration_intercept.steps.season_clock.success",
+          "failure": "HB.Content.Seed.trailTemplates.migration_intercept.steps.season_clock.failure"
+        },
+        {
+          "id": "corridor-map",
+          "name": "HB.Content.Seed.trailTemplates.migration_intercept.steps.corridor_map.name",
+          "kind": "track",
+          "dc": 14,
+          "skills": [
+            "sur",
+            "inv",
+            "prc"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.migration_intercept.steps.corridor_map.success",
+          "failure": "HB.Content.Seed.trailTemplates.migration_intercept.steps.corridor_map.failure"
+        },
+        {
+          "id": "remove-pressure",
+          "name": "HB.Content.Seed.trailTemplates.migration_intercept.steps.remove_pressure.name",
+          "kind": "ecology",
+          "dc": 14,
+          "skills": [
+            "nat",
+            "ani",
+            "per"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.migration_intercept.steps.remove_pressure.success",
+          "failure": "HB.Content.Seed.trailTemplates.migration_intercept.steps.remove_pressure.failure"
+        },
+        {
+          "id": "guide-crossing",
+          "name": "HB.Content.Seed.trailTemplates.migration_intercept.steps.guide_crossing.name",
+          "kind": "hazard",
+          "dc": 15,
+          "skills": [
+            "sur",
+            "ani",
+            "ath"
+          ],
+          "success": "HB.Content.Seed.trailTemplates.migration_intercept.steps.guide_crossing.success",
+          "failure": "HB.Content.Seed.trailTemplates.migration_intercept.steps.guide_crossing.failure"
+        },
+        {
+          "id": "migration-conclusion",
+          "name": "HB.Content.Seed.trailTemplates.migration_intercept.steps.migration_conclusion.name",
+          "kind": "conclusion",
+          "dc": 0,
+          "skills": [],
+          "success": "HB.Content.Seed.trailTemplates.migration_intercept.steps.migration_conclusion.success",
+          "failure": "HB.Content.Seed.trailTemplates.migration_intercept.steps.migration_conclusion.failure"
+        }
+      ]
+    }
+  ],
+  "complications": [
+    {
+      "id": "core-complication-01",
+      "key": "HB.Content.Seed.complications.core_complication_01"
+    },
+    {
+      "id": "core-complication-02",
+      "key": "HB.Content.Seed.complications.core_complication_02"
+    },
+    {
+      "id": "core-complication-03",
+      "key": "HB.Content.Seed.complications.core_complication_03"
+    },
+    {
+      "id": "core-complication-04",
+      "key": "HB.Content.Seed.complications.core_complication_04"
+    },
+    {
+      "id": "core-complication-05",
+      "key": "HB.Content.Seed.complications.core_complication_05"
+    },
+    {
+      "id": "core-complication-06",
+      "key": "HB.Content.Seed.complications.core_complication_06"
+    },
+    {
+      "id": "core-complication-07",
+      "key": "HB.Content.Seed.complications.core_complication_07"
+    },
+    {
+      "id": "core-complication-08",
+      "key": "HB.Content.Seed.complications.core_complication_08"
+    },
+    {
+      "id": "core-complication-09",
+      "key": "HB.Content.Seed.complications.core_complication_09"
+    },
+    {
+      "id": "core-complication-10",
+      "key": "HB.Content.Seed.complications.core_complication_10"
+    },
+    {
+      "id": "core-complication-11",
+      "key": "HB.Content.Seed.complications.core_complication_11"
+    },
+    {
+      "id": "core-complication-12",
+      "key": "HB.Content.Seed.complications.core_complication_12"
+    },
+    {
+      "id": "core-complication-13",
+      "key": "HB.Content.Seed.complications.core_complication_13"
+    },
+    {
+      "id": "core-complication-14",
+      "key": "HB.Content.Seed.complications.core_complication_14"
+    },
+    {
+      "id": "core-complication-15",
+      "key": "HB.Content.Seed.complications.core_complication_15"
+    },
+    {
+      "id": "core-complication-16",
+      "key": "HB.Content.Seed.complications.core_complication_16"
+    },
+    {
+      "id": "core-complication-17",
+      "key": "HB.Content.Seed.complications.core_complication_17"
+    },
+    {
+      "id": "core-complication-18",
+      "key": "HB.Content.Seed.complications.core_complication_18"
+    },
+    {
+      "id": "core-complication-19",
+      "key": "HB.Content.Seed.complications.core_complication_19"
+    },
+    {
+      "id": "core-complication-20",
+      "key": "HB.Content.Seed.complications.core_complication_20"
+    },
+    {
+      "id": "core-complication-21",
+      "key": "HB.Content.Seed.complications.core_complication_21"
+    },
+    {
+      "id": "core-complication-22",
+      "key": "HB.Content.Seed.complications.core_complication_22"
+    },
+    {
+      "id": "core-complication-23",
+      "key": "HB.Content.Seed.complications.core_complication_23"
+    },
+    {
+      "id": "core-complication-24",
+      "key": "HB.Content.Seed.complications.core_complication_24"
+    },
+    {
+      "id": "core-complication-25",
+      "key": "HB.Content.Seed.complications.core_complication_25"
+    },
+    {
+      "id": "core-complication-26",
+      "key": "HB.Content.Seed.complications.core_complication_26"
+    },
+    {
+      "id": "core-complication-27",
+      "key": "HB.Content.Seed.complications.core_complication_27"
+    },
+    {
+      "id": "core-complication-28",
+      "key": "HB.Content.Seed.complications.core_complication_28"
+    },
+    {
+      "id": "core-complication-29",
+      "key": "HB.Content.Seed.complications.core_complication_29"
+    },
+    {
+      "id": "core-complication-30",
+      "key": "HB.Content.Seed.complications.core_complication_30"
+    }
+  ]
+}

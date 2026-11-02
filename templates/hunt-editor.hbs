@@ -1,0 +1,34 @@
+<form class="hb-editor-form">
+  <header><h1>{{#if proposalMode}}{{localize "HB.HuntEditor.ProposalTitle"}}{{else}}{{#if editing}}{{localize "HB.HuntEditor.EditTitle"}}{{else}}{{localize "HB.HuntEditor.NewTitle"}}{{/if}}{{/if}}</h1><p>{{#if proposalMode}}{{localize "HB.HuntEditor.ProposalHint"}}{{else}}{{localize "HB.HuntEditor.Hint"}}{{/if}}</p></header>
+  {{#if knowledgeContext}}<section class="hb-hunt-knowledge-context"><p><i class="fa-solid fa-user-check"></i> {{localize "HB.HuntDisplay.Context"}} <strong>{{knowledgeContext.name}}{{#if knowledgeContext.actorName}} · {{knowledgeContext.actorName}}{{/if}}</strong></p><div class="hb-hunt-color-legend">{{#each colorLegend}}<span><i style="background-color: {{color}}"></i>{{label}}</span>{{/each}}</div></section>{{/if}}
+  <div class="hb-form-grid">
+    <label class="wide">{{localize "HB.Fields.Title"}}<input name="title" type="text" value="{{hunt.title}}" required autofocus></label>
+    {{#if proposalMode}}
+      <label>{{localize "HB.Common.Monster"}}<input type="hidden" name="monsterId" value="{{selectedMonsterChoice.id}}"><input type="text" value="{{selectedMonsterChoice.name}}" readonly></label>
+    {{else}}
+      <label>{{localize "HB.Common.Monster"}}
+        <div class="hb-fast-select" data-hb-fast-select>
+          <input type="hidden" name="monsterId" value="{{selectedMonsterChoice.id}}">
+          <button type="button" class="hb-fast-select-trigger" data-hb-fast-trigger><span data-hb-fast-label>{{selectedMonsterChoice.name}}</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="hb-fast-select-panel" data-hb-fast-panel hidden>
+            <input type="search" data-hb-fast-search placeholder="{{localize 'HB.Common.Search'}}" autocomplete="off">
+            <div class="hb-fast-select-results" data-hb-fast-results></div>
+            <p class="hb-search-empty" data-hb-fast-empty hidden>{{localize "HB.Common.NoMatches"}}</p>
+          </div>
+        </div>
+      </label>
+    {{/if}}
+    <label>{{localize "HB.Fields.TrailTemplate"}}<select name="templateId">{{#each templates}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}} ({{stepCount}})</option>{{/each}}</select></label>
+    <label>{{localize "HB.HuntEditor.PlannedOutcome"}}<select name="plannedOutcome"><option value="">{{localize "HB.Common.None"}}</option>{{#each plannedOutcomes}}<option value="{{outcome}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+    <label>{{localize "HB.Fields.Region"}}<input name="region" type="text" value="{{hunt.region}}"></label>
+    <label>{{localize "HB.Fields.Patron"}}<input name="patron" type="text" value="{{hunt.patron}}"></label>
+    {{#unless proposalMode}}
+      <label>{{localize "HB.Fields.Visibility"}}<select name="visibility">{{#each visibilityOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+      <label>{{localize "HB.Fields.Status"}}<select name="status">{{#each statuses}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+      <fieldset class="wide"><legend>{{localize "HB.Fields.Participants"}}</legend><div class="hb-check-grid">{{#each users}}<label class="hb-checkbox"><input type="checkbox" name="participantUserIds" value="{{id}}" {{#if checked}}checked{{/if}}> {{name}}</label>{{/each}}</div></fieldset>
+    {{/unless}}
+    <label class="wide">{{localize "HB.Fields.Stakes"}}<textarea name="stakes" rows="4">{{hunt.stakes}}</textarea></label>
+    {{#if proposalMode}}<label class="wide">{{localize "HB.HuntEditor.PlayerNotes"}}<textarea name="playerNotes" rows="5">{{hunt.notes}}</textarea></label>{{else}}<label class="wide">{{localize "HB.Fields.GMNotes"}}<textarea name="notes" rows="5">{{hunt.notes}}</textarea></label>{{/if}}
+  </div>
+  <footer class="hb-form-actions"><button type="button" data-action="cancel">{{localize "HB.Common.Cancel"}}</button><button type="button" class="primary" data-action="save"><i class="fa-solid fa-floppy-disk"></i> {{#if proposalMode}}{{localize "HB.HuntEditor.SubmitProposal"}}{{else}}{{localize "HB.Common.Save"}}{{/if}}</button></footer>
+</form>

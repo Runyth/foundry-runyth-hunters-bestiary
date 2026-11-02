@@ -1,0 +1,44 @@
+{
+  "id": "hunters-bestiary",
+  "title": "Hunter's Bestiary",
+  "description": "A complete monster-hunting game mode for Foundry VTT: personal bestiaries, tracks, rumors, ecology, field research, micro-quest hunts, generated books and GM-private roll tables.",
+  "version": "1.8.0",
+  "authors": [
+    {
+      "name": "Runyth"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13.341",
+    "verified": "13.351",
+    "maximum": "13.351"
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/hunters-bestiary.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "socket": true,
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "license": "LICENSE",
+  "media": [
+    {
+      "type": "icon",
+      "url": "assets/hunters-bestiary.svg"
+    }
+  ]
+}

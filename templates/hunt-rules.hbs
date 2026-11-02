@@ -1,0 +1,80 @@
+<form class="hb-editor-form hb-hunt-rules-form">
+  <header><h1>{{localize "HB.HuntRules.Title"}}</h1><p>{{localize "HB.HuntRules.Intro"}}</p></header>
+
+  <section class="hb-rules-section">
+    <h2>{{localize "HB.HuntRules.EligibilityTitle"}}</h2>
+    <p>{{localize "HB.HuntRules.EligibilityHint"}}</p>
+    <div class="hb-form-grid">
+      <label>{{localize "HB.HuntRules.GlobalMinimum"}}<select name="minimumHuntLevel">{{#each minimumLevelOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+      <label class="hb-checkbox"><input type="checkbox" name="avoidImmediateRepeat" {{#if rules.avoidImmediateRepeat}}checked{{/if}}> {{localize "HB.HuntRules.AvoidRepeat"}}</label>
+    </div>
+  </section>
+
+  <section class="hb-rules-section">
+    <div class="hb-pane-heading"><div><h2>{{localize "HB.HuntRules.QuarryPoolTitle"}}</h2><p>{{localize "HB.HuntRules.QuarryPoolHint"}}</p></div><span class="hb-count-badge">{{quarryPoolCount}}</span></div>
+    <input type="search" data-hb-search="quarry-pool" placeholder="{{localize 'HB.HuntRules.SearchMonsters'}}">
+    <div class="hb-virtual-list" data-hb-list="quarry-pool">
+      {{#each monsters}}<label class="hb-checkbox hb-virtual-row" data-search-text="{{searchText}}"><input type="checkbox" name="quarryPool" value="{{id}}" {{#if checked}}checked{{/if}}> <span>{{name}}</span><small>{{id}}</small></label>{{/each}}
+    </div>
+    <p class="hb-search-empty" data-hb-search-empty="quarry-pool" hidden>{{localize "HB.Common.NoMatches"}}</p>
+  </section>
+
+
+  <section class="hb-rules-section">
+    <h2>{{localize "HB.HuntRules.FieldworkTitle"}}</h2>
+    <p>{{localize "HB.HuntRules.FieldworkHint"}}</p>
+    <div class="hb-form-grid">
+      <label>{{localize "HB.HuntRules.TrackMinRumors"}}<input type="number" min="0" max="9999" name="fieldwork.trackSearch.minRumors" value="{{fieldwork.trackSearch.minRumors}}"></label>
+      <label>{{localize "HB.HuntRules.SightingMinTracks"}}<input type="number" min="0" max="9999" name="fieldwork.sighting.minSuccessfulTracks" value="{{fieldwork.sighting.minSuccessfulTracks}}"></label>
+      <label>{{localize "HB.HuntRules.SightingChance"}}<input type="number" min="0" max="100" name="fieldwork.sighting.chance" value="{{fieldwork.sighting.chance}}"></label>
+      <label class="hb-checkbox"><input type="checkbox" name="fieldwork.sighting.gmApproval" {{#if fieldwork.sighting.gmApproval}}checked{{/if}}> {{localize "HB.HuntRules.SightingApproval"}}</label>
+      <label>{{localize "HB.HuntRules.DifficultyMinSightings"}}<input type="number" min="0" max="9999" name="fieldwork.difficulty.minSightings" value="{{fieldwork.difficulty.minSightings}}"></label>
+      <label>{{localize "HB.HuntRules.DifficultyChance"}}<input type="number" min="0" max="100" name="fieldwork.difficulty.chance" value="{{fieldwork.difficulty.chance}}"></label>
+      <label class="hb-checkbox"><input type="checkbox" name="fieldwork.difficulty.gmApproval" {{#if fieldwork.difficulty.gmApproval}}checked{{/if}}> {{localize "HB.HuntRules.DifficultyApproval"}}</label>
+      <label class="hb-checkbox"><input type="checkbox" name="fieldwork.huntStart.requireDifficulty" {{#if fieldwork.huntStart.requireDifficulty}}checked{{/if}}> {{localize "HB.HuntRules.RequireDifficulty"}}</label>
+      <label>{{localize "HB.HuntRules.MaxDeferred"}}<input type="number" min="0" max="20" name="fieldwork.maxDeferredQuarries" value="{{fieldwork.maxDeferredQuarries}}"></label>
+      <label>{{localize "HB.HuntRules.MaxActiveHunts"}}<input type="number" min="1" max="20" name="fieldwork.maxActiveHunts" value="{{fieldwork.maxActiveHunts}}"></label>
+    </div>
+  </section>
+
+  <section class="hb-rules-section">
+    <h2>{{localize "HB.Difficulty.Title"}}</h2>
+    <p>{{localize "HB.Difficulty.Hint"}}</p>
+    <div class="hb-form-grid">
+      {{#each difficultyBands}}<label>{{localize "HB.Difficulty.BandLabel"}} {{tier}}<input type="text" maxlength="80" name="difficultyBand.{{tier}}" value="{{customLabel}}" placeholder="{{defaultLabel}}"></label>{{/each}}
+    </div>
+  </section>
+
+  <section class="hb-rules-section">
+    <h2>{{localize "HB.HuntRules.DisclosureTitle"}}</h2>
+    <p>{{localize "HB.HuntRules.DisclosureHint"}}</p>
+    <div class="hb-rules-table-wrap"><table class="hb-rules-table"><thead><tr><th>{{localize "HB.Common.Field"}}</th><th>{{localize "HB.HuntRules.MinLevel"}}</th><th>{{localize "HB.HuntRules.MinPoints"}}</th><th>{{localize "HB.HuntRules.MinRumors"}}</th><th>{{localize "HB.HuntRules.Chance"}}</th><th>{{localize "HB.HuntRules.GMApproval"}}</th></tr></thead><tbody>
+      {{#each disclosureRows}}<tr><th>{{label}}</th><td><select name="disclosure.{{field}}.minLevel">{{#each levelOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></td><td><input type="number" min="0" max="9999" name="disclosure.{{field}}.minPoints" value="{{minPoints}}"></td><td><input type="number" min="0" max="9999" name="disclosure.{{field}}.minRumors" value="{{minRumors}}"></td><td><input type="number" min="0" max="100" name="disclosure.{{field}}.chance" value="{{chance}}"></td><td><input type="checkbox" name="disclosure.{{field}}.gmApproval" {{#if gmApproval}}checked{{/if}}></td></tr>{{/each}}
+    </tbody></table></div>
+  </section>
+
+  <section class="hb-rules-section">
+    <h2>{{localize "HB.HuntRules.ResolutionTitle"}}</h2>
+    <p>{{localize "HB.HuntRules.ResolutionHint"}}</p>
+    <div class="hb-rules-table-wrap"><table class="hb-rules-table"><thead><tr><th>{{localize "HB.HuntRules.Outcome"}}</th><th>{{localize "HB.HuntRules.Mode"}}</th><th>{{localize "HB.Common.DC"}}</th><th>{{localize "HB.HuntRules.Skills"}}</th></tr></thead><tbody>
+      {{#each resolutionRows}}<tr><th>{{label}}</th><td><select name="resolution.{{outcome}}.mode">{{#each modes}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></td><td><input type="number" min="0" max="40" name="resolution.{{outcome}}.dc" value="{{dc}}"></td><td><input type="text" name="resolution.{{outcome}}.skills" value="{{skills}}"></td></tr>{{/each}}
+    </tbody></table></div><small>{{skillReference}}</small>
+  </section>
+
+  <section class="hb-rules-section hb-hunt-colors-section">
+    <h2>{{localize "HB.HuntDisplay.ColorsTitle"}}</h2>
+    <p>{{localize "HB.HuntDisplay.ColorsHint"}}</p>
+    <div class="hb-action-row"><select name="huntColorPreset">{{#each huntColorPresets}}<option value="{{name}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select><button type="button" data-action="applyColorPreset">{{localize "HB.HuntDisplay.ApplyPreset"}}</button></div>
+    <div class="hb-hunt-color-grid">{{#each huntColorRows}}<label><span>{{label}}</span><input type="color" name="huntColor.{{state}}" value="{{color}}"><code>{{color}}</code></label>{{/each}}</div>
+    <div class="hb-action-row"><input type="text" name="customColorPresetName" maxlength="80" placeholder="{{localize 'HB.HuntDisplay.CustomPresetName'}}"><button type="button" data-action="saveColorPreset"><i class="fa-solid fa-bookmark"></i> {{localize "HB.HuntDisplay.SavePreset"}}</button></div>
+  </section>
+
+  <section class="hb-rules-section">
+    <h2>{{localize "HB.HuntRules.OverridesTitle"}}</h2><p>{{localize "HB.HuntRules.OverridesHint"}}</p>
+    <input type="search" data-hb-search="hunt-overrides" placeholder="{{localize 'HB.HuntRules.SearchMonsters'}}">
+    <div class="hb-virtual-list" data-hb-list="hunt-overrides">{{#each monsters}}<article class="hb-override-row hb-virtual-row" data-search-text="{{searchText}}"><div><strong>{{name}}</strong><small>{{id}}{{#if hasOverride}} · {{localize "HB.HuntRules.HasOverride"}}{{/if}}</small></div><button type="button" data-action="editOverride" data-monster-id="{{id}}"><i class="fa-solid fa-pen"></i> {{localize "HB.HuntRules.EditOverride"}}</button></article>{{/each}}</div>
+    <p class="hb-search-empty" data-hb-search-empty="hunt-overrides" hidden>{{localize "HB.Common.NoMatches"}}</p>
+  </section>
+
+  <footer class="hb-form-actions"><button type="button" data-action="close">{{localize "HB.Common.Close"}}</button><button type="button" class="primary" data-action="save"><i class="fa-solid fa-floppy-disk"></i> {{localize "HB.Common.Save"}}</button></footer>
+</form>

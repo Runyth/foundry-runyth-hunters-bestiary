@@ -1,0 +1,34 @@
+<form class="hb-record-form" autocomplete="off">
+  <div class="hb-record-fields">
+    {{#if isSighting}}
+      <label>
+        <span>{{localize "HB.Dialogs.Sighting.Location"}}</span>
+        <input name="location" type="text" value="{{location}}" data-autofocus>
+      </label>
+      <label>
+        <span>{{localize "HB.Dialogs.Sighting.Detail"}}</span>
+        <textarea name="detail" rows="6">{{detail}}</textarea>
+      </label>
+    {{/if}}
+
+    {{#if isTrophy}}
+      <label>
+        <span>{{localize "HB.Dialogs.Trophy.Name"}}</span>
+        <input name="name" type="text" value="{{name}}" data-autofocus required>
+      </label>
+      <label>
+        <span>{{localize "HB.Dialogs.Trophy.Quantity"}}</span>
+        <input name="quantity" type="number" min="1" max="999" value="{{quantity}}">
+      </label>
+      <label>
+        <span>{{localize "HB.Dialogs.Trophy.Detail"}}</span>
+        <textarea name="detail" rows="5">{{detail}}</textarea>
+      </label>
+    {{/if}}
+  </div>
+
+  <footer class="hb-form-actions">
+    <button type="button" data-action="cancel"><i class="fa-solid fa-xmark"></i> {{localize "HB.Common.Cancel"}}</button>
+    <button type="button" class="primary" data-action="save"><i class="fa-solid fa-floppy-disk"></i> {{localize "HB.Common.Save"}}</button>
+  </footer>
+</form>

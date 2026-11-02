@@ -1,0 +1,19 @@
+<form class="hb-editor-form">
+  <header><h1>{{localize "HB.Transfer.Title"}}</h1><p>{{localize "HB.Transfer.Hint"}}</p></header>
+  <section class="hb-transfer-section">
+    <h2><i class="fa-solid fa-file-export"></i> {{localize "HB.Transfer.ExportTitle"}}</h2>
+    {{#if isGM}}<div class="hb-action-row"><button type="button" data-action="selectAll">{{localize "HB.Actions.SelectAll"}}</button><button type="button" data-action="selectSelf">{{localize "HB.Actions.SelectSelf"}}</button></div>{{/if}}
+    <div class="hb-check-grid">{{#each users}}<label class="hb-checkbox"><input type="checkbox" name="userIds" value="{{id}}" {{#if checked}}checked{{/if}}> {{name}} {{#if isGM}}<span class="muted">(GM)</span>{{/if}}</label>{{/each}}</div>
+    {{#if isGM}}<label class="hb-checkbox"><input type="checkbox" name="includeWorld"> {{localize "HB.Transfer.IncludeWorld"}}</label><label class="hb-checkbox"><input type="checkbox" name="includeAudit"> {{localize "HB.Transfer.IncludeAudit"}}</label>{{/if}}
+    <button type="button" class="primary" data-action="export"><i class="fa-solid fa-download"></i> {{localize "HB.Actions.Export"}}</button>
+  </section>
+  <section class="hb-transfer-section">
+    <h2><i class="fa-solid fa-file-import"></i> {{localize "HB.Transfer.ImportTitle"}}</h2>
+    <label>{{localize "HB.Transfer.JsonFile"}}<input name="importFile" type="file" accept="application/json,.json"></label>
+    <label class="hb-checkbox"><input type="checkbox" name="merge" checked> {{localize "HB.Transfer.Merge"}}</label>
+    {{#if isGM}}<label class="hb-checkbox"><input type="checkbox" name="importWorld"> {{localize "HB.Transfer.ImportWorld"}}</label>{{/if}}
+    <p class="hb-warning"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "HB.Transfer.ImportWarning"}}</p>
+    <button type="button" data-action="import"><i class="fa-solid fa-upload"></i> {{localize "HB.Actions.Import"}}</button>
+  </section>
+  {{#if isGM}}<section class="hb-transfer-section"><h2><i class="fa-solid fa-sliders"></i> {{localize "HB.Transfer.SettingsTitle"}}</h2><p>{{localize "HB.Transfer.SettingsHint"}}</p><div class="hb-action-row"><button type="button" class="primary" data-action="exportSettings"><i class="fa-solid fa-download"></i> {{localize "HB.Transfer.ExportSettings"}}</button></div><label>{{localize "HB.Transfer.SettingsFile"}}<input name="settingsImportFile" type="file" accept="application/json,.json"></label><button type="button" data-action="importSettings"><i class="fa-solid fa-upload"></i> {{localize "HB.Transfer.ImportSettings"}}</button></section>{{/if}}
+</form>

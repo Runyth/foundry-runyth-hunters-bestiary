@@ -1,0 +1,22 @@
+<section class="hb-audit-log">
+  {{#if unavailable}}
+    <div class="hb-empty large"><i class="fa-solid fa-user-slash"></i><h2>{{localize "HB.Audit.UnavailableTitle"}}</h2><p>{{localize "HB.Audit.UnavailableHint"}}</p></div>
+  {{else}}
+    <header class="hb-audit-header">
+      <div><span class="hb-eyebrow">{{localize "HB.Audit.SelectedHunter"}}</span><h2>{{userName}}{{#if actorName}} · {{actorName}}{{/if}}</h2><p>{{localize "HB.Audit.Hint"}}</p></div>
+      <div class="hb-audit-header-actions"><span class="hb-count-badge">{{total}}</span><button type="button" data-action="refreshAudit"><i class="fa-solid fa-rotate"></i> {{localize "HB.Audit.Refresh"}}</button></div>
+    </header>
+    <label class="hb-audit-search"><span>{{localize "HB.Common.Search"}}</span><input type="search" data-hb-search="audit" placeholder="{{localize "HB.Audit.SearchPlaceholder"}}"></label>
+    <div class="hb-audit-list" data-hb-list="audit">
+      {{#each events}}
+        <article class="hb-audit-row {{category}}" data-search-text="{{searchText}}">
+          <div class="hb-audit-time"><time datetime="{{at}}">{{atDisplay}}</time><span>{{categoryLabel}}</span></div>
+          <div class="hb-audit-body"><h3>{{title}}</h3>{{#if monsterName}}<span class="hb-audit-context"><i class="fa-solid fa-paw"></i> {{monsterName}}</span>{{/if}}{{#if huntTitle}}<span class="hb-audit-context"><i class="fa-solid fa-location-crosshairs"></i> {{huntTitle}}</span>{{/if}}{{#if detail}}<p>{{detail}}</p>{{/if}}{{#if points}}<small>{{localize "HB.Audit.Points"}}: {{points}}</small>{{/if}}{{#if statusLabel}}<small>{{statusLabel}}</small>{{/if}}</div>
+        </article>
+      {{else}}
+        <div class="hb-empty"><i class="fa-solid fa-clock-rotate-left"></i><p>{{localize "HB.Audit.Empty"}}</p></div>
+      {{/each}}
+      <div class="hb-empty" data-hb-search-empty="audit" hidden><i class="fa-solid fa-magnifying-glass"></i><p>{{localize "HB.Audit.SearchEmpty"}}</p></div>
+    </div>
+  {{/if}}
+</section>

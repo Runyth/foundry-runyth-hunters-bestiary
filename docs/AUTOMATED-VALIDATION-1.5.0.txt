@@ -1,0 +1,525 @@
+# Hunter's Bestiary 1.5.0 — Automated Validation
+
+## npm test
+
+> hunters-bestiary@1.5.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: GM API unlinks only the expected managed Actor UUID
+ok 1 - GM API unlinks only the expected managed Actor UUID
+  ---
+  duration_ms: 26.518708
+  type: 'test'
+  ...
+# Subtest: managed Actor refresh preserves unrelated embedded Items
+ok 2 - managed Actor refresh preserves unrelated embedded Items
+  ---
+  duration_ms: 1.609168
+  type: 'test'
+  ...
+# Subtest: player API catalogue is knowledge-gated and never returns GM secrets
+ok 3 - player API catalogue is knowledge-gated and never returns GM secrets
+  ---
+  duration_ms: 20.941894
+  type: 'test'
+  ...
+# Subtest: GM API catalogue retains complete records
+ok 4 - GM API catalogue retains complete records
+  ---
+  duration_ms: 3.353089
+  type: 'test'
+  ...
+# Subtest: one field-check action creates exactly one Chat card
+ok 5 - one field-check action creates exactly one Chat card
+  ---
+  duration_ms: 1.023267
+  type: 'test'
+  ...
+# Subtest: Foundry v13 entrypoint imports against the expected public application shape
+ok 6 - Foundry v13 entrypoint imports against the expected public application shape
+  ---
+  duration_ms: 27.464825
+  type: 'test'
+  ...
+# Subtest: repeatable fieldwork requests coalesce while unresolved and consume once
+ok 7 - repeatable fieldwork requests coalesce while unresolved and consume once
+  ---
+  duration_ms: 2.614318
+  type: 'test'
+  ...
+# Subtest: hunt attempts require an active assigned step
+ok 8 - hunt attempts require an active assigned step
+  ---
+  duration_ms: 0.445319
+  type: 'test'
+  ...
+# Subtest: evidence credit is GM-reviewed and duplicate unresolved evidence is coalesced
+ok 9 - evidence credit is GM-reviewed and duplicate unresolved evidence is coalesced
+  ---
+  duration_ms: 1.103798
+  type: 'test'
+  ...
+# Subtest: track requests require a known quarry or assigned hunt
+ok 10 - track requests require a known quarry or assigned hunt
+  ---
+  duration_ms: 1.255476
+  type: 'test'
+  ...
+# Subtest: dashboard retains quick guide and adds role-specific detailed guides
+ok 11 - dashboard retains quick guide and adds role-specific detailed guides
+  ---
+  duration_ms: 4.280141
+  type: 'test'
+  ...
+# Subtest: player guide is spoiler-safe and GM guide documents authority boundaries
+ok 12 - player guide is spoiler-safe and GM guide documents authority boundaries
+  ---
+  duration_ms: 1.719009
+  type: 'test'
+  ...
+# Subtest: progression safeguards are explicit in production source
+ok 13 - progression safeguards are explicit in production source
+  ---
+  duration_ms: 1.894617
+  type: 'test'
+  ...
+# Subtest: the same Chat message cannot mutate a hunt twice
+ok 14 - the same Chat message cannot mutate a hunt twice
+  ---
+  duration_ms: 3.812188
+  type: 'test'
+  ...
+# Subtest: template hunts start active and unlock steps sequentially
+ok 15 - template hunts start active and unlock steps sequentially
+  ---
+  duration_ms: 3.668222
+  type: 'test'
+  ...
+# Subtest: hunt normalization bounds unsafe values
+ok 16 - hunt normalization bounds unsafe values
+  ---
+  duration_ms: 0.633893
+  type: 'test'
+  ...
+# Subtest: world image override wins over packaged image
+ok 17 - world image override wins over packaged image
+  ---
+  duration_ms: 0.646502
+  type: 'test'
+  ...
+# Subtest: packaged image synchronizes actor and prototype token source
+ok 18 - packaged image synchronizes actor and prototype token source
+  ---
+  duration_ms: 0.235304
+  type: 'test'
+  ...
+# Subtest: unsafe or empty image paths are rejected
+ok 19 - unsafe or empty image paths are rejected
+  ---
+  duration_ms: 0.089434
+  type: 'test'
+  ...
+# Subtest: every bundled monster declares a packaged image
+ok 20 - every bundled monster declares a packaged image
+  ---
+  duration_ms: 4.546852
+  type: 'test'
+  ...
+# Subtest: dashboard list and selected detail resolve the same effective image
+ok 21 - dashboard list and selected detail resolve the same effective image
+  ---
+  duration_ms: 1.317009
+  type: 'test'
+  ...
+# Subtest: image selection uses the namespaced Foundry v13 picker and exposes the public API
+ok 22 - image selection uses the namespaced Foundry v13 picker and exposes the public API
+  ---
+  duration_ms: 1.421055
+  type: 'test'
+  ...
+# Subtest: Token HUD and directory rerenders insert one control with one listener
+ok 23 - Token HUD and directory rerenders insert one control with one listener
+  ---
+  duration_ms: 1.131501
+  type: 'test'
+  ...
+# Subtest: Scene Controls and launcher hooks register once with Foundry v13 record shape
+ok 24 - Scene Controls and launcher hooks register once with Foundry v13 record shape
+  ---
+  duration_ms: 0.868345
+  type: 'test'
+  ...
+# Subtest: keybinding registration is idempotent
+ok 25 - keybinding registration is idempotent
+  ---
+  duration_ms: 0.18652
+  type: 'test'
+  ...
+# Subtest: production hooks are narrow and never inject into Actor or Item sheets
+ok 26 - production hooks are narrow and never inject into Actor or Item sheets
+  ---
+  duration_ms: 9.693024
+  type: 'test'
+  ...
+# Subtest: production source uses native DOM, modern Chat behavior, and no canvas overlays
+ok 27 - production source uses native DOM, modern Chat behavior, and no canvas overlays
+  ---
+  duration_ms: 5.286563
+  type: 'test'
+  ...
+# Subtest: module CSS is scoped to module-owned roots and prefixes
+ok 28 - module CSS is scoped to module-owned roots and prefixes
+  ---
+  duration_ms: 6.922461
+  type: 'test'
+  ...
+# Subtest: ApplicationV2 listeners are lifecycle-bound and saved tabs are restored
+ok 29 - ApplicationV2 listeners are lifecycle-bound and saved tabs are restored
+  ---
+  duration_ms: 2.377583
+  type: 'test'
+  ...
+# Subtest: manifest uses Foundry's standard modular localization declarations
+ok 30 - manifest uses Foundry's standard modular localization declarations
+  ---
+  duration_ms: 1.308075
+  type: 'test'
+  ...
+# Subtest: shipped data uses localization keys and contains no embedded language maps
+ok 31 - shipped data uses localization keys and contains no embedded language maps
+  ---
+  duration_ms: 5.675146
+  type: 'test'
+  ...
+# Subtest: localization delegates to Foundry's active game.i18n service
+ok 32 - localization delegates to Foundry's active game.i18n service
+  ---
+  duration_ms: 0.461904
+  type: 'test'
+  ...
+# Subtest: production has no custom language selector or translation-dictionary injection
+ok 33 - production has no custom language selector or translation-dictionary injection
+  ---
+  duration_ms: 3.094119
+  type: 'test'
+  ...
+# Subtest: Foundry v13 manifest omits unsupported top-level system key
+ok 34 - Foundry v13 manifest omits unsupported top-level system key
+  ---
+  duration_ms: 1.173313
+  type: 'test'
+  ...
+# Subtest: canonical core title
+ok 35 - canonical core title
+  ---
+  duration_ms: 1.815467
+  type: 'test'
+  ...
+# Subtest: canonical system-layer title
+ok 36 - canonical system-layer title
+  ---
+  duration_ms: 0.171277
+  type: 'test'
+  ...
+# Subtest: canonical subject title
+ok 37 - canonical subject title
+  ---
+  duration_ms: 0.090506
+  type: 'test'
+  ...
+# Subtest: canonical subject-system title
+ok 38 - canonical subject-system title
+  ---
+  duration_ms: 0.08601
+  type: 'test'
+  ...
+# Subtest: naming convention documents exact separators
+ok 39 - naming convention documents exact separators
+  ---
+  duration_ms: 0.581815
+  type: 'test'
+  ...
+# Subtest: invalid apostrophe and separator return structured problems
+ok 40 - invalid apostrophe and separator return structured problems
+  ---
+  duration_ms: 0.582144
+  type: 'test'
+  ...
+# Subtest: reversed subject and system order is rejected
+ok 41 - reversed subject and system order is rejected
+  ---
+  duration_ms: 0.216175
+  type: 'test'
+  ...
+# Subtest: startup warning registry deduplicates per module
+ok 42 - startup warning registry deduplicates per module
+  ---
+  duration_ms: 0.453251
+  type: 'test'
+  ...
+# Subtest: compliant module names produce a valid structured result
+ok 43 - compliant module names produce a valid structured result
+  ---
+  duration_ms: 0.560732
+  type: 'test'
+  ...
+# Subtest: missing family prefix is reported explicitly
+ok 44 - missing family prefix is reported explicitly
+  ---
+  duration_ms: 0.341743
+  type: 'test'
+  ...
+# Subtest: disabled startup modules and compliant modules never warn
+ok 45 - disabled startup modules and compliant modules never warn
+  ---
+  duration_ms: 0.288714
+  type: 'test'
+  ...
+# Subtest: bounded concurrency preserves order and never exceeds its limit
+ok 46 - bounded concurrency preserves order and never exceeds its limit
+  ---
+  duration_ms: 6.834389
+  type: 'test'
+  ...
+# Subtest: concurrent mapped geometry writes retain every application entry
+ok 47 - concurrent mapped geometry writes retain every application entry
+  ---
+  duration_ms: 6.355089
+  type: 'test'
+  ...
+# Subtest: complete monster bundles are flattened and linked
+ok 48 - complete monster bundles are flattened and linked
+  ---
+  duration_ms: 3.073688
+  type: 'test'
+  ...
+# Subtest: incomplete monster registration is rejected by default
+ok 49 - incomplete monster registration is rejected by default
+  ---
+  duration_ms: 0.837348
+  type: 'test'
+  ...
+# Subtest: partial registration is accepted only when explicitly allowed
+ok 50 - partial registration is accepted only when explicitly allowed
+  ---
+  duration_ms: 0.428254
+  type: 'test'
+  ...
+# Subtest: actor source declarations are deliberate and system-aware
+ok 51 - actor source declarations are deliberate and system-aware
+  ---
+  duration_ms: 0.215454
+  type: 'test'
+  ...
+# Subtest: registered Actor adapters make adapter sources provisionable
+ok 52 - registered Actor adapters make adapter sources provisionable
+  ---
+  duration_ms: 0.221653
+  type: 'test'
+  ...
+# Subtest: completeness reports support linked shared content
+ok 53 - completeness reports support linked shared content
+  ---
+  duration_ms: 0.553792
+  type: 'test'
+  ...
+# Subtest: schema-v2 migration preserves edited core content and adds package metadata
+ok 54 - schema-v2 migration preserves edited core content and adds package metadata
+  ---
+  duration_ms: 11.477765
+  type: 'test'
+  ...
+# Subtest: record entry windows are resizable ApplicationV2 applications with distinct persisted ids
+ok 55 - record entry windows are resizable ApplicationV2 applications with distinct persisted ids
+  ---
+  duration_ms: 1.13169
+  type: 'test'
+  ...
+# Subtest: record fields and list metadata use content-safe sizing
+ok 56 - record fields and list metadata use content-safe sizing
+  ---
+  duration_ms: 0.522395
+  type: 'test'
+  ...
+# Subtest: record entry closing does not block on geometry persistence or parent refresh
+ok 57 - record entry closing does not block on geometry persistence or parent refresh
+  ---
+  duration_ms: 0.324928
+  type: 'test'
+  ...
+# Subtest: share insight and free-text prompts use bounded themed form controls
+ok 58 - share insight and free-text prompts use bounded themed form controls
+  ---
+  duration_ms: 0.424197
+  type: 'test'
+  ...
+# Subtest: record and monster editor windows bypass slow close animation and persistence waits
+ok 59 - record and monster editor windows bypass slow close animation and persistence waits
+  ---
+  duration_ms: 7.681622
+  type: 'test'
+  ...
+# Subtest: seed catalogue satisfies the module contract
+ok 60 - seed catalogue satisfies the module contract
+  ---
+  duration_ms: 3.837005
+  type: 'test'
+  ...
+# Subtest: all shipped monster content uses standard Foundry localization keys
+ok 61 - all shipped monster content uses standard Foundry localization keys
+  ---
+  duration_ms: 11.584806
+  type: 'test'
+  ...
+# Subtest: trail templates provide playable sequential checks
+ok 62 - trail templates provide playable sequential checks
+  ---
+  duration_ms: 0.401213
+  type: 'test'
+  ...
+# Subtest: core settings register once
+ok 63 - core settings register once
+  ---
+  duration_ms: 1.580535
+  type: 'test'
+  ...
+# Subtest: socket requests reject malformed and unauthorized action envelopes
+ok 64 - socket requests reject malformed and unauthorized action envelopes
+  ---
+  duration_ms: 1.055806
+  type: 'test'
+  ...
+# Subtest: knowledge thresholds and manual overrides are deterministic
+ok 65 - knowledge thresholds and manual overrides are deterministic
+  ---
+  duration_ms: 0.668865
+  type: 'test'
+  ...
+# Subtest: progress normalization bounds values and de-duplicates books
+ok 66 - progress normalization bounds values and de-duplicates books
+  ---
+  duration_ms: 1.221635
+  type: 'test'
+  ...
+# Subtest: hunt progress is recorded and resolved idempotently
+ok 67 - hunt progress is recorded and resolved idempotently
+  ---
+  duration_ms: 0.530958
+  type: 'test'
+  ...
+# Subtest: same-user progress mutations serialize while different users can proceed independently
+ok 68 - same-user progress mutations serialize while different users can proceed independently
+  ---
+  duration_ms: 10.065203
+  type: 'test'
+  ...
+# Subtest: system adapters require a system and a real capability
+ok 69 - system adapters require a system and a real capability
+  ---
+  duration_ms: 1.226783
+  type: 'test'
+  ...
+# Subtest: active system adapters provide Actors for system-neutral monsters
+ok 70 - active system adapters provide Actors for system-neutral monsters
+  ---
+  duration_ms: 0.78549
+  type: 'test'
+  ...
+# Subtest: field checks are delegated and normalized
+ok 71 - field checks are delegated and normalized
+  ---
+  duration_ms: 1.193564
+  type: 'test'
+  ...
+# Subtest: adapters for other systems remain inactive
+ok 72 - adapters for other systems remain inactive
+  ---
+  duration_ms: 0.218648
+  type: 'test'
+  ...
+# Subtest: merge keeps greater progress and de-duplicates stable records
+ok 73 - merge keeps greater progress and de-duplicates stable records
+  ---
+  duration_ms: 2.050872
+  type: 'test'
+  ...
+# Subtest: dashboard options require ApplicationV2-resizable window behavior
+ok 74 - dashboard options require ApplicationV2-resizable window behavior
+  ---
+  duration_ms: 0.735605
+  type: 'test'
+  ...
+# Subtest: geometry is clamped into the active viewport
+ok 75 - geometry is clamped into the active viewport
+  ---
+  duration_ms: 0.778209
+  type: 'test'
+  ...
+# Subtest: operation summaries distinguish success, skipped, and failure
+ok 76 - operation summaries distinguish success, skipped, and failure
+  ---
+  duration_ms: 0.218177
+  type: 'test'
+  ...
+# Subtest: dashboard naming validation runs once for every intentional open call
+ok 77 - dashboard naming validation runs once for every intentional open call
+  ---
+  duration_ms: 0.23983
+  type: 'test'
+  ...
+# Subtest: shared progress dialogs use fixed width and preserve structured failures
+ok 78 - shared progress dialogs use fixed width and preserve structured failures
+  ---
+  duration_ms: 5.675678
+  type: 'test'
+  ...
+# Subtest: operation-result inspection treats Foundry-like class instances and compatibility getters as opaque
+ok 79 - operation-result inspection treats Foundry-like class instances and compatibility getters as opaque
+  ---
+  duration_ms: 0.53261
+  type: 'test'
+  ...
+# Subtest: operation-result inspection ignores accessor properties even on plain records
+ok 80 - operation-result inspection ignores accessor properties even on plain records
+  ---
+  duration_ms: 0.117266
+  type: 'test'
+  ...
+# Subtest: explicit nested operation failures remain detectable through the result schema
+ok 81 - explicit nested operation failures remain detectable through the result schema
+  ---
+  duration_ms: 0.202944
+  type: 'test'
+  ...
+# Subtest: progress operations can auto-close clean success and retain failed windows
+ok 82 - progress operations can auto-close clean success and retain failed windows
+  ---
+  duration_ms: 1.437299
+  type: 'test'
+  ...
+1..82
+# tests 82
+# suites 0
+# pass 82
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 618.067072
+
+## npm run check
+
+> hunters-bestiary@1.5.0 check
+> node tools/check.mjs
+
+Hunter's Bestiary validation passed (9 groups):
+- manifest and referenced files
+- seed schema, counts, IDs, references, and modular localized content
+- 27 script files syntax-checked
+- deprecated V1 API scan
+- hook ownership, native DOM, Chat, Scene Controls, and canvas isolation audit
+- all production relative imports resolve
+- stylesheet isolation audit
+- 1088 modular English/German localization keys and static references
+- 40 template actions mapped

@@ -1,0 +1,23 @@
+<form class="hb-editor-form hb-monster-editor">
+  <header><h1>{{#if editing}}{{localize "HB.MonsterEditor.EditTitle"}}{{else}}{{localize "HB.MonsterEditor.NewTitle"}}{{/if}}</h1><p>{{localize "HB.MonsterEditor.Hint"}}</p></header>
+  <div class="hb-form-grid">
+    <label>{{localize "HB.Fields.Id"}}<input name="id" type="text" value="{{monster.id}}"></label>
+    <label>{{localize "HB.Common.Type"}}<input name="type" type="text" value="{{monster.type}}"></label>
+    <label>{{localize "HB.Common.Tier"}}<input name="tier" type="number" min="1" max="10" value="{{monster.tier}}"></label>
+    <label>{{localize "HB.Fields.ActorUuid"}}<input name="actorUuid" type="text" value="{{monster.actorUuid}}" placeholder="Actor.xxxxx"></label>
+    <label class="wide">{{localize "HB.Fields.Tags"}}<input name="tags" type="text" value="{{monster.tagsText}}"></label>
+    <label class="wide">{{localize "HB.Fields.Name"}}<input name="name" type="text" value="{{monster.nameText}}"></label>
+    <label class="wide">{{localize "HB.Fields.Summary"}}<textarea name="summary" rows="3">{{monster.summaryText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Rumor"}}<textarea name="rumor" rows="3">{{monster.rumorText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Habitats"}}<textarea name="habitats" rows="4">{{monster.habitatsText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Signs"}}<textarea name="signs" rows="5">{{monster.signsText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Ecology"}}<textarea name="ecology" rows="4">{{monster.ecologyText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Behavior"}}<textarea name="behavior" rows="4">{{monster.behaviorText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Defenses"}}<textarea name="defenses" rows="4">{{monster.defensesText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Weaknesses"}}<textarea name="weaknesses" rows="4">{{monster.weaknessesText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.Harvest"}}<textarea name="harvest" rows="4">{{monster.harvestText}}</textarea></label>
+    <label class="wide hb-secret">{{localize "HB.Fields.GMSecrets"}}<textarea name="gmSecrets" rows="4">{{monster.gmSecretsText}}</textarea></label>
+    <label class="wide">{{localize "HB.Fields.PreferredSkills"}}<input name="preferredSkills" type="text" value="{{monster.preferredSkillsText}}" placeholder="sur, nat, inv"></label>
+  </div>
+  <footer class="hb-form-actions">{{#if editing}}<button type="button" class="danger" data-action="delete"><i class="fa-solid fa-trash"></i> {{localize "HB.Common.Delete"}}</button>{{/if}}<span class="spacer"></span><button type="button" data-action="cancel">{{localize "HB.Common.Cancel"}}</button><button type="button" class="primary" data-action="save"><i class="fa-solid fa-floppy-disk"></i> {{localize "HB.Common.Save"}}</button></footer>
+</form>

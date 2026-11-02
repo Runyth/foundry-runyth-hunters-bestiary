@@ -1,0 +1,12 @@
+# Patch Qualification — Hunter's Bestiary 1.4.2
+
+- Automated tests: **74/74**
+- English/German localization parity: **1019/1019**
+- Static validation: passed
+- Production JavaScript syntax/import validation: passed
+- Deprecated API and ownership scans: passed
+- Performance regression coverage: passed
+- Deterministic double-build verification: passed; two independent builds were byte-identical
+- Source-to-install byte reproduction: passed; install and source ZIPs rebuilt byte-identically from the extracted source archive
+
+Live Foundry VTT execution is not available in the build environment; the documentation bundle contains a manual runtime checklist.

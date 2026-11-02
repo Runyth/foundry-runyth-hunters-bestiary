@@ -1,0 +1,12 @@
+Hunter's Bestiary 1.7.1 automated validation
+
+- Automated tests: 116/116 passed
+- Static validation groups: 9/9 passed
+- English/German localization parity: 1230/1230 keys
+- Manifest and referenced files: passed
+- Production relative imports: passed
+- Deprecated Foundry V1 API scan: passed
+- Hook ownership / native DOM / canvas isolation: passed
+- Stylesheet isolation: passed
+- ApplicationV2 template actions: 53 mapped
+- New regression coverage: safe hunt-step reversal, audit preservation, selected-player activity reconstruction, GM-only audit UI
