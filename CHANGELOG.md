@@ -1,8 +1,6 @@
 # Changelog
 
-## 1.8.1 - 2026-11-03
-
-### Fixed and improved
+## 1.8.1 — 2026-11-03
 
 - AGENTS.md conformance release: the manifest author carries the standard organisational URL, and the shipped homebrew content states its CC BY-SA 4.0 content licence in the README and on the content data records. No runtime behaviour relationship or dependency change.
 
@@ -124,8 +122,6 @@
 - Added future-language authoring documentation and regression coverage.
 - Preserved the coordinated actor-image feature set and all stable IDs and settings.
 
-# Changelog
-
 ## 1.4.0
 
 - Added persistent quarry-image overrides and Foundry FilePicker selection.
@@ -146,7 +142,6 @@
 - Made Edit Monster geometry persistence non-blocking during close, matching the record-entry windows.
 - Preserved all saved geometry, record results, and monster-edit behavior.
 
-
 ## 1.3.4
 
 - Made Record Sighting and Record Trophy/Sample close immediately instead of waiting for client-setting persistence.
@@ -161,15 +156,14 @@
 - Fixed shared progress dialogs to use a stable viewport-clamped width.
 - Added structured extraction and display of operation failures in shared progress dialogs.
 
-
-## 1.3.2 - 2026-07-31
+## 1.3.2 — 2026-07-31
 
 - Replaced the Tier/knowledge subtitle with separate wrapping fact badges to eliminate compressed labels.
 - Corrected shared ApplicationV2 option generation.
 - Added a strict GM-only Actor unlink API for managed-resource cleanup.
 - Added regression coverage for narrow metadata layout, valid ApplicationV2 options, and UUID-guarded unlinking.
 
-## 1.3.1 - 2026-07-31
+## 1.3.1 — 2026-07-31
 
 - Made Bestiary list entries grow naturally with localized tier and knowledge-level subtitles.
 - Replaced sighting and trophy/sample prompts with resizable ApplicationV2 record windows.
@@ -177,14 +171,12 @@
 - Corrected right-side input and textarea padding through border-box sizing.
 - Added regression coverage for dynamic card layout and record-window persistence.
 
-
 - Normalized the canonical family title and coordinated dependency versions across all four official modules.
 - Added/consumed the core naming API with structured validation, registrations, startup warning deduplication, and dashboard-open warnings.
 - Added/consumed the shared dashboard toolkit for ApplicationV2 geometry, reset controls, stable search, progress, busy states, operation reporting, and safe destructive confirmations.
 - Preserved stable module IDs, existing settings and flags, imported content identities, provider IDs, and documented compatibility aliases.
 - Added complete English/German localization parity, developer guidance, migration documentation, tests, and release qualification artifacts.
 - Retained this module's high-contrast dark field-journal palette and module-specific functionality.
-
 
 ## 1.2.1 — 2026-07-29
 
@@ -195,6 +187,13 @@
 - Knowledge-gated player-facing API catalogue data and removed GM-only secrets and Actor source metadata.
 - Added ApplicationV2 listener cleanup, active-tab persistence, scoped CSS, and comprehensive interference regression tests.
 - Excluded source-only documentation from the installable archive.
+
+## 1.2.0
+
+- Added a public, system-neutral system-adapter registry.
+- Added adapter capabilities for native field checks, quarry Actor generation, harvest Items, and encounter profiles.
+- Allowed system adapters to provision Actors for intentionally system-neutral core quarry without changing catalogue records.
+- Exposed adapter registration, capability inspection, harvest creation, and encounter metadata through the public API.
 
 ## 1.1.0 — 2026-07-25
 
@@ -225,10 +224,3 @@
 - Added per-user window position and size persistence with viewport clamping and reset.
 - Added English and German localization and high-contrast responsive styling.
 - Added reproducible build, static validation, schema tests, and ZIP layout checks.
-
-## 1.2.0
-
-- Added a public, system-neutral system-adapter registry.
-- Added adapter capabilities for native field checks, quarry Actor generation, harvest Items, and encounter profiles.
-- Allowed system adapters to provision Actors for intentionally system-neutral core quarry without changing catalogue records.
-- Exposed adapter registration, capability inspection, harvest creation, and encounter metadata through the public API.
