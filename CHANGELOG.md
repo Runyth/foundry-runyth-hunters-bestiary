@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.3 — 2026-11-05
+
+- Dashboard and data-surface image paths resolve through the rebranded module id
+  (`runyth-hunters-bestiary`); the dashboard template and bundled seed image
+  paths no longer request the pre-rebrand directory.
 ## 1.8.2 — 2026-11-04
 
 - The installable archive now ships every relative import the manifest entry needs, so the module's buttons and settings register on world load instead of silently failing.

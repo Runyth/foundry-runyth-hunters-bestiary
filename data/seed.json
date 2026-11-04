@@ -98,7 +98,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.ashback_troll.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "mireglass-basilisk",
@@ -160,7 +160,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.mireglass_basilisk.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "thornhide-boar",
@@ -220,7 +220,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.thornhide_boar.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "moonveil-stag",
@@ -281,7 +281,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.moonveil_stag.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "saltmarsh-mireclaw",
@@ -342,7 +342,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.saltmarsh_mireclaw.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "hollow-eyed-wyrm",
@@ -404,7 +404,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.hollow_eyed_wyrm.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "fen-lantern-moth",
@@ -465,7 +465,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.fen_lantern_moth.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "gravewind-hyena",
@@ -526,7 +526,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.gravewind_hyena.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "ironjaw-lindworm",
@@ -587,7 +587,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.ironjaw_lindworm.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "gloamfang-cougar",
@@ -649,7 +649,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.gloamfang_cougar.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "carrion-bell-spider",
@@ -711,7 +711,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.carrion_bell_spider.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "rimehorn-aurochs",
@@ -771,7 +771,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.rimehorn_aurochs.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "embercrop-manticore",
@@ -832,7 +832,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.embercrop_manticore.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "stormglass-roc",
@@ -892,7 +892,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.stormglass_roc.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "reed-crowned-crocodile",
@@ -952,7 +952,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.reed_crowned_crocodile.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "lanternjaw-eel",
@@ -1012,7 +1012,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.lanternjaw_eel.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "bone-orchard-elk",
@@ -1072,7 +1072,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.bone_orchard_elk.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "dustmantle-burrower",
@@ -1132,7 +1132,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.dustmantle_burrower.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "choirback-toad",
@@ -1192,7 +1192,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.choirback_toad.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "veinroot-colossus",
@@ -1252,7 +1252,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.veinroot_colossus.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "cinderwing-drake",
@@ -1312,7 +1312,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.cinderwing_drake.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "whitewake-serpent",
@@ -1372,7 +1372,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.whitewake_serpent.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "coppercap-jackal",
@@ -1432,7 +1432,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.coppercap_jackal.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     },
     {
       "id": "mirrorhide-lynx",
@@ -1492,7 +1492,7 @@
         "mode": "none",
         "reason": "HB.Content.Seed.monsters.mirrorhide_lynx.actorSource.reason"
       },
-      "img": "modules/hunters-bestiary/assets/hunters-bestiary.svg"
+      "img": "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg"
     }
   ],
   "tracks": [

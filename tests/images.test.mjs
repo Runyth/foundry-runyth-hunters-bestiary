@@ -27,7 +27,7 @@ import { readFile } from "node:fs/promises";
 test("every bundled monster declares a packaged image", async () => {
   const seed = JSON.parse(await readFile(new URL("../data/seed.json", import.meta.url), "utf8"));
   assert.equal(seed.monsters.length, 24);
-  assert.ok(seed.monsters.every(monster => typeof monster.img === "string" && monster.img.startsWith("modules/hunters-bestiary/")));
+  assert.ok(seed.monsters.every(monster => typeof monster.img === "string" && monster.img.startsWith("modules/runyth-hunters-bestiary/")));
 });
 
 test("dashboard list and selected detail resolve the same effective image", async () => {

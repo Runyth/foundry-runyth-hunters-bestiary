@@ -1,48 +1,48 @@
 {
- "id": "runyth-hunters-bestiary",
- "title": "Runyth Hunter's Bestiary",
- "description": "A complete monster-hunting game mode for Foundry VTT: personal bestiaries, tracks, rumors, ecology, field research, micro-quest hunts, generated books and GM-private roll tables.",
- "version": "1.8.2",
- "authors": [
-  {
-   "name": "Runyth",
-   "url": "https://github.com/Runyth"
-  }
- ],
- "compatibility": {
-  "minimum": "13.341",
-  "verified": "13.351",
-  "maximum": "13.351"
- },
- "esmodules": [
-  "scripts/main.mjs"
- ],
- "styles": [
-  "styles/runyth-hunters-bestiary.css"
- ],
- "languages": [
-  {
-   "lang": "en",
-   "name": "English",
-   "path": "lang/en.json"
+  "id": "runyth-hunters-bestiary",
+  "title": "Runyth Hunter's Bestiary",
+  "description": "A complete monster-hunting game mode for Foundry VTT: personal bestiaries, tracks, rumors, ecology, field research, micro-quest hunts, generated books and GM-private roll tables.",
+  "version": "1.8.3",
+  "authors": [
+    {
+      "name": "Runyth",
+      "url": "https://github.com/Runyth"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13.341",
+    "verified": "13.351",
+    "maximum": "13.351"
   },
-  {
-   "lang": "de",
-   "name": "Deutsch",
-   "path": "lang/de.json"
-  }
- ],
- "socket": true,
- "readme": "README.md",
- "changelog": "CHANGELOG.md",
- "license": "LICENSE",
- "media": [
-  {
-   "type": "icon",
-   "url": "assets/hunters-bestiary.svg"
-  }
- ],
- "url": "https://github.com/Runyth/foundry-runyth-hunters-bestiary",
- "manifest": "https://github.com/Runyth/foundry-runyth-hunters-bestiary/releases/latest/download/module.json",
- "download": "https://github.com/Runyth/foundry-runyth-hunters-bestiary/releases/download/v1.8.2/runyth-hunters-bestiary-v1.8.2-mod.zip"
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/runyth-hunters-bestiary.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "socket": true,
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "license": "LICENSE",
+  "media": [
+    {
+      "type": "icon",
+      "url": "assets/hunters-bestiary.svg"
+    }
+  ],
+  "url": "https://github.com/Runyth/foundry-runyth-hunters-bestiary",
+  "manifest": "https://github.com/Runyth/foundry-runyth-hunters-bestiary/releases/latest/download/module.json",
+  "download": "https://github.com/Runyth/foundry-runyth-hunters-bestiary/releases/download/v1.8.3/runyth-hunters-bestiary-v1.8.3-mod.zip"
 }
