@@ -3,8 +3,11 @@
 import { MODULE_ID, FLAGS } from "./constants.mjs";
 import { getWorldData, setWorldData, appendAudit } from "./state.mjs";
 import { clone, nowIso } from "./utils.mjs";
+import { moduleLog } from "./utils.mjs";
 
 export const DEFAULT_MONSTER_IMAGE = `modules/${MODULE_ID}/assets/hunters-bestiary.svg`;
+export const LEGACY_IMAGE_PREFIX = "modules/hunters-bestiary/";
+export const REBRANDED_IMAGE_PREFIX = `modules/${MODULE_ID}/`;
 
 export function normalizeImagePath(value) {
   const path = String(value ?? "").trim();
@@ -92,4 +95,34 @@ async function findLinkedActor(monster) {
     if (linked?.documentName === "Actor" && !linked.pack) return linked;
   }
   return globalThis.game?.actors?.contents?.find?.(actor => actor.getFlag?.(MODULE_ID, FLAGS.ACTOR_MONSTER_ID) === monster?.id) ?? null;
+}
+
+// 1.8.3 schema-3 repair: pre-rebrand worlds carry the legacy module id in the
+// core image fields of provisioned Actors. Rewrites them through the public
+// update path; only rows that still carry the legacy prefix are touched.
+export async function migrateProvisionedImagePaths() {
+  const findings = [];
+  for (const actor of game.actors.contents ?? []) {
+    const monsterId = actor?.getFlag?.(MODULE_ID, FLAGS.ACTOR_MONSTER_ID);
+    if (!monsterId) continue;
+    const updates = {};
+    if (typeof actor.img === "string" && actor.img.startsWith(LEGACY_IMAGE_PREFIX)) {
+      updates.img = `${REBRANDED_IMAGE_PREFIX}${actor.img.slice(LEGACY_IMAGE_PREFIX.length)}`;
+    }
+    const texture = actor.prototypeToken?.texture?.src;
+    if (typeof texture === "string" && texture.startsWith(LEGACY_IMAGE_PREFIX)) {
+      updates["prototypeToken.texture.src"] = `${REBRANDED_IMAGE_PREFIX}${texture.slice(LEGACY_IMAGE_PREFIX.length)}`;
+    }
+    if (Object.keys(updates).length === 0) continue;
+    try {
+      await actor.update(updates);
+      findings.push({ monsterId, actorId: actor.id, updated: Object.keys(updates) });
+    } catch (error) {
+      console.error(`${MODULE_ID} | Actor image migration failed for ${actor.name}`, error);
+    }
+  }
+  if (findings.length) {
+    moduleLog(`Rewrote legacy image paths on ${findings.length} provisioned Actor(s).`);
+  }
+  return findings;
 }

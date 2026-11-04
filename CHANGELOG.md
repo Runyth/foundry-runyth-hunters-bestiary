@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.4 — 2026-11-05
+
+- Catalogue schema 3: provisioned-world image paths from installs made before
+  the rebrand (bundled monster rows, image overrides, and provisioned Actor
+  core-image fields) are rewritten to the rebranded module id at GM world load.
 ## 1.8.3 — 2026-11-05
 
 - Dashboard and data-surface image paths resolve through the rebranded module id

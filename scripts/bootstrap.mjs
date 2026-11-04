@@ -73,8 +73,35 @@ export async function initializeWorldData() {
   return seed;
 }
 
+// Pre-rebrand module id; provisioned worlds from 1.8.2-and-earlier carry these
+// absolute paths in worldData.imageOverrides and packaged monster img rows.
+const LEGACY_IMAGE_PREFIX = "modules/hunters-bestiary/";
+const REBRANDED_IMAGE_PREFIX = "modules/runyth-hunters-bestiary/";
+
+function rewriteImagePrefix(value) {
+  if (typeof value !== "string" || !value.startsWith(LEGACY_IMAGE_PREFIX)) return value;
+  return `${REBRANDED_IMAGE_PREFIX}${value.slice(LEGACY_IMAGE_PREFIX.length)}`;
+}
+
+export function migrateImagePaths(worldData) {
+  const output = clone(worldData ?? {});
+  if (output.imageOverrides) {
+    for (const [monsterId, path] of Object.entries(output.imageOverrides)) {
+      output.imageOverrides[monsterId] = rewriteImagePrefix(path);
+    }
+  }
+  for (const monster of output.monsters ?? []) {
+    if (typeof monster.img === "string") {
+      monster.img = rewriteImagePrefix(monster.img);
+    }
+  }
+  return output;
+}
+
 export function migrateWorldData(input, seed) {
   const output = clone(input ?? {});
+  const migratedImages = migrateImagePaths(output);
+  for (const key of Object.keys(migratedImages)) output[key] = migratedImages[key];
   for (const key of ["monsters", "tracks", "rumors", "books", "trailTemplates", "complications", "knowledgeLevels"]) {
     output[key] = Array.isArray(output[key]) ? output[key] : clone(seed[key] ?? []);
   }

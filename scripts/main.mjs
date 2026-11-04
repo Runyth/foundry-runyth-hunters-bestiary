@@ -33,6 +33,7 @@ Hooks.once("ready", async () => {
   await runReadySubsystem("world data", initializeWorldData, failures, true);
   await runReadySubsystem("socket", registerSocket, failures);
   await runReadySubsystem("rerender hooks", registerRerenderHooks, failures);
+  if (game.user.isGM) await runReadySubsystem("actor image migration", migrateProvisionedImagePaths, failures);
 
   api.markReady({ ok: failures.length === 0, failures });
   api.warnForEnabledComplementaryModuleNames();

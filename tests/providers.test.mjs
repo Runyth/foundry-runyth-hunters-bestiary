@@ -161,8 +161,10 @@ test("schema-v2 migration preserves edited core content and adds package metadat
   delete legacy.monsters[0].actorSource;
   delete legacy.complications[0].id;
 
+  legacy.imageOverrides = { [legacy.monsters[0].id]: "modules/hunters-bestiary/assets/hunters-bestiary.svg" };
   const migrated = migrateWorldData(legacy, seed);
-  assert.equal(migrated.schemaVersion, 2);
+  assert.equal(migrated.imageOverrides[legacy.monsters[0].id], "modules/runyth-hunters-bestiary/assets/hunters-bestiary.svg");
+  assert.equal(migrated.schemaVersion, 3);
   assert.equal(migrated.moduleVersion, "1.8.0");
   assert.equal(migrated.monsters[0].summary, "Edited campaign summary.");
   assert.ok(migrated.monsters[0].contentLinks.rumorIds.length > 0);
